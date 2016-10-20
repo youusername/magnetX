@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
+		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
+		AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C01DB8C8C600D12963 /* ViewController.m */; };
+		AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */; };
+		AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC820C51DB8C8C600D12963 /* Assets.xcassets */; };
+		AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC820C71DB8C8C700D12963 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAC820B61DB8C8C600D12963 /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC820B91DB8C8C600D12963 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAC820BA1DB8C8C600D12963 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAC820BD1DB8C8C600D12963 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAC820BF1DB8C8C600D12963 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AAC820C01DB8C8C600D12963 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAC820C31DB8C8C600D12963 /* magnetX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = magnetX.xcdatamodel; sourceTree = "<group>"; };
+		AAC820C51DB8C8C600D12963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC820C81DB8C8C700D12963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAC820CA1DB8C8C700D12963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC820B31DB8C8C600D12963 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC820AD1DB8C8C600D12963 = {
+			isa = PBXGroup;
+			children = (
+				AAC820B81DB8C8C600D12963 /* magnetX */,
+				AAC820B71DB8C8C600D12963 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC820B71DB8C8C600D12963 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820B61DB8C8C600D12963 /* magnetX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC820B81DB8C8C600D12963 /* magnetX */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820B91DB8C8C600D12963 /* AppDelegate.h */,
+				AAC820BA1DB8C8C600D12963 /* AppDelegate.m */,
+				AAC820BF1DB8C8C600D12963 /* ViewController.h */,
+				AAC820C01DB8C8C600D12963 /* ViewController.m */,
+				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
+				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
+				AAC820CA1DB8C8C700D12963 /* Info.plist */,
+				AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */,
+				AAC820BC1DB8C8C600D12963 /* Supporting Files */,
+			);
+			path = magnetX;
+			sourceTree = "<group>";
+		};
+		AAC820BC1DB8C8C600D12963 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820BD1DB8C8C600D12963 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC820B51DB8C8C600D12963 /* magnetX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC820CD1DB8C8C700D12963 /* Build configuration list for PBXNativeTarget "magnetX" */;
+			buildPhases = (
+				AAC820B21DB8C8C600D12963 /* Sources */,
+				AAC820B31DB8C8C600D12963 /* Frameworks */,
+				AAC820B41DB8C8C600D12963 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = magnetX;
+			productName = magnetX;
+			productReference = AAC820B61DB8C8C600D12963 /* magnetX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC820AE1DB8C8C600D12963 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "214644496@qq.com";
+				TargetAttributes = {
+					AAC820B51DB8C8C600D12963 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AAC820B11DB8C8C600D12963 /* Build configuration list for PBXProject "magnetX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC820AD1DB8C8C600D12963;
+			productRefGroup = AAC820B71DB8C8C600D12963 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC820B51DB8C8C600D12963 /* magnetX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC820B41DB8C8C600D12963 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
+				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC820B21DB8C8C600D12963 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */,
+				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,
+				AAC820BE1DB8C8C600D12963 /* main.m in Sources */,
+				AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAC820C71DB8C8C700D12963 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC820C81DB8C8C700D12963 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAC820CB1DB8C8C700D12963 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AAC820CC1DB8C8C700D12963 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AAC820CE1DB8C8C700D12963 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = magnetX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.214644496.magnetX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAC820CF1DB8C8C700D12963 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = magnetX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.214644496.magnetX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC820B11DB8C8C600D12963 /* Build configuration list for PBXProject "magnetX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC820CB1DB8C8C700D12963 /* Debug */,
+				AAC820CC1DB8C8C700D12963 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC820CD1DB8C8C700D12963 /* Build configuration list for PBXNativeTarget "magnetX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC820CE1DB8C8C700D12963 /* Debug */,
+				AAC820CF1DB8C8C700D12963 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAC820C31DB8C8C600D12963 /* magnetX.xcdatamodel */,
+			);
+			currentVersion = AAC820C31DB8C8C600D12963 /* magnetX.xcdatamodel */;
+			path = magnetX.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AAC820AE1DB8C8C600D12963 /* Project object */;
+}
