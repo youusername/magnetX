@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+extern NSString* beseURL;
 @interface ViewController : NSViewController
 
 

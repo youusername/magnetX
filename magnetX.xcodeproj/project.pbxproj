@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
 		AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C01DB8C8C600D12963 /* ViewController.m */; };
@@ -16,9 +17,16 @@
 		AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D21DB8CA7700D12963 /* SideViewController.m */; };
 		AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D61DB8CE4100D12963 /* WindowController.m */; };
 		AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DA1DB9C27F00D12963 /* NavigationView.m */; };
+		AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DE1DB9ED9700D12963 /* movieModel.m */; };
+		AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC820E01DB9F27500D12963 /* SourceList.plist */; };
+		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
+		AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E61DBA171100D12963 /* nameTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
+		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC820B61DB8C8C600D12963 /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC820B91DB8C8C600D12963 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAC820BA1DB8C8C600D12963 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +43,13 @@
 		AAC820D61DB8CE4100D12963 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		AAC820D91DB9C27F00D12963 /* NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
 		AAC820DA1DB9C27F00D12963 /* NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
+		AAC820DD1DB9ED9700D12963 /* movieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movieModel.h; sourceTree = "<group>"; };
+		AAC820DE1DB9ED9700D12963 /* movieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = movieModel.m; sourceTree = "<group>"; };
+		AAC820E01DB9F27500D12963 /* SourceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SourceList.plist; sourceTree = "<group>"; };
+		AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = breakDownHtml.h; sourceTree = "<group>"; };
+		AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = breakDownHtml.m; sourceTree = "<group>"; };
+		AAC820E51DBA171100D12963 /* nameTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nameTableCellView.h; sourceTree = "<group>"; };
+		AAC820E61DBA171100D12963 /* nameTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameTableCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31C39FC67FADAB335C3AFA71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */,
+				83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		38CCD415B04F734BCDAB785D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAC820AD1DB8C8C600D12963 = {
 			isa = PBXGroup;
 			children = (
 				AAC820B81DB8C8C600D12963 /* magnetX */,
 				AAC820B71DB8C8C600D12963 /* Products */,
+				31C39FC67FADAB335C3AFA71 /* Pods */,
+				38CCD415B04F734BCDAB785D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +107,11 @@
 				AAC820D81DB9C26C00D12963 /* BaseClass */,
 				AAC820D41DB8CAD300D12963 /* View */,
 				AAC820D01DB8CA6E00D12963 /* ViewController */,
-				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
+				AAC820DC1DB9ECF600D12963 /* Model */,
 				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
+				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
 				AAC820CA1DB8C8C700D12963 /* Info.plist */,
+				AAC820E01DB9F27500D12963 /* SourceList.plist */,
 				AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */,
 				AAC820BC1DB8C8C600D12963 /* Supporting Files */,
 			);
@@ -105,6 +142,8 @@
 		AAC820D41DB8CAD300D12963 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAC820E51DBA171100D12963 /* nameTableCellView.h */,
+				AAC820E61DBA171100D12963 /* nameTableCellView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -118,6 +157,17 @@
 			name = BaseClass;
 			sourceTree = "<group>";
 		};
+		AAC820DC1DB9ECF600D12963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820DD1DB9ED9700D12963 /* movieModel.h */,
+				AAC820DE1DB9ED9700D12963 /* movieModel.m */,
+				AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */,
+				AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC820CD1DB8C8C700D12963 /* Build configuration list for PBXNativeTarget "magnetX" */;
 			buildPhases = (
+				4961C0CDBA2C586BB38F9AAA /* [CP] Check Pods Manifest.lock */,
 				AAC820B21DB8C8C600D12963 /* Sources */,
 				AAC820B31DB8C8C600D12963 /* Frameworks */,
 				AAC820B41DB8C8C600D12963 /* Resources */,
+				6E48A5818F554D0C587A8A44 /* [CP] Embed Pods Frameworks */,
+				F843D9DA47D0F97D834822E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
 			);
@@ -183,14 +237,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4961C0CDBA2C586BB38F9AAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E48A5818F554D0C587A8A44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F843D9DA47D0F97D834822E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAC820B21DB8C8C600D12963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */,
 				AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */,
 				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
+				AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */,
+				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
 				AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */,
 				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,
 				AAC820BE1DB8C8C600D12963 /* main.m in Sources */,
@@ -301,6 +406,7 @@
 		};
 		AAC820CE1DB8C8C700D12963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -313,6 +419,7 @@
 		};
 		AAC820CF1DB8C8C700D12963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
