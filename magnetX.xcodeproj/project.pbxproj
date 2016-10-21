@@ -13,6 +13,9 @@
 		AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */; };
 		AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC820C51DB8C8C600D12963 /* Assets.xcassets */; };
 		AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC820C71DB8C8C700D12963 /* Main.storyboard */; };
+		AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D21DB8CA7700D12963 /* SideViewController.m */; };
+		AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D61DB8CE4100D12963 /* WindowController.m */; };
+		AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DA1DB9C27F00D12963 /* NavigationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		AAC820C51DB8C8C600D12963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC820C81DB8C8C700D12963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAC820CA1DB8C8C700D12963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC820D11DB8CA7700D12963 /* SideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideViewController.h; sourceTree = "<group>"; };
+		AAC820D21DB8CA7700D12963 /* SideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideViewController.m; sourceTree = "<group>"; };
+		AAC820D51DB8CE4100D12963 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		AAC820D61DB8CE4100D12963 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		AAC820D91DB9C27F00D12963 /* NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
+		AAC820DA1DB9C27F00D12963 /* NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,9 @@
 			children = (
 				AAC820B91DB8C8C600D12963 /* AppDelegate.h */,
 				AAC820BA1DB8C8C600D12963 /* AppDelegate.m */,
-				AAC820BF1DB8C8C600D12963 /* ViewController.h */,
-				AAC820C01DB8C8C600D12963 /* ViewController.m */,
+				AAC820D81DB9C26C00D12963 /* BaseClass */,
+				AAC820D41DB8CAD300D12963 /* View */,
+				AAC820D01DB8CA6E00D12963 /* ViewController */,
 				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
 				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
 				AAC820CA1DB8C8C700D12963 /* Info.plist */,
@@ -77,6 +87,35 @@
 				AAC820BD1DB8C8C600D12963 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAC820D01DB8CA6E00D12963 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820D51DB8CE4100D12963 /* WindowController.h */,
+				AAC820D61DB8CE4100D12963 /* WindowController.m */,
+				AAC820D11DB8CA7700D12963 /* SideViewController.h */,
+				AAC820D21DB8CA7700D12963 /* SideViewController.m */,
+				AAC820BF1DB8C8C600D12963 /* ViewController.h */,
+				AAC820C01DB8C8C600D12963 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AAC820D41DB8CAD300D12963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AAC820D81DB9C26C00D12963 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				AAC820D91DB9C27F00D12963 /* NavigationView.h */,
+				AAC820DA1DB9C27F00D12963 /* NavigationView.m */,
+			);
+			name = BaseClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */,
+				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
+				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
 				AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */,
 				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,
 				AAC820BE1DB8C8C600D12963 /* main.m in Sources */,
@@ -300,6 +342,7 @@
 				AAC820CF1DB8C8C700D12963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
