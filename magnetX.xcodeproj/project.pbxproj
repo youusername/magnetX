@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F161DE61DBA43300037BDBF /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F161DE51DBA43300037BDBF /* rule.json */; };
+		1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DE81DBA457D0037BDBF /* sideModel.m */; };
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F161DE51DBA43300037BDBF /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = "<group>"; };
+		1F161DE71DBA457D0037BDBF /* sideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sideModel.h; sourceTree = "<group>"; };
+		1F161DE81DBA457D0037BDBF /* sideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sideModel.m; sourceTree = "<group>"; };
 		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +113,8 @@
 				AAC820D41DB8CAD300D12963 /* View */,
 				AAC820D01DB8CA6E00D12963 /* ViewController */,
 				AAC820DC1DB9ECF600D12963 /* Model */,
-				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
 				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
+				1F161DE51DBA43300037BDBF /* rule.json */,
 				AAC820CA1DB8C8C700D12963 /* Info.plist */,
 				AAC820E01DB9F27500D12963 /* SourceList.plist */,
 				AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */,
@@ -142,6 +147,7 @@
 		AAC820D41DB8CAD300D12963 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
 				AAC820E51DBA171100D12963 /* nameTableCellView.h */,
 				AAC820E61DBA171100D12963 /* nameTableCellView.m */,
 			);
@@ -160,6 +166,8 @@
 		AAC820DC1DB9ECF600D12963 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F161DE71DBA457D0037BDBF /* sideModel.h */,
+				1F161DE81DBA457D0037BDBF /* sideModel.m */,
 				AAC820DD1DB9ED9700D12963 /* movieModel.h */,
 				AAC820DE1DB9ED9700D12963 /* movieModel.m */,
 				AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */,
@@ -175,12 +183,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC820CD1DB8C8C700D12963 /* Build configuration list for PBXNativeTarget "magnetX" */;
 			buildPhases = (
+				8E904F0789AB392F105214E9 /* Check Pods Manifest.lock */,
 				4961C0CDBA2C586BB38F9AAA /* [CP] Check Pods Manifest.lock */,
 				AAC820B21DB8C8C600D12963 /* Sources */,
 				AAC820B31DB8C8C600D12963 /* Frameworks */,
 				AAC820B41DB8C8C600D12963 /* Resources */,
 				6E48A5818F554D0C587A8A44 /* [CP] Embed Pods Frameworks */,
 				F843D9DA47D0F97D834822E2 /* [CP] Copy Pods Resources */,
+				F5ACC16AAE23A7722E59637C /* Embed Pods Frameworks */,
+				D2FB4B2516F9D00E5A9513BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */,
+				1F161DE61DBA43300037BDBF /* rule.json in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +280,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8E904F0789AB392F105214E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2FB4B2516F9D00E5A9513BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5ACC16AAE23A7722E59637C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F843D9DA47D0F97D834822E2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +352,7 @@
 				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
 				AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */,
+				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
 				AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */,
 				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,

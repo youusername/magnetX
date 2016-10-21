@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    beseURL = @"http://www.bt177.net/word/%E6%9C%AB%E6%97%A5.html";
     [self configureSearchURLString];
     self.magnets = [breakDownHtml breakDownHtmlToUrl:beseURL];
     [self.tableView reloadData];
@@ -50,6 +49,8 @@
     
 }
 - (void)configureSearchURLString {
+    beseURL = @"http://www.bt177.net/word/%E6%9C%AB%E6%97%A5.html";
+
 }
 #pragma mark - NSTableViewDataSource
 
@@ -108,7 +109,8 @@
 //    [rightClickMenu addItem:downloadItem];
 //    return rightClickMenu;
 //}
-//#pragma mark - Indicator and reload table view data
+
+#pragma mark - Indicator and reload table view data
 
 - (void)reloadDataAndStopIndicator {
     [self stopAnimatingProgressIndicator];

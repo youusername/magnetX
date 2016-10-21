@@ -709,54 +709,6 @@
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Us-7Q6">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4e-vh-rLB">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="270"/>
-                                        <clipView key="contentView" drawsBackground="NO" id="HsQ-Q1-7mP">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="270"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" headerView="7iS-Zy-WRs" indentationPerLevel="16" outlineTableColumn="C4E-p9-izz" id="eUs-F7-sbj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="247"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <size key="intercellSpacing" width="3" height="0.0"/>
-                                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                                                    <tableColumns>
-                                                        <tableColumn width="297" minWidth="40" maxWidth="1000" id="C4E-p9-izz">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="目标网站">
-                                                                <font key="font" metaFont="smallSystem"/>
-                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                            </tableHeaderCell>
-                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="fdsa" placeholderString="fdas" id="Afd-eQ-idR">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                        </tableColumn>
-                                                    </tableColumns>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="UOH-tx-NO5" id="KqH-3c-npi"/>
-                                                        <outlet property="delegate" destination="UOH-tx-NO5" id="wFU-fm-fzX"/>
-                                                    </connections>
-                                                </outlineView>
-                                            </subviews>
-                                            <nil key="backgroundColor"/>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="YZu-CE-38U">
-                                            <rect key="frame" x="1" y="119" width="223" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="aKu-0s-ILw">
-                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <tableHeaderView key="headerView" id="7iS-Zy-WRs">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="23"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableHeaderView>
-                                    </scrollView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3u-A4u">
                                         <rect key="frame" x="91" y="275" width="129" height="21"/>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0JC-As-TQe">
@@ -764,17 +716,67 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-bn-Dow">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="268"/>
+                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Ua2-vF-p5e">
+                                            <rect key="frame" x="0.0" y="23" width="300" height="245"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="mze-e1-lS7" id="geU-6j-KYk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="245"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <size key="intercellSpacing" width="3" height="2"/>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                    <tableColumns>
+                                                        <tableColumn identifier="siteCell" width="297" minWidth="40" maxWidth="1000" id="4GA-l8-G1m">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="来源网站">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="lOk-ij-DDe">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                        </tableColumn>
+                                                    </tableColumns>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="UOH-tx-NO5" id="b1Z-kY-mdl"/>
+                                                        <outlet property="delegate" destination="UOH-tx-NO5" id="1zK-pJ-wu2"/>
+                                                    </connections>
+                                                </tableView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </clipView>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="A6W-PF-xaj"/>
+                                        </constraints>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ppe-Zk-N1c">
+                                            <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gXl-rr-b2e">
+                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <tableHeaderView key="headerView" id="mze-e1-lS7">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="23"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableHeaderView>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="K4e-vh-rLB" secondAttribute="bottom" id="2U3-B1-oN5"/>
                                     <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="80" id="3gx-wt-5r1"/>
                                     <constraint firstItem="vyS-3u-A4u" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="91" id="5d8-Tb-GNW"/>
-                                    <constraint firstItem="K4e-vh-rLB" firstAttribute="top" secondItem="vyS-3u-A4u" secondAttribute="bottom" constant="6" id="Bqo-b5-mlz"/>
-                                    <constraint firstItem="K4e-vh-rLB" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="30" id="Kqr-aa-T72"/>
                                     <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="5" id="MAp-g9-KJe"/>
-                                    <constraint firstItem="K4e-vh-rLB" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" id="bOl-vm-hez"/>
-                                    <constraint firstAttribute="trailing" secondItem="K4e-vh-rLB" secondAttribute="trailing" id="djg-i5-cy0"/>
+                                    <constraint firstAttribute="trailing" secondItem="fyd-bn-Dow" secondAttribute="trailing" id="N7E-L3-OIO"/>
+                                    <constraint firstItem="fyd-bn-Dow" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" id="RoP-Jl-g0r"/>
+                                    <constraint firstAttribute="bottom" secondItem="fyd-bn-Dow" secondAttribute="bottom" id="Rv9-A6-afM"/>
                                     <constraint firstAttribute="width" constant="300" id="mNd-DN-fsd"/>
+                                    <constraint firstItem="fyd-bn-Dow" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="32" id="piQ-8H-e5u"/>
                                 </constraints>
                             </visualEffectView>
                         </subviews>
@@ -786,7 +788,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="outlineView" destination="eUs-F7-sbj" id="ift-wO-2Oy"/>
+                        <outlet property="tableView" destination="geU-6j-KYk" id="SlB-hU-ukB"/>
                     </connections>
                 </viewController>
                 <customObject id="Iak-NJ-u5y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
