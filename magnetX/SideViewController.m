@@ -26,29 +26,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:url];
-    _sites = [NSMutableArray new];
-    self.sites = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    self.sites = [NSMutableArray new];
+
+    for (NSDictionary *dic in array) {
+        sideModel *side = [sideModel new];
+        side.site = dic[@"site"];
+        side.name = dic[@"name"];;
+        side.size = dic[@"size"];;
+        side.count  = dic[@"count"];;
+        side.source = dic[@"source"];;
+        side.magnet = dic[@"magnet"];;
+        [self.sites addObject:side];
+    }
     
     [self.tableView reloadData];
 
 }
--(void)setSites:(NSMutableArray *)sites{
-    if (sites) {
-        for (NSDictionary *dic in sites) {
-            sideModel *side = [sideModel new];
-            side.site = dic[@"site"];
-            side.name = dic[@"name"];;
-            side.size = dic[@"size"];;
-            side.count  = dic[@"count"];;
-            side.source = dic[@"source"];;
-            side.magnet = dic[@"magnet"];;
-            [_sites addObject:side];
-        }
-    }
-}
+
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

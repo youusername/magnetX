@@ -4,7 +4,7 @@
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":."//dl[@class='BotInfo']//dt/span[2]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
@@ -12,7 +12,7 @@
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":."//dl[@class='BotInfo']//dt/span[2]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
@@ -20,7 +20,7 @@
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":."//dl[@class='BotInfo']//dt/span[2]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
@@ -28,7 +28,7 @@
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":."//dl[@class='BotInfo']//dt/span[2]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
@@ -36,7 +36,15 @@
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":."//dl[@class='BotInfo']//dt/span[2]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
+  "source":"http://www.bt177.net/word/XXX.html"
+  },
+  {
+  "site":"http://www.bt177.net",
+  "magnet":".//div[@class='dInfo']",
+  "name":".//div[@class='T1']",
+  "size":".//dl[@class='BotInfo']//dt/span[1]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   }
 ]
