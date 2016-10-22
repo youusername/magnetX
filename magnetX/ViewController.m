@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "movieModel.h"
 #import "breakDownHtml.h"
-#import "movieModel.h"
 #import "nameTableCellView.h"
+
 @interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSTextField *searchTextField;
@@ -18,22 +18,40 @@
 @property (weak) IBOutlet NSTextField *info;
 @property (weak) IBOutlet NSTableView *tableView;
 @property (nonatomic, strong) NSMutableArray<movieModel*> *magnets;
-@property (nonatomic, strong) NSString       *searchURLString;
+@property (nonatomic, strong) NSString  *searchURLString;
 
 @end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureSearchURLString];
-    self.magnets = [breakDownHtml breakDownHtmlToUrl:beseURL];
-    [self.tableView reloadData];
+    [self observeNotification];
+    [self setupSearchText];
     // Do any additional setup after loading the view.
 }
+#pragma mark - Notification
 
+- (void)observeNotification {
+    [MagnetXNotification addObserver:self selector:@selector(changeKeyword) name:MagnetXSiteChangeKeywordNotification];
+}
+- (void)changeKeyword{
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+        self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        [self.tableView reloadData];
+//    });
+}
 - (void)resetData {
     [self.magnets removeAllObjects];
     [self.tableView reloadData];
+}
+- (void)setupSearchText{
+    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3"];
+    self.searchTextField.stringValue = searchText[arc4random() % 7];
+    
+    [self changeKeyword];
+
 }
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
@@ -48,10 +66,7 @@
     
     
 }
-- (void)configureSearchURLString {
-    beseURL = @"http://www.bt177.net/word/%E6%9C%AB%E6%97%A5.html";
 
-}
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

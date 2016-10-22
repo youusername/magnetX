@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-extern NSString* beseURL;
+extern sideModel *selectSideRule;
 @interface ViewController : NSViewController
 
 

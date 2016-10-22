@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Ono.h"
+extern sideModel *selectSideRule;
+
 @interface movieModel : NSObject
 @property (nonatomic,strong)NSString* name;
 @property (nonatomic,strong)NSString* size;

@@ -1,0 +1,18 @@
+//
+//  magnetX.pch
+//  magnetX
+//
+//  Created by 张靖 on 16/10/22.
+//  Copyright © 2016年 214644496@qq.com. All rights reserved.
+//
+
+#ifndef magnetX_pch
+#define magnetX_pch
+#import "magnetXAPI.h"
+#import "sideModel.h"
+#import "MagnetXNotification.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* magnetX_pch */

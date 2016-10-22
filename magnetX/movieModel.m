@@ -7,16 +7,17 @@
 //
 
 #import "movieModel.h"
-NSString* beseURL;
+sideModel *selectSideRule;
+
 @implementation movieModel
 + (movieModel*)entity:(ONOXMLElement *)element{
     movieModel*Model = [movieModel new];
-    NSString*magnet=[[element firstChildWithXPath:@".//div[@class='dInfo']"].stringValue substringWithRange:NSMakeRange(6,40)];
+    NSString*magnet=[[element firstChildWithXPath:selectSideRule.magnet].stringValue substringWithRange:NSMakeRange(6,40)];
     Model.magnet = [NSString stringWithFormat:@"magnet:?xt=urn:btih:%@",magnet];
-    Model.name = [[element firstChildWithXPath:@".//div[@class='T1']"] stringValue];
-    Model.size = [element firstChildWithXPath:@".//dl[@class='BotInfo']//dt/span[1]"].stringValue;
-    Model.count = [element firstChildWithXPath:@".//dl[@class='BotInfo']//dt/span[2]"].stringValue;
-    Model.source = [[beseURL substringFromIndex:7] componentsSeparatedByString:@"/"][0];
+    Model.name = [[element firstChildWithXPath:selectSideRule.name] stringValue];
+    Model.size = [element firstChildWithXPath:selectSideRule.size].stringValue;
+    Model.count = [element firstChildWithXPath:selectSideRule.count].stringValue;
+    Model.source =selectSideRule.site;
     return Model;
 }
 

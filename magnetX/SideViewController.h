@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+extern sideModel *selectSideRule;
 
 @interface SideViewController : NSViewController
 

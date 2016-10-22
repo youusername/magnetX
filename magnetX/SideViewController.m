@@ -8,7 +8,6 @@
 
 #import "SideViewController.h"
 //#import "DMHYCoreDataStackManager.h"
-#import "sideModel.h"
 
 @interface SideViewController ()<NSTableViewDataSource, NSTableViewDelegate, NSSplitViewDelegate>
 
@@ -26,11 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self setupTableViewData];
+    [self observeNotification];
+
+    extern sideModel *selectSideRule;
+    selectSideRule = self.sites[0];
+}
+- (void)setupTableViewData{
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     self.sites = [NSMutableArray new];
-
+    
     for (NSDictionary *dic in array) {
         sideModel *side = [sideModel new];
         side.site = dic[@"site"];
@@ -41,11 +48,18 @@
         side.magnet = dic[@"magnet"];;
         [self.sites addObject:side];
     }
-    
+    [self changeSelectRuleOfIndex:0];
     [self.tableView reloadData];
-
 }
+- (void)changeSelectRuleOfIndex:(NSInteger)index{
+    
+    selectSideRule = self.sites[index];
+    [MagnetXNotification postNotificationName:MagnetXSiteChangeKeywordNotification object:selectSideRule];
+}
+#pragma mark - Notification
 
+- (void)observeNotification {
+}
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -68,6 +82,7 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
+    [self changeSelectRuleOfIndex:self.tableView.selectedRow];
     NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
 }
 

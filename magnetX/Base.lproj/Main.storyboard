@@ -709,21 +709,14 @@
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Us-7Q6">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3u-A4u">
-                                        <rect key="frame" x="91" y="275" width="129" height="21"/>
-                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0JC-As-TQe">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
                                     <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="27" horizontalPageScroll="10" verticalLineScroll="27" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7I-oy-tMe">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="268"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="266"/>
                                         <clipView key="contentView" drawsBackground="NO" id="nJm-DM-scH">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="268"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="266"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="25" rowSizeStyle="automatic" headerView="CwG-DX-XMh" viewBased="YES" id="iB2-E2-23B">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="245"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="243"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -771,7 +764,7 @@
                                             </subviews>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="NUe-RM-88L">
-                                            <rect key="frame" x="1" y="110.22468966245651" width="220.84069442749023" height="16"/>
+                                            <rect key="frame" x="1" y="110" width="220.84069442749023" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Onq-pr-rga">
@@ -783,16 +776,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3u-A4u">
+                                        <rect key="frame" x="86" y="265" width="129" height="32"/>
+                                        <buttonCell key="cell" type="push" title="添加配置" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0JC-As-TQe">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="d7I-oy-tMe" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" id="3TZ-Iu-0sR"/>
-                                    <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="80" id="3gx-wt-5r1"/>
-                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="91" id="5d8-Tb-GNW"/>
-                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="5" id="MAp-g9-KJe"/>
+                                    <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="91" id="3gx-wt-5r1"/>
+                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="92" id="5d8-Tb-GNW"/>
+                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="7" id="MAp-g9-KJe"/>
                                     <constraint firstAttribute="bottom" secondItem="d7I-oy-tMe" secondAttribute="bottom" id="Ycp-ev-Twz"/>
                                     <constraint firstAttribute="width" constant="300" id="mNd-DN-fsd"/>
                                     <constraint firstAttribute="trailing" secondItem="d7I-oy-tMe" secondAttribute="trailing" id="mb2-Mw-THv"/>
-                                    <constraint firstItem="d7I-oy-tMe" firstAttribute="top" secondItem="vyS-3u-A4u" secondAttribute="bottom" constant="8" id="vbe-2w-bqz"/>
+                                    <constraint firstItem="d7I-oy-tMe" firstAttribute="top" secondItem="vyS-3u-A4u" secondAttribute="bottom" constant="6" id="vbe-2w-bqz"/>
                                 </constraints>
                             </visualEffectView>
                         </subviews>
@@ -1087,7 +1087,4 @@
             <point key="canvasLocation" x="887.5" y="1136.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-    </resources>
 </document>

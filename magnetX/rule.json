@@ -1,6 +1,6 @@
  [
   {
-  "site":"http://www.bt177.net",
+  "site":"http://www.bt177.net11111",
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
@@ -8,7 +8,7 @@
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
-  "site":"http://www.bt177.net",
+  "site":"http://www.bt177.net22222",
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
@@ -16,7 +16,7 @@
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {
-  "site":"http://www.bt177.net",
+  "site":"http://www.bt177.net333333",
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",
