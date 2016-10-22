@@ -11,6 +11,7 @@
 
 #define MagnetXSiteChangeNotification @"siteChangeNotification"
 #define MagnetXSiteChangeKeywordNotification @"siteChangeKeywordNotification"
-
+#define MagnetXStartAnimatingProgressIndicator @"startAnimatingProgressIndicator"
+#define MagnetXStopAnimatingProgressIndicator @"stopAnimatingProgressIndicator"
 
 #endif /* magnetXAPI_h */

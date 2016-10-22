@@ -16,10 +16,10 @@
 
     NSData*data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     
-            ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:data error:nil];
-            [doc enumerateElementsWithXPath:@"//ul[@class='mlist']//li" usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
-                [array addObject:[movieModel entity:element]];
-            }];
+    ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:data error:nil];
+    [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
+        [array addObject:[movieModel entity:element]];
+    }];
 
     return array;
 }

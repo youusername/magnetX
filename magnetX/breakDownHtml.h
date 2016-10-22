@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+extern sideModel *selectSideRule;
 
 @interface breakDownHtml : NSObject
 + (NSMutableArray*)breakDownHtmlToUrl:(NSString*)url;

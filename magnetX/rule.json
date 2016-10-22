@@ -1,46 +1,18 @@
  [
   {
-  "site":"http://www.bt177.net11111",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
+  "site":"高清MP4吧",
+  "waiting":"10",
+  "group":"//tbody[@class='tbody']//tr",
+  "magnet":".//td[@style='text-align:left;']//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//td[4]",
+  "count":".//td[1]",
+  "source":"http://www.mp4ba.com/search.php?keyword=XXX"
   },
   {
   "site":"http://www.bt177.net22222",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
-  },
-  {
-  "site":"http://www.bt177.net333333",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
-  },
-  {
-  "site":"http://www.bt177.net",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
-  },
-  {
-  "site":"http://www.bt177.net",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
-  },
-  {
-  "site":"http://www.bt177.net",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
   "magnet":".//div[@class='dInfo']",
   "name":".//div[@class='T1']",
   "size":".//dl[@class='BotInfo']//dt/span[1]",

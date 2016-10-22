@@ -41,8 +41,10 @@
     for (NSDictionary *dic in array) {
         sideModel *side = [sideModel new];
         side.site = dic[@"site"];
+        side.group= dic[@"group"];
         side.name = dic[@"name"];;
         side.size = dic[@"size"];;
+        side.waiting= dic[@"waiting"];
         side.count  = dic[@"count"];;
         side.source = dic[@"source"];;
         side.magnet = dic[@"magnet"];;
@@ -52,9 +54,12 @@
     [self.tableView reloadData];
 }
 - (void)changeSelectRuleOfIndex:(NSInteger)index{
-    
+    if (index<0) {
+        return;
+    }
     selectSideRule = self.sites[index];
     [MagnetXNotification postNotificationName:MagnetXSiteChangeKeywordNotification object:selectSideRule];
+    [MagnetXNotification postNotificationName:MagnetXStartAnimatingProgressIndicator object:nil];
 }
 #pragma mark - Notification
 

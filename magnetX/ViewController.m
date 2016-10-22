@@ -34,24 +34,33 @@
 
 - (void)observeNotification {
     [MagnetXNotification addObserver:self selector:@selector(changeKeyword) name:MagnetXSiteChangeKeywordNotification];
+    [MagnetXNotification addObserver:self selector:@selector(startAnimatingProgressIndicator) name:MagnetXStartAnimatingProgressIndicator];
+    [MagnetXNotification addObserver:self selector:@selector(stopAnimatingProgressIndicator) name:MagnetXStopAnimatingProgressIndicator];
 }
 - (void)changeKeyword{
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
-        self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        [self.tableView reloadData];
-//    });
-}
-- (void)resetData {
+
     [self.magnets removeAllObjects];
-    [self.tableView reloadData];
+    NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+    self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    if (self.magnets.count>0) {
+        [self reloadDataAndStopIndicator];
+    }else{
+        [self setErrorInfoAndStopIndicator];
+    }
+
+
 }
+//- (void)resetData {
+//    [self.magnets removeAllObjects];
+//    [self.tableView reloadData];
+//}
 - (void)setupSearchText{
     NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3"];
     self.searchTextField.stringValue = searchText[arc4random() % 7];
     
     [self changeKeyword];
-
+    [self reloadDataAndStopIndicator];
 }
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
@@ -59,10 +68,11 @@
     // Update the view, if already loaded.
 }
 - (IBAction)setupData:(id)sender {
+    
     if (![sender isKindOfClass:[ViewController class]]) {
         return;
     }
-    [self startAnimatingProgressIndicator];
+    [self changeKeyword];
     
     
 }
@@ -134,7 +144,7 @@
 }
 
 - (void)setErrorInfoAndStopIndicator {
-    self.info.stringValue = @"网络错误.";
+    self.info.stringValue = @"请检查网络，或者等一下再刷新";
     [self stopAnimatingProgressIndicator];
 }
 #pragma mark - ProgressIndicator

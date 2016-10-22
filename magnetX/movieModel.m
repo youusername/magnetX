@@ -12,7 +12,8 @@ sideModel *selectSideRule;
 @implementation movieModel
 + (movieModel*)entity:(ONOXMLElement *)element{
     movieModel*Model = [movieModel new];
-    NSString*magnet=[[element firstChildWithXPath:selectSideRule.magnet].stringValue substringWithRange:NSMakeRange(6,40)];
+    NSString*firstMagnet = [element firstChildWithXPath:selectSideRule.magnet].stringValue;
+    NSString*magnet=[firstMagnet substringWithRange:NSMakeRange(firstMagnet.length-40,40)];
     Model.magnet = [NSString stringWithFormat:@"magnet:?xt=urn:btih:%@",magnet];
     Model.name = [[element firstChildWithXPath:selectSideRule.name] stringValue];
     Model.size = [element firstChildWithXPath:selectSideRule.size].stringValue;
