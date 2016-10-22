@@ -974,8 +974,8 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="countCell" width="83" minWidth="10" maxWidth="3.4028234663852886e+38" id="OGM-QT-mVz">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="文件数量">
+                                                <tableColumn identifier="countCell" width="101" minWidth="10" maxWidth="3.4028234663852886e+38" id="OGM-QT-mVz">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="文件数量or时间">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -988,11 +988,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="ddO-Ey-r14">
-                                                            <rect key="frame" x="601" y="1" width="83" height="25"/>
+                                                            <rect key="frame" x="601" y="1" width="101" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erY-5M-2Cp">
-                                                                    <rect key="frame" x="0.0" y="8" width="83" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="8" width="101" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="8" id="Agd-Gf-lu3">
                                                                         <font key="font" metaFont="system"/>
@@ -1021,7 +1021,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="SN8-1z-cLW">
-                                                            <rect key="frame" x="687" y="1" width="124" height="25"/>
+                                                            <rect key="frame" x="705" y="1" width="124" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSX-hS-KNx">

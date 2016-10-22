@@ -10,6 +10,41 @@
 sideModel *selectSideRule;
 
 @implementation movieModel
+-(void)setName:(NSString *)name{
+    if (name) {
+        _name = [name stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    }else{
+        _name = @"";
+    }
+}
+-(void)setMagnet:(NSString *)magnet{
+    if (magnet) {
+        _magnet = magnet;
+    }else{
+        _magnet = @"";
+    }
+}
+-(void)setSize:(NSString *)size{
+    if (size) {
+        _size = size;
+    }else{
+        _size = @"";
+    }
+}
+-(void)setCount:(NSString *)count{
+    if (count) {
+        _count = count;
+    }else{
+        _count = @"";
+    }
+}
+- (void)setSource:(NSString *)source{
+    if (source) {
+        _source = source;
+    }else{
+        _source = @"";
+    }
+}
 + (movieModel*)entity:(ONOXMLElement *)element{
     movieModel*Model = [movieModel new];
     NSString*firstMagnet = [element firstChildWithXPath:selectSideRule.magnet].stringValue;

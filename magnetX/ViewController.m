@@ -69,9 +69,9 @@
 }
 - (IBAction)setupData:(id)sender {
     
-    if (![sender isKindOfClass:[ViewController class]]) {
-        return;
-    }
+//    if (![sender isKindOfClass:[ViewController class]]) {
+//        return;
+//    }
     [self changeKeyword];
     
     
@@ -150,11 +150,13 @@
 #pragma mark - ProgressIndicator
 
 - (void)startAnimatingProgressIndicator {
+    self.indicator.hidden = NO;
     [self.indicator startAnimation:self];
     self.info.stringValue = @"";
 }
 
 - (void)stopAnimatingProgressIndicator {
+    self.indicator.hidden = YES;
     [self.indicator stopAnimation:self];
 }
 
