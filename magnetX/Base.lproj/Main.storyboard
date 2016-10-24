@@ -823,9 +823,9 @@
                                 <rect key="frame" x="0.0" y="238" width="849" height="75"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="59g-bU-Ahy">
-                                        <rect key="frame" x="100" y="23" width="313" height="29"/>
+                                        <rect key="frame" x="100" y="27" width="313" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="Za0-BE-LUk"/>
+                                            <constraint firstAttribute="height" constant="25" id="Za0-BE-LUk"/>
                                             <constraint firstAttribute="width" constant="313" id="udo-ki-nqd"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入你想搜索的关键字" drawsBackground="YES" id="XCU-wo-wFL">
@@ -833,6 +833,9 @@
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="SeO-wd-xgI" id="3zz-rW-sXV"/>
+                                        </connections>
                                     </textField>
                                     <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3Km-uQ-wlj">
                                         <rect key="frame" x="458" y="30" width="16" height="16"/>

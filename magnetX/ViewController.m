@@ -41,7 +41,7 @@
 
     [self.magnets removeAllObjects];
     NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
-    self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
     
     if (self.magnets.count>0) {
         [self reloadDataAndStopIndicator];
@@ -75,6 +75,13 @@
     [self changeKeyword];
     
     
+}
+#pragma mark - NSTextFieldDelegate
+
+- (void)controlTextDidEndEditing:(NSNotification *)notification {
+    if ([notification.userInfo[@"NSTextMovement"] intValue] == NSReturnTextMovement) {
+        [self setupData:self];
+    }
 }
 
 #pragma mark - NSTableViewDataSource
