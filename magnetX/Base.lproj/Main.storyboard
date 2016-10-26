@@ -663,7 +663,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="MagnetX" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="1024" height="768"/>
@@ -686,7 +686,7 @@
                         <splitViewItem id="a9r-TZ-FDl"/>
                     </splitViewItems>
                     <splitView key="splitView" misplaced="YES" dividerStyle="thin" vertical="YES" id="exy-WI-Mxi">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
@@ -696,7 +696,7 @@
                 </splitViewController>
                 <customObject id="siv-sH-zG3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="520" y="691"/>
+            <point key="canvasLocation" x="526" y="635"/>
         </scene>
         <!--Side View Controller-->
         <scene sceneID="kwX-Mf-jWQ">
@@ -789,6 +789,7 @@
                                     <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="91" id="3gx-wt-5r1"/>
                                     <constraint firstItem="vyS-3u-A4u" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="92" id="5d8-Tb-GNW"/>
                                     <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="7" id="MAp-g9-KJe"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="WHf-Rz-ef7"/>
                                     <constraint firstAttribute="bottom" secondItem="d7I-oy-tMe" secondAttribute="bottom" id="Ycp-ev-Twz"/>
                                     <constraint firstAttribute="width" constant="300" id="mNd-DN-fsd"/>
                                     <constraint firstAttribute="trailing" secondItem="d7I-oy-tMe" secondAttribute="trailing" id="mb2-Mw-THv"/>
