@@ -5,4 +5,4 @@
 
 持续更新中.....
 
-https://github.com/youusername/magnetX/blob/master/magnetX/image.png
+![demo.gif](https://github.com/youusername/magnetX/blob/master/magnetX/image.png)
