@@ -10,8 +10,9 @@
 #import "movieModel.h"
 #import "breakDownHtml.h"
 #import "nameTableCellView.h"
+#import "NSTableView+ContextMenu.h"
 
-@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
+@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate>
 
 @property (weak) IBOutlet NSTextField *searchTextField;
 @property (weak) IBOutlet NSProgressIndicator *indicator;
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     [self observeNotification];
     [self setupSearchText];
+//    [self setupTableViewDoubleAction];
     // Do any additional setup after loading the view.
 }
 #pragma mark - Notification
@@ -56,12 +58,25 @@
 //    [self.tableView reloadData];
 //}
 - (void)setupSearchText{
-    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3"];
-    self.searchTextField.stringValue = searchText[arc4random() % 7];
+    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3",@"血族",@"神兽金刚之青龙再现",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
+    self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
     
     [self changeKeyword];
     [self reloadDataAndStopIndicator];
 }
+//- (void)setupTableViewDoubleAction {
+//    NSInteger action = [[NSUserDefaults standardUserDefaults] integerForKey:@"DoubleAction"];
+//    switch (action) {
+//        case 0:
+//            self.tableView.doubleAction = @selector(openUrlLink:);
+//            break;
+//        case 1:
+//            self.tableView.doubleAction = @selector(queryDownloadMagnet:);
+//            break;
+//        default:
+//            break;
+//    }
+//}
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
@@ -73,8 +88,61 @@
 //        return;
 //    }
     [self changeKeyword];
+
+}
+- (void)openUrlLink:(id)sender {
+    NSInteger row = -1;
+    if ([sender isKindOfClass:[NSButton class]]) {
+        row = [self.tableView rowForView:sender];
+    } else {
+        row = self.tableView.selectedRow;
+    }
     
+    if (row<0) {
+        return;
+    }
+    movieModel *torrent = self.magnets[row];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL*url =[NSURL URLWithString:torrent.source];
+        [self openMagnetWith:url];
+    });
+}
+- (void)copyToPasteboard:(id)sender{
+    NSInteger row = -1;
+    if ([sender isKindOfClass:[NSButton class]]) {
+        row = [self.tableView rowForView:sender];
+    } else {
+        row = self.tableView.selectedRow;
+    }
     
+    if (row<0) {
+        return;
+    }
+    movieModel *torrent = self.magnets[row];
+    NSPasteboard*pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
+    [pasteboard setString:torrent.magnet forType:NSStringPboardType];
+}
+- (IBAction)queryDownloadMagnet:(id)sender {
+    NSInteger row = -1;
+    if ([sender isKindOfClass:[NSButton class]]) {
+        row = [self.tableView rowForView:sender];
+    } else {
+        row = self.tableView.selectedRow;
+    }
+    
+    if (row<0) {
+        return;
+    }
+    movieModel *torrent = self.magnets[row];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL*url =[NSURL URLWithString:torrent.magnet];
+        [self openMagnetWith:url];
+    });
+}
+- (void)openMagnetWith:(NSURL *)magnet {
+    [[NSWorkspace sharedWorkspace] openURL:magnet];
 }
 #pragma mark - NSTextFieldDelegate
 
@@ -125,22 +193,27 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
+
 }
 
 #pragma mark - Table View Context Menu Delegate
 
-//- (NSMenu *)tableView:(NSTableView *)aTableView menuForRows:(NSIndexSet *)rows {
-//    NSMenu *rightClickMenu = [[NSMenu alloc] initWithTitle:@""];
-//    NSMenuItem *openItem = [[NSMenuItem alloc] initWithTitle:@"打开介绍页面"
-//                                                      action:@selector(openTorrentLink:)
-//                                               keyEquivalent:@""];
-//    NSMenuItem *downloadItem = [[NSMenuItem alloc] initWithTitle:@"下载"
-//                                                          action:@selector(queryDownloadURL:)
-//                                                   keyEquivalent:@""];
-//    [rightClickMenu addItem:openItem];
-//    [rightClickMenu addItem:downloadItem];
-//    return rightClickMenu;
-//}
+- (NSMenu *)tableView:(NSTableView *)aTableView menuForRows:(NSIndexSet *)rows {
+    NSMenu *rightClickMenu = [[NSMenu alloc] initWithTitle:@""];
+    NSMenuItem *downloadItem = [[NSMenuItem alloc] initWithTitle:@"下载"
+                                                          action:@selector(queryDownloadMagnet:)
+                                                   keyEquivalent:@""];
+    NSMenuItem *copyMagnetItem = [[NSMenuItem alloc] initWithTitle:@"复制链接"
+                                                          action:@selector(copyToPasteboard:)
+                                                   keyEquivalent:@""];
+    NSMenuItem *openItem = [[NSMenuItem alloc] initWithTitle:@"打开介绍页面"
+                                                      action:@selector(openUrlLink:)
+                                               keyEquivalent:@""];
+    [rightClickMenu addItem:downloadItem];
+    [rightClickMenu addItem:copyMagnetItem];
+    [rightClickMenu addItem:openItem];
+    return rightClickMenu;
+}
 
 #pragma mark - Indicator and reload table view data
 

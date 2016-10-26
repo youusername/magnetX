@@ -80,6 +80,7 @@
     if ([identifier isEqualToString:@"siteCell"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"siteCell" owner:self];
         cellView.textField.stringValue = side.site;
+
         return cellView;
     }
 
@@ -88,6 +89,7 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     [self changeSelectRuleOfIndex:self.tableView.selectedRow];
+    
     NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
 }
 

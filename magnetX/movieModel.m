@@ -53,7 +53,7 @@ sideModel *selectSideRule;
     Model.name = [[element firstChildWithXPath:selectSideRule.name] stringValue];
     Model.size = [element firstChildWithXPath:selectSideRule.size].stringValue;
     Model.count = [element firstChildWithXPath:selectSideRule.count].stringValue;
-    Model.source =selectSideRule.site;
+//    Model.source =selectSideRule.site;
     return Model;
 }
 

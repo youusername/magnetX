@@ -18,7 +18,9 @@
     
     ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:data error:nil];
     [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
-        [array addObject:[movieModel entity:element]];
+        movieModel*movie = [movieModel entity:element];
+        movie.source = url;
+        [array addObject:movie];
     }];
 
     return array;
