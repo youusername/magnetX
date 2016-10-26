@@ -180,7 +180,7 @@
     }
     if ([identifier isEqualToString:@"sourceCell"]) {
         NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"sourceCell" owner:self];
-        cellView.textField.stringValue = torrent.source;
+        cellView.textField.stringValue = selectSideRule.site;
         return cellView;
     }
     if ([identifier isEqualToString:@"magnetCell"]) {

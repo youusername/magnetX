@@ -1,5 +1,14 @@
  [
-  
+  {
+  "site":"SOBT",
+  "waiting":"0",
+  "group":"//div[@class='search-list col-md-8']//div[@class='search-item']",
+  "magnet":".//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//div[@class='item-bar']//span[2]//b",
+  "count":".//div[@class='item-bar']//span[1]//b",
+  "source":"http://www.sobt5.org/q/XXX.html"
+  },
   {
   "site":"BT岛",
   "waiting":"0",
