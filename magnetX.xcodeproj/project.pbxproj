@@ -25,6 +25,7 @@
 		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
 		AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E61DBA171100D12963 /* nameTableCellView.m */; };
 		AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */; };
+		AAE4C01A1DC091660000D0B9 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C0191DC091660000D0B9 /* image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		AAC820E61DBA171100D12963 /* nameTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameTableCellView.m; sourceTree = "<group>"; };
 		AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ContextMenu.h"; sourceTree = "<group>"; };
 		AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ContextMenu.m"; sourceTree = "<group>"; };
+		AAE4C0191DC091660000D0B9 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				1F161DEA1DBB1FB00037BDBF /* magnetXAPI.h */,
 				1F161DEB1DBB20150037BDBF /* magnetX.pch */,
 				AAC820E01DB9F27500D12963 /* SourceList.plist */,
+				AAE4C0191DC091660000D0B9 /* image.png */,
 				AAC820C21DB8C8C600D12963 /* magnetX.xcdatamodeld */,
 				AAC820BC1DB8C8C600D12963 /* Supporting Files */,
 			);
@@ -258,6 +261,7 @@
 				1F161DE61DBA43300037BDBF /* rule.json in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
+				AAE4C01A1DC091660000D0B9 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
