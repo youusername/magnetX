@@ -1,4 +1,25 @@
  [
+  
+  {
+  "site":"BT岛",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//dt//span[1]",
+  "count":".//dt//span[2]",
+  "source":"http://www.btdao5.com/list/XXX-s1d-1.html"
+  },
+  {
+  "site":"bt177",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//div[@class='dInfo']",
+  "name":".//div[@class='T1']",
+  "size":".//dl[@class='BotInfo']//dt/span[1]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
+  "source":"http://www.bt177.net/word/XXX.html"
+  },
   {
   "site":"高清MP4吧",
   "waiting":"10",
@@ -8,15 +29,5 @@
   "size":".//td[4]",
   "count":".//td[1]",
   "source":"http://www.mp4ba.com/search.php?keyword=XXX"
-  },
-  {
-  "site":"http://www.bt177.net22222",
-  "waiting":"0",
-  "group":"//ul[@class='mlist']//li",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
   }
 ]
