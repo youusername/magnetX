@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AFHTTPSessionManager.h"
 @interface AppDelegate ()
 
 - (IBAction)saveAction:(id)sender;
@@ -15,6 +15,26 @@
 @end
 
 @implementation AppDelegate
+#pragma mark - MenuItem
+
+- (IBAction)updateRule:(id)sender {
+    NSURL*url = [NSURL URLWithString:@"https://github.com/youusername/magnetX/blob/master/rule.json"];
+//    dispatch_queue_t requestQueue = dispatch_get_main_queue();
+//    AFHTTPSessionManager*session = [AFHTTPSessionManager manager];
+//    session.completionQueue = requestQueue;
+//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+//    securityPolicy.validatesDomainName = NO;
+//    session.securityPolicy = securityPolicy;
+//    [session GET:url.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
+    
+}
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
