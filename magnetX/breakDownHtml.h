@@ -10,5 +10,7 @@
 extern sideModel *selectSideRule;
 
 @interface breakDownHtml : NSObject
-+ (NSMutableArray*)breakDownHtmlToUrl:(NSString*)url;
++ (breakDownHtml *)downloader;
+- (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSArray*array)) successHandler failure:(void(^)(NSError *error)) failureHandler;
+
 @end

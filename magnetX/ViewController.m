@@ -27,8 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self observeNotification];
-    [self setupSearchText];
+    [self config];
 //    [self setupTableViewDoubleAction];
     // Do any additional setup after loading the view.
 }
@@ -39,24 +38,46 @@
     [MagnetXNotification addObserver:self selector:@selector(startAnimatingProgressIndicator) name:MagnetXStartAnimatingProgressIndicator];
     [MagnetXNotification addObserver:self selector:@selector(stopAnimatingProgressIndicator) name:MagnetXStopAnimatingProgressIndicator];
 }
+- (void)config{
+    self.magnets = [NSMutableArray new];
+    
+    [self observeNotification];
+    [self setupSearchText];
+}
 - (void)changeKeyword{
 
-    [self.magnets removeAllObjects];
-    NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
-    self.magnets = [breakDownHtml breakDownHtmlToUrl:[beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
-    
-    if (self.magnets.count>0) {
-        [self reloadDataAndStopIndicator];
-    }else{
-        [self setErrorInfoAndStopIndicator];
-    }
+    [self resetData];
 
+    
+    NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+    NSString*url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+//    self.magnets = [breakDownHtml breakDownHtmlToUrl:url];
+//
+//    if (self.magnets.count>0) {
+//        [self reloadDataAndStopIndicator];
+//    }else{
+//        [self setErrorInfoAndStopIndicator];
+//    }
+    @WEAKSELF(self);
+    [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
+        
+    } success:^(NSArray *array) {
+        [selfWeak.magnets addObjectsFromArray:array];
+        
+        if (array.count>0) {
+            [selfWeak reloadDataAndStopIndicator];
+        }else{
+            [selfWeak setErrorInfoAndStopIndicator];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
 
 }
-//- (void)resetData {
-//    [self.magnets removeAllObjects];
-//    [self.tableView reloadData];
-//}
+- (void)resetData {
+    [self.magnets removeAllObjects];
+    [self.tableView reloadData];
+}
 - (void)setupSearchText{
     NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3",@"血族",@"神兽金刚之青龙再现",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
     self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
