@@ -47,17 +47,11 @@
 - (void)changeKeyword{
 
     [self resetData];
-
+    [self startAnimatingProgressIndicator];
     
     NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
     NSString*url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
-//    self.magnets = [breakDownHtml breakDownHtmlToUrl:url];
-//
-//    if (self.magnets.count>0) {
-//        [self reloadDataAndStopIndicator];
-//    }else{
-//        [self setErrorInfoAndStopIndicator];
-//    }
+
     @WEAKSELF(self);
     [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
         
@@ -67,10 +61,10 @@
         if (array.count>0) {
             [selfWeak reloadDataAndStopIndicator];
         }else{
-            [selfWeak setErrorInfoAndStopIndicator];
+            [selfWeak setErrorInfoAndStopIndicator:@"源网站没有数据,切换其它源试试！"];
         }
     } failure:^(NSError *error) {
-        
+        [selfWeak setErrorInfoAndStopIndicator:@"请检查网络，或者等一下再刷新"];
     }];
 
 }
@@ -83,7 +77,6 @@
     self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
     
     [self changeKeyword];
-    [self reloadDataAndStopIndicator];
 }
 //- (void)setupTableViewDoubleAction {
 //    NSInteger action = [[NSUserDefaults standardUserDefaults] integerForKey:@"DoubleAction"];
@@ -244,8 +237,8 @@
     self.info.stringValue = @"加载完成!";
 }
 
-- (void)setErrorInfoAndStopIndicator {
-    self.info.stringValue = @"请检查网络，或者等一下再刷新";
+- (void)setErrorInfoAndStopIndicator:(NSString*)string{
+    self.info.stringValue = string;
     [self stopAnimatingProgressIndicator];
 }
 #pragma mark - ProgressIndicator
@@ -253,7 +246,7 @@
 - (void)startAnimatingProgressIndicator {
     self.indicator.hidden = NO;
     [self.indicator startAnimation:self];
-    self.info.stringValue = @"";
+    self.info.stringValue = @"努力加载中.....";
 }
 
 - (void)stopAnimatingProgressIndicator {
