@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AFHTTPSessionManager.h"
+#import "SSZipArchive.h"
 @interface AppDelegate ()
 
 - (IBAction)saveAction:(id)sender;
@@ -18,20 +19,26 @@
 #pragma mark - MenuItem
 
 - (IBAction)updateRule:(id)sender {
-    NSURL*url = [NSURL URLWithString:@"https://github.com/youusername/magnetX/blob/master/rule.json"];
-//    dispatch_queue_t requestQueue = dispatch_get_main_queue();
-//    AFHTTPSessionManager*session = [AFHTTPSessionManager manager];
-//    session.completionQueue = requestQueue;
-//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-//    securityPolicy.validatesDomainName = NO;
-//    session.securityPolicy = securityPolicy;
-//    [session GET:url.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        
-//    }];
+    
+    NSURL*url = [NSURL URLWithString:MagnetXUpdateRuleURL];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    NSURLSession * session = [NSURLSession sharedSession];
+    NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSString *docPath = [[NSBundle mainBundle] resourcePath];
+            [data writeToFile:[docPath stringByAppendingString:@"/rule.zip"] atomically:YES ];
+            
+            [SSZipArchive unzipFileAtPath:[docPath stringByAppendingString:@"/rule.zip"] toDestination:[docPath stringByAppendingString:@"/"]];
+             
+            NSLog(@"writeToFile\n%@",[docPath stringByAppendingString:@"rule.zip"]);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 更新界面
+                [MagnetXNotification postNotificationName:MagnetXUpdateRuleNotification userInfo:@"update"];
+            });
+        });
+
+    }];
+    [dataTask resume];
     
 }
 

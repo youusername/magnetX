@@ -200,7 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC820CD1DB8C8C700D12963 /* Build configuration list for PBXNativeTarget "magnetX" */;
 			buildPhases = (
-				8E904F0789AB392F105214E9 /* Check Pods Manifest.lock */,
+				8E904F0789AB392F105214E9 /* [CP] Check Pods Manifest.lock */,
 				4961C0CDBA2C586BB38F9AAA /* [CP] Check Pods Manifest.lock */,
 				AAC820B21DB8C8C600D12963 /* Sources */,
 				AAC820B31DB8C8C600D12963 /* Frameworks */,
@@ -298,14 +298,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E904F0789AB392F105214E9 /* Check Pods Manifest.lock */ = {
+		8E904F0789AB392F105214E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

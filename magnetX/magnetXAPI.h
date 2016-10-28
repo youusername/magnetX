@@ -13,6 +13,9 @@
 #define MagnetXSiteChangeKeywordNotification @"siteChangeKeywordNotification"
 #define MagnetXStartAnimatingProgressIndicator @"startAnimatingProgressIndicator"
 #define MagnetXStopAnimatingProgressIndicator @"stopAnimatingProgressIndicator"
+#define MagnetXUpdateRuleNotification @"UpdateRuleNotification"
+
+#define MagnetXUpdateRuleURL    @"https://github.com/youusername/rule/archive/master.zip"
 
 #pragma mark - Snippet
 #define WEAKSELF(o) autoreleasepool{} __weak typeof(o) o##Weak = o;

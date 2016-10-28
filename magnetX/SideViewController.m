@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.sites = [NSMutableArray new];
     [self setupTableViewData];
     [self observeNotification];
 
@@ -33,10 +33,18 @@
     selectSideRule = self.sites[0];
 }
 - (void)setupTableViewData{
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule" withExtension:@"json"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule-master/rule" withExtension:@"json"];;
+    
     NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    if (data==nil) {
+        url = [[NSBundle mainBundle] URLForResource:@"rul" withExtension:@"json"];
+        data = [NSData dataWithContentsOfURL:url];
+    }
+    
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    self.sites = [NSMutableArray new];
+    
+    [self.sites removeAllObjects];
     
     for (NSDictionary *dic in array) {
         sideModel *side = [sideModel new];
@@ -64,7 +72,10 @@
 #pragma mark - Notification
 
 - (void)observeNotification {
+    [MagnetXNotification addObserver:self selector:@selector(setupTableViewData) name:MagnetXUpdateRuleNotification];
 }
+
+
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

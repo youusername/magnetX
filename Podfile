@@ -8,6 +8,7 @@ target 'magnetX' do
   # Pods for magnetX
 pod 'AFNetworking'
 pod 'Ono'
-pod 'CDEvents'
-pod 'DateTools'
+#pod 'CDEvents'
+#pod 'DateTools'
+pod 'SSZipArchive'
 end
