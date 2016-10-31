@@ -235,8 +235,11 @@
 #pragma mark - Indicator and reload table view data
 
 - (void)reloadDataAndStopIndicator {
+    dispatch_async(dispatch_get_main_queue(), ^{
     [self stopAnimatingProgressIndicator];
+
     [self.tableView reloadData];
+    });
     self.info.stringValue = @"加载完成!";
 }
 

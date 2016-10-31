@@ -1,23 +1,13 @@
  [
   {
-  "site":"Btbook",
+  "site":"磁力猪",
   "waiting":"0",
-  "group":"//div[@class='search-item']",
-  "magnet":".//span[@class='list-label']//a//@href",
+  "group":"//div[@class='row']",
+  "magnet":".//a//@href",
   "name":".//a",
-  "size":".//span[@class='list-value'][2]",
-  "count":".//span[@class='list-value'][3]",
-  "source":"http://www.btmeet.org/search/XXX.html"
-  },
-  {
-  "site":"面包搜索",
-  "waiting":"0",
-  "group":"//div[@class='search-item']",
-  "magnet":".//span[@class='list-label']//a//@href",
-  "name":".//a",
-  "size":".//span[@class='list-value'][2]",
-  "count":".//span[@class='list-value'][3]",
-  "source":"http://www.breadsearch.com/search/XXX"
+  "size":".//div[@class='col-sm-2 col-lg-1 hidden-xs text-right size']",
+  "count":".//div[@class='col-sm-2 col-lg-2 hidden-xs text-right date']",
+  "source":"http://www.clpig.com/torrent/XXX.html"
   },
   {
   "site":"cililian.me",
@@ -62,11 +52,11 @@
   {
   "site":"bt177",
   "waiting":"0",
-  "group":"//ul[@class='mlist']//li",
-  "magnet":".//div[@class='dInfo']",
-  "name":".//div[@class='T1']",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
+  "group":"//li",
+  "magnet":".//a//@href",
+  "name":".//a",
+  "size":".//span[1]",
+  "count":".//span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
   },
   {

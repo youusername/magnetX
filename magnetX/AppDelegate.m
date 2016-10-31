@@ -17,6 +17,10 @@
 
 @implementation AppDelegate
 #pragma mark - MenuItem
+- (IBAction)help:(id)sender {
+    NSArray* urls = [NSArray arrayWithObject:[NSURL URLWithString:@"https://github.com/youusername/magnetX"]];
+    [[NSWorkspace sharedWorkspace] openURLs:urls withAppBundleIdentifier:nil options:NSWorkspaceLaunchWithoutActivation additionalEventParamDescriptor:nil launchIdentifiers:nil];
+}
 
 - (IBAction)updateRule:(id)sender {
     
