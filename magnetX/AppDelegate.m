@@ -24,18 +24,17 @@
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     NSURLSession * session = [NSURLSession sharedSession];
     NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSString *docPath = [[NSBundle mainBundle] resourcePath];
             [data writeToFile:[docPath stringByAppendingString:@"/rule.zip"] atomically:YES ];
             
-            [SSZipArchive unzipFileAtPath:[docPath stringByAppendingString:@"/rule.zip"] toDestination:[docPath stringByAppendingString:@"/"]];
-             
-            NSLog(@"writeToFile\n%@",[docPath stringByAppendingString:@"rule.zip"]);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // 更新界面
-                [MagnetXNotification postNotificationName:MagnetXUpdateRuleNotification userInfo:@"update"];
-            });
-        });
+            [SSZipArchive unzipFileAtPath:[docPath stringByAppendingString:@"/rule.zip"] toDestination:[docPath stringByAppendingString:@"/"]progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
+                NSLog(@"entry %@",entry);
+
+            } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nonnull error) {
+                
+                NSLog(@"path %@",path);
+                [MagnetXNotification postNotificationName:MagnetXUpdateRuleNotification];
+            }];
 
     }];
     [dataTask resume];

@@ -33,14 +33,15 @@
     selectSideRule = self.sites[0];
 }
 - (void)setupTableViewData{
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule-master/rule" withExtension:@"json"];;
+    NSString *url = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/rule-master/rule.json"];
+    NSData *data = [NSData dataWithContentsOfFile:url];
     
     
-    if (url==nil) {
-        url = [[NSBundle mainBundle] URLForResource:@"rule" withExtension:@"json"];
+    if (data==nil) {
+        url = [[NSBundle mainBundle] pathForResource:@"rule" ofType:@"json"];
+        data = [NSData dataWithContentsOfFile:url];
     }
     
-    NSData *data = [NSData dataWithContentsOfURL:url];
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     
     [self.sites removeAllObjects];
@@ -58,7 +59,10 @@
         [self.sites addObject:side];
     }
     [self changeSelectRuleOfIndex:0];
+    dispatch_async(dispatch_get_main_queue(), ^{
+
     [self.tableView reloadData];
+    });
 }
 - (void)changeSelectRuleOfIndex:(NSInteger)index{
     if (index<0) {

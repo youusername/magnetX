@@ -70,7 +70,10 @@
 }
 - (void)resetData {
     [self.magnets removeAllObjects];
+    dispatch_async(dispatch_get_main_queue(), ^{
+
     [self.tableView reloadData];
+    });
 }
 - (void)setupSearchText{
     NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3",@"血族",@"神兽金刚之青龙再现",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
