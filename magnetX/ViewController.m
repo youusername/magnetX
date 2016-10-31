@@ -237,10 +237,10 @@
 - (void)reloadDataAndStopIndicator {
     dispatch_async(dispatch_get_main_queue(), ^{
     [self stopAnimatingProgressIndicator];
+    self.info.stringValue = @"加载完成!";
 
     [self.tableView reloadData];
     });
-    self.info.stringValue = @"加载完成!";
 }
 
 - (void)setErrorInfoAndStopIndicator:(NSString*)string{

@@ -7,6 +7,7 @@
 //
 
 #import "SideViewController.h"
+#import "AppDelegate.h"
 //#import "DMHYCoreDataStackManager.h"
 
 @interface SideViewController ()<NSTableViewDataSource, NSTableViewDelegate, NSSplitViewDelegate>
@@ -31,6 +32,10 @@
 
     extern sideModel *selectSideRule;
     selectSideRule = self.sites[0];
+}
+- (IBAction)update:(id)sender {
+    AppDelegate* app =(AppDelegate*)[NSApplication sharedApplication].delegate;
+    [app updateRule:nil];
 }
 - (void)setupTableViewData{
     NSString *url = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/rule-master/rule.json"];

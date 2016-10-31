@@ -17,6 +17,12 @@
 
 @implementation AppDelegate
 #pragma mark - MenuItem
+- (IBAction)hideWindow:(id)sender {
+    [[NSApplication sharedApplication] hide:self];
+}
+
+
+
 - (IBAction)help:(id)sender {
     NSArray* urls = [NSArray arrayWithObject:[NSURL URLWithString:@"https://github.com/youusername/magnetX"]];
     [[NSWorkspace sharedWorkspace] openURLs:urls withAppBundleIdentifier:nil options:NSWorkspaceLaunchWithoutActivation additionalEventParamDescriptor:nil launchIdentifiers:nil];
@@ -44,9 +50,13 @@
     [dataTask resume];
     
 }
-
+//点击左上角小叉，是否退出软件
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
+    return YES;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+
     // Insert code here to initialize your application
 }
 
@@ -54,8 +64,10 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
-
-
+#pragma mark - NSWindowDelegate
+-(void)windowWillClose:(NSNotification *)notification{
+//    [self hideWindow:nil];
+}
 #pragma mark - Core Data stack
 
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
