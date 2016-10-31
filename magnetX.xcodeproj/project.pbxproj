@@ -10,6 +10,7 @@
 		1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DE81DBA457D0037BDBF /* sideModel.m */; };
 		1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DED1DBB22790037BDBF /* MagnetXNotification.m */; };
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
+		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
 		AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C01DB8C8C600D12963 /* ViewController.m */; };
@@ -25,7 +26,6 @@
 		AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E61DBA171100D12963 /* nameTableCellView.m */; };
 		AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */; };
 		AAE4C01A1DC091660000D0B9 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C0191DC091660000D0B9 /* image.png */; };
-		AAE4C01F1DC1A5D10000D0B9 /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C01E1DC1A5D10000D0B9 /* rule.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +38,7 @@
 		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
+		AA78C13D1DC6EF730014BA0C /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = SOURCE_ROOT; };
 		AAC820B61DB8C8C600D12963 /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC820B91DB8C8C600D12963 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAC820BA1DB8C8C600D12963 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ContextMenu.h"; sourceTree = "<group>"; };
 		AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ContextMenu.m"; sourceTree = "<group>"; };
 		AAE4C0191DC091660000D0B9 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
-		AAE4C01E1DC1A5D10000D0B9 /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +125,7 @@
 				AAC820DC1DB9ECF600D12963 /* Model */,
 				AAC820C51DB8C8C600D12963 /* Assets.xcassets */,
 				AAC820CA1DB8C8C700D12963 /* Info.plist */,
+				AA78C13D1DC6EF730014BA0C /* rule.json */,
 				1F161DEA1DBB1FB00037BDBF /* magnetXAPI.h */,
 				1F161DEB1DBB20150037BDBF /* magnetX.pch */,
 				AAC820E01DB9F27500D12963 /* SourceList.plist */,
@@ -180,7 +181,6 @@
 		AAC820DC1DB9ECF600D12963 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AAE4C01E1DC1A5D10000D0B9 /* rule.json */,
 				1F161DEC1DBB22790037BDBF /* MagnetXNotification.h */,
 				1F161DED1DBB22790037BDBF /* MagnetXNotification.m */,
 				1F161DE71DBA457D0037BDBF /* sideModel.h */,
@@ -260,7 +260,7 @@
 				AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
-				AAE4C01F1DC1A5D10000D0B9 /* rule.json in Resources */,
+				AA78C13E1DC6EF730014BA0C /* rule.json in Resources */,
 				AAE4C01A1DC091660000D0B9 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

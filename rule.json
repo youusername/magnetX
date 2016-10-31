@@ -1,5 +1,25 @@
  [
   {
+  "site":"Btbook",
+  "waiting":"0",
+  "group":"//div[@class='search-item']",
+  "magnet":".//span[@class='list-label']//a//@href",
+  "name":".//a",
+  "size":".//span[@class='list-value'][2]",
+  "count":".//span[@class='list-value'][3]",
+  "source":"http://www.btmeet.org/search/XXX.html"
+  },
+  {
+  "site":"面包搜索",
+  "waiting":"0",
+  "group":"//div[@class='search-item']",
+  "magnet":".//span[@class='list-label']//a//@href",
+  "name":".//a",
+  "size":".//span[@class='list-value'][2]",
+  "count":".//span[@class='list-value'][3]",
+  "source":"http://www.breadsearch.com/search/XXX"
+  },
+  {
   "site":"cililian.me",
   "waiting":"0",
   "group":"//ul[@class='mlist']//li",
@@ -8,5 +28,55 @@
   "size":".//dl[@class='BotInfo']//dt/span[1]",
   "count":".//dl[@class='BotInfo']//dt/span[2]",
   "source":"http://cililian.me/list/XXX/1.html"
+  },
+  {
+  "site":"种子搜",
+  "waiting":"0",
+  "group":"//table[@class='table table-bordered table-striped']",
+  "magnet":".//a//@href",
+  "name":".//tbody//a",
+  "size":".//tbody//tr//td[2]//strong",
+  "count":".//tbody//tr//td[1]//strong",
+  "source":"http://www.zhongziso.com/list/XXX/1"
+  },
+  {
+  "site":"SOBT",
+  "waiting":"0",
+  "group":"//div[@class='search-list col-md-8']//div[@class='search-item']",
+  "magnet":".//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//div[@class='item-bar']//span[2]//b",
+  "count":".//div[@class='item-bar']//span[1]//b",
+  "source":"http://www.sobt5.org/q/XXX.html"
+  },
+  {
+  "site":"BT岛",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//dt//span[1]",
+  "count":".//dt//span[2]",
+  "source":"http://www.btdao5.com/list/XXX-s1d-1.html"
+  },
+  {
+  "site":"bt177",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//div[@class='dInfo']",
+  "name":".//div[@class='T1']",
+  "size":".//dl[@class='BotInfo']//dt/span[1]",
+  "count":".//dl[@class='BotInfo']//dt/span[2]",
+  "source":"http://www.bt177.net/word/XXX.html"
+  },
+  {
+  "site":"高清MP4吧",
+  "waiting":"10",
+  "group":"//tbody[@class='tbody']//tr",
+  "magnet":".//td[@style='text-align:left;']//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//td[4]",
+  "count":".//td[1]",
+  "source":"http://www.mp4ba.com/search.php?keyword=XXX"
   }
-]
+  ]
