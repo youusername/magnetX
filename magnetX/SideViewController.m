@@ -35,13 +35,12 @@
 - (void)setupTableViewData{
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"rule-master/rule" withExtension:@"json"];;
     
-    NSData *data = [NSData dataWithContentsOfURL:url];
     
-    if (data==nil) {
-        url = [[NSBundle mainBundle] URLForResource:@"rul" withExtension:@"json"];
-        data = [NSData dataWithContentsOfURL:url];
+    if (url==nil) {
+        url = [[NSBundle mainBundle] URLForResource:@"rule" withExtension:@"json"];
     }
     
+    NSData *data = [NSData dataWithContentsOfURL:url];
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     
     [self.sites removeAllObjects];
