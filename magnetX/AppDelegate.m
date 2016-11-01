@@ -51,15 +51,28 @@
     
 }
 //点击左上角小叉，是否退出软件
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
-    return YES;
-}
+//- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
+//    return YES;
+//}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
     // Insert code here to initialize your application
 }
-
+//点击Dock重新打开主窗口
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication
+                    hasVisibleWindows:(BOOL)flag{
+    //    if (!flag){//是否有可见窗口
+    //主窗口显示
+    //        [NSApp activateIgnoringOtherApps:NO];
+    [self.RootWindow makeKeyAndOrderFront:self];
+    
+    
+    //    }
+    
+    
+    return YES;
+}
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
