@@ -1,6 +1,8 @@
 # magnetX
 
 
+下载地址  https://github.com/youusername/magnetX/releases
+
 > Mac上从各大磁力搜索网站抓取资源的软件
 
 持续更新中.....
