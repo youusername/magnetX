@@ -3,6 +3,8 @@
 
 下载地址  https://github.com/youusername/magnetX/releases
 
+如果您有很好的资源网站,请发邮件给我，收到后会进行后续规则添加。 214644496@qq.com
+
 > Mac上从各大磁力搜索网站抓取资源的软件
 
 持续更新中.....
