@@ -1,5 +1,35 @@
  [
   {
+  "site":"爱磁力",
+  "waiting":"0",
+  "group":"//td[@class='x-item']",
+  "magnet":".//a//@href",
+  "name":".//a",
+  "size":".//span[4]//b",
+  "count":".//span[3]//b",
+  "source":"http://icili.org/list/XXX/1"
+  },
+  {
+  "site":"磁力吧",
+  "waiting":"0",
+  "group":"//div[@class='search-item']",
+  "magnet":".//a//@href",
+  "name":".//a",
+  "size":".//span[3]//b",
+  "count":".//span[2]//b",
+  "source":"http://www.ciliba.org/s/XXX.html"
+  },
+  {
+  "site":"BT云搜",
+  "waiting":"0",
+  "group":"//li[@class='media']",
+  "magnet":".//a//@href",
+  "name":".//a",
+  "size":".//div[@class='media-more']//span[2]",
+  "count":".//div[@class='media-more']//span[1]",
+  "source":"http://www.btyunsou.com/search/XXX_ctime_1.html"
+  },
+  {
   "site":"磁力猪",
   "waiting":"0",
   "group":"//div[@class='row']",
@@ -58,15 +88,5 @@
   "size":".//span[1]",
   "count":".//span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
-  },
-  {
-  "site":"高清MP4吧",
-  "waiting":"10",
-  "group":"//tbody[@class='tbody']//tr",
-  "magnet":".//td[@style='text-align:left;']//a//@href",
-  "name":".//a[@target='_blank']",
-  "size":".//td[4]",
-  "count":".//td[1]",
-  "source":"http://www.mp4ba.com/search.php?keyword=XXX"
   }
   ]
