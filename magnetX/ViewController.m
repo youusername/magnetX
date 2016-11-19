@@ -37,12 +37,16 @@
     [MagnetXNotification addObserver:self selector:@selector(changeKeyword) name:MagnetXSiteChangeKeywordNotification];
     [MagnetXNotification addObserver:self selector:@selector(startAnimatingProgressIndicator) name:MagnetXStartAnimatingProgressIndicator];
     [MagnetXNotification addObserver:self selector:@selector(stopAnimatingProgressIndicator) name:MagnetXStopAnimatingProgressIndicator];
+    [MagnetXNotification addObserver:self selector:@selector(makeFirstResponder) name:MagnetXMakeFirstResponder];
 }
 - (void)config{
     self.magnets = [NSMutableArray new];
     
     [self observeNotification];
     [self setupSearchText];
+}
+- (void)makeFirstResponder{
+    [[self.searchTextField window] makeFirstResponder:self.searchTextField];
 }
 - (void)changeKeyword{
 
