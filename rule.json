@@ -1,5 +1,25 @@
  [
   {
+  "site":"AOYOSO",
+  "waiting":"0",
+  "group":"//div[@class='col-md-8']//div[@class='panel panel-default']",
+  "magnet":".//a//@href",
+  "name":".//a",
+  "size":".//table//tr//td[2]",
+  "count":".//table//tr//td[1]",
+  "source":"http://www.aoyoso.com/search/XXX_ctime_1.html"
+  },
+  {
+  "site":"Torrent So",
+  "waiting":"0",
+  "group":"//div[@class='bt_list']//a[@class='tableli']",
+  "magnet":".//@href",
+  "name":".//h3",
+  "size":".//em[@class='list_file_size']",
+  "count":".//em[@class='list_file_time']",
+  "source":"https://www.torrentso.com/cn/s/XXX/"
+  },
+  {
   "site":"爱磁力",
   "waiting":"0",
   "group":"//td[@class='x-item']",
