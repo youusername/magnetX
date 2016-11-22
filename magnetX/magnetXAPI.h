@@ -14,6 +14,8 @@
 #define MagnetXStartAnimatingProgressIndicator @"startAnimatingProgressIndicator"
 #define MagnetXStopAnimatingProgressIndicator @"stopAnimatingProgressIndicator"
 #define MagnetXUpdateRuleNotification @"UpdateRuleNotification"
+#define MagnetXMakeFirstResponder   @"makeFirstResponder"
+
 
 #define MagnetXUpdateRuleURL    @"https://github.com/youusername/rule/archive/master.zip"
 

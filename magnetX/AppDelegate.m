@@ -77,6 +77,55 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
+- (void)applicationWillFinishLaunching:(NSNotification *)notification
+{
+    
+}
+
+- (void)applicationWillHide:(NSNotification *)notification
+{
+    
+}
+- (void)applicationDidHide:(NSNotification *)notification{
+    
+}
+- (void)applicationWillUnhide:(NSNotification *)notification{
+    
+}
+- (void)applicationDidUnhide:(NSNotification *)notification{
+    
+}
+- (void)applicationWillBecomeActive:(NSNotification *)notification{
+    //回到应用时让搜索输入框成为第一响应者
+    [MagnetXNotification postNotificationName:MagnetXMakeFirstResponder];
+    
+}
+- (void)applicationDidBecomeActive:(NSNotification *)notification{
+    
+}
+- (void)applicationWillResignActive:(NSNotification *)notification{
+    
+}
+- (void)applicationDidResignActive:(NSNotification *)notification{
+    
+    
+}
+- (void)applicationWillUpdate:(NSNotification *)notification{
+    
+}
+- (void)applicationDidUpdate:(NSNotification *)notification{
+    
+}
+
+- (void)applicationDidChangeScreenParameters:(NSNotification *)notification{
+    
+    
+}
+
+- (void)applicationDidChangeOcclusionState:(NSNotification *)notification{
+    
+}
+
 #pragma mark - NSWindowDelegate
 -(void)windowWillClose:(NSNotification *)notification{
 //    [self hideWindow:nil];
