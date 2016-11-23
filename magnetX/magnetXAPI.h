@@ -18,6 +18,10 @@
 
 
 #define MagnetXUpdateRuleURL    @"https://github.com/youusername/rule/archive/master.zip"
+#define MagnetXUpdateAppURL     @"https://github.com/youusername/magnetX/releases"
+
+#define MagnetXVersionString     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
 
 #pragma mark - Snippet
 #define WEAKSELF(o) autoreleasepool{} __weak typeof(o) o##Weak = o;

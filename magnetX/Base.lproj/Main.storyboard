@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -376,6 +376,11 @@
                                                 <action selector="updateRule:" target="Voe-Tx-rLC" id="cI0-bo-VHE"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="检查更新软件" keyEquivalent="i" id="T7d-4p-9hK">
+                                            <connections>
+                                                <segue destination="Xrt-b5-LRu" kind="show" id="i2T-me-y9w"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -401,6 +406,61 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-465" y="-425"/>
+        </scene>
+        <!--Date Application View Controller-->
+        <scene sceneID="bTR-My-b5q">
+            <objects>
+                <viewController storyboardIdentifier="UPDateApplicationViewController" id="Xrt-b5-LRu" customClass="UPDateApplicationViewController" sceneMemberID="viewController">
+                    <view key="view" id="QoK-Xj-pPo">
+                        <rect key="frame" x="0.0" y="0.0" width="455" height="308"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6a3-Mx-h1x">
+                                <rect key="frame" x="103" y="233" width="248" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="当前版本：1.0" id="7PC-Af-QLX">
+                                    <font key="font" metaFont="system" size="26"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-fX-3Sr">
+                                <rect key="frame" x="103" y="185" width="248" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="最新版本：1.1" id="7Gn-CB-jdS">
+                                    <font key="font" size="30" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFn-VK-04d">
+                                <rect key="frame" x="107" y="66" width="240" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="下载最新版" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wa0-UH-MTZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="updateAPP:" target="Xrt-b5-LRu" id="GmO-DU-W41"/>
+                                </connections>
+                            </button>
+                            <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-aN-54E">
+                                <rect key="frame" x="20" y="121" width="415" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <levelIndicatorCell key="cell" alignment="left" doubleValue="2" maxValue="2" warningValue="2" criticalValue="2" levelIndicatorStyle="continuousCapacity" id="evq-eH-J2c"/>
+                            </levelIndicator>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="downButton" destination="aFn-VK-04d" id="teN-SE-Thy"/>
+                        <outlet property="githubVersionLabel" destination="HAt-fX-3Sr" id="UMY-5X-sPe"/>
+                        <outlet property="level" destination="Xef-aN-54E" id="ZI4-vg-V9A"/>
+                        <outlet property="versionLabel" destination="6a3-Mx-h1x" id="OL4-ER-Gyh"/>
+                    </connections>
+                </viewController>
+                <customObject id="nqa-3M-plL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453.5" y="-81"/>
         </scene>
         <!--关于MagnetX-->
         <scene sceneID="f93-vs-1ew">
@@ -571,7 +631,7 @@
                                             </subviews>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="NUe-RM-88L">
-                                            <rect key="frame" x="1" y="110" width="220.84069442749023" height="16"/>
+                                            <rect key="frame" x="1" y="110" width="221" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Onq-pr-rga">

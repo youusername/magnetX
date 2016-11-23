@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AFHTTPSessionManager.h"
-#import "SSZipArchive.h"
+
 @interface AppDelegate ()
 
 - (IBAction)saveAction:(id)sender;
@@ -50,6 +49,8 @@
     [dataTask resume];
     
 }
+
+
 //点击左上角小叉，是否退出软件
 //- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
 //    return YES;

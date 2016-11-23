@@ -11,6 +11,6 @@ extern sideModel *selectSideRule;
 
 @interface breakDownHtml : NSObject
 + (breakDownHtml *)downloader;
-- (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSArray*array)) successHandler failure:(void(^)(NSError *error)) failureHandler;
+- (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSData*data)) successHandler failure:(void(^)(NSError *error)) failureHandler;
 
 @end

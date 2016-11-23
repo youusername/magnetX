@@ -63,7 +63,16 @@ sideModel *selectSideRule;
     return Model;
 }
 
-
++ (NSArray*)HTMLDocumentWithData:(NSData*)data{
+    NSMutableArray*array = [NSMutableArray new];
+    ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:data error:nil];
+    [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
+        movieModel*movie = [movieModel entity:element];
+//        movie.source = url;
+        [array addObject:movie];
+    }];
+    return array;
+}
 
 
 

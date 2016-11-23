@@ -59,10 +59,11 @@
     @WEAKSELF(self);
     [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
         
-    } success:^(NSArray *array) {
-        [selfWeak.magnets addObjectsFromArray:array];
+    } success:^(NSData*data) {
         
-        if (array.count>0) {
+        [selfWeak.magnets addObjectsFromArray:[movieModel HTMLDocumentWithData:data]];
+        
+        if (selfWeak.magnets.count>0) {
             [selfWeak reloadDataAndStopIndicator];
         }else{
             [selfWeak setErrorInfoAndStopIndicator:@"源网站没有数据,切换其它源试试！"];
@@ -122,10 +123,11 @@
     if (row<0) {
         return;
     }
-    movieModel *torrent = self.magnets[row];
+    NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+    NSString*url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL*url =[NSURL URLWithString:torrent.source];
-        [self openMagnetWith:url];
+        NSURL*toURL =[NSURL URLWithString:url];
+        [self openMagnetWith:toURL];
     });
 }
 - (void)copyToPasteboard:(id)sender{

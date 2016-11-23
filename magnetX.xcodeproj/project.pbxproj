@@ -10,6 +10,7 @@
 		1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DE81DBA457D0037BDBF /* sideModel.m */; };
 		1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DED1DBB22790037BDBF /* MagnetXNotification.m */; };
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
+		61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */; };
 		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
@@ -35,6 +36,8 @@
 		1F161DEC1DBB22790037BDBF /* MagnetXNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnetXNotification.h; sourceTree = "<group>"; };
 		1F161DED1DBB22790037BDBF /* MagnetXNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnetXNotification.m; sourceTree = "<group>"; };
 		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61746F931DE5CCE7006E7F9C /* UPDateApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPDateApplicationViewController.h; sourceTree = "<group>"; };
+		61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPDateApplicationViewController.m; sourceTree = "<group>"; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		AA78C13D1DC6EF730014BA0C /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = SOURCE_ROOT; };
@@ -150,6 +153,8 @@
 				AAC820D21DB8CA7700D12963 /* SideViewController.m */,
 				AAC820BF1DB8C8C600D12963 /* ViewController.h */,
 				AAC820C01DB8C8C600D12963 /* ViewController.m */,
+				61746F931DE5CCE7006E7F9C /* UPDateApplicationViewController.h */,
+				61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			files = (
 				AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */,
 				AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */,
+				61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */,
 				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
 				AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */,

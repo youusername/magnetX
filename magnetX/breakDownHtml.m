@@ -19,7 +19,7 @@
     });
     return downloader;
 }
-- (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSArray*array)) successHandler failure:(void(^)(NSError *error)) failureHandler{
+- (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSData*data)) successHandler failure:(void(^)(NSError *error)) failureHandler{
 //    NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
 //    NSURLSession * session = [NSURLSession sharedSession];
 //    NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -42,18 +42,13 @@
     }
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", @"text/json", nil];
     [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         dispatch_async(dispatch_queue_create("download html queue", nil), ^{
-            NSMutableArray*array = [NSMutableArray new];
-            ONOXMLDocument *doc = [ONOXMLDocument HTMLDocumentWithData:responseObject error:nil];
-            [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
-                movieModel*movie = [movieModel entity:element];
-                movie.source = urlString;
-                [array addObject:movie];
-            }];
+            
             if (successHandler) {
-                successHandler(array);
+                successHandler(responseObject);
             }
         });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Ono.h"
+
 extern sideModel *selectSideRule;
 
 @interface movieModel : NSObject
@@ -17,4 +17,5 @@ extern sideModel *selectSideRule;
 @property (nonatomic,strong)NSString* source;
 @property (nonatomic,strong)NSString* magnet;
 + (movieModel*)entity:(ONOXMLElement *)element;
++ (NSArray<movieModel*>*)HTMLDocumentWithData:(NSData*)data;
 @end
