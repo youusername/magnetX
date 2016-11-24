@@ -21,6 +21,7 @@
 #define MagnetXUpdateAppURL     @"https://github.com/youusername/magnetX/releases"
 
 #define MagnetXVersionString     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define MagnetXBundleName     [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]
 
 
 #pragma mark - Snippet

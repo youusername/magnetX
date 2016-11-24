@@ -376,11 +376,7 @@
                                                 <action selector="updateRule:" target="Voe-Tx-rLC" id="cI0-bo-VHE"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="检查更新软件" keyEquivalent="i" id="T7d-4p-9hK">
-                                            <connections>
-                                                <segue destination="Xrt-b5-LRu" kind="show" id="i2T-me-y9w"/>
-                                            </connections>
-                                        </menuItem>
+                                        <menuItem title="检查更新软件" keyEquivalent="i" id="T7d-4p-9hK"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -418,7 +414,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6a3-Mx-h1x">
                                 <rect key="frame" x="103" y="233" width="248" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="当前版本：1.0" id="7PC-Af-QLX">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="当前版本：V1.0" id="7PC-Af-QLX">
                                     <font key="font" metaFont="system" size="26"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -427,7 +423,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-fX-3Sr">
                                 <rect key="frame" x="103" y="185" width="248" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="最新版本：1.1" id="7Gn-CB-jdS">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="最新版本：V    " id="7Gn-CB-jdS">
                                     <font key="font" size="30" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -569,8 +565,8 @@
         <scene sceneID="kwX-Mf-jWQ">
             <objects>
                 <viewController id="UOH-tx-NO5" customClass="SideViewController" sceneMemberID="viewController">
-                    <view key="view" id="0u4-RE-MvJ">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                    <view key="view" misplaced="YES" id="0u4-RE-MvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Us-7Q6">
@@ -680,7 +676,7 @@
                 </viewController>
                 <customObject id="Iak-NJ-u5y" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="1471"/>
+            <point key="canvasLocation" x="255" y="1471"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EsG-Js-mOL">
@@ -721,32 +717,32 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8v-oD-4KU">
-                                                                    <rect key="frame" x="0.0" y="13" width="530" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="3" width="530" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="乐高电影：正义联盟大战末日军团.2015.中英字幕￡CMCT犇犇" id="5Jk-ar-kIW">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="乐高电影：正义联盟大战末日军团.2015.中英字幕￡CMCT犇犇" id="5Jk-ar-kIW">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-g8-Nd4">
-                                                                    <rect key="frame" x="455" y="8" width="65" height="20"/>
+                                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="s2R-RZ-kPA">
+                                                                    <rect key="frame" x="469" y="2" width="61" height="26"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="65" id="kjW-mr-Aof"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="sBn-ax-7Av"/>
+                                                                        <constraint firstAttribute="width" constant="61" id="YPs-ZS-43S"/>
                                                                     </constraints>
-                                                                    <buttonCell key="cell" type="square" title="⬇︎ ⬇︎ ⬇︎" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="plO-Tl-uOL">
+                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="downloading" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="UTC-9D-tmY">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
                                                                     <connections>
-                                                                        <action selector="queryDownloadMagnet:" target="SeO-wd-xgI" id="3MZ-kv-rfe"/>
+                                                                        <action selector="queryDownloadMagnet:" target="SeO-wd-xgI" id="kwI-vv-vdC"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="Bhl-g8-Nd4" firstAttribute="top" secondItem="spk-X2-9Yg" secondAttribute="top" constant="2" id="7cW-mE-ePp"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Bhl-g8-Nd4" secondAttribute="trailing" constant="10" id="U3U-se-nho"/>
+                                                                <constraint firstItem="s2R-RZ-kPA" firstAttribute="top" secondItem="spk-X2-9Yg" secondAttribute="top" constant="2" id="M8a-o6-IHi"/>
+                                                                <constraint firstAttribute="bottom" secondItem="s2R-RZ-kPA" secondAttribute="bottom" constant="2" id="NW0-31-kch"/>
+                                                                <constraint firstAttribute="trailing" secondItem="s2R-RZ-kPA" secondAttribute="trailing" id="Z8a-fY-OnP"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="d8v-oD-4KU" id="kH0-Qe-ZC2"/>
@@ -964,5 +960,6 @@
     </scenes>
     <resources>
         <image name="AppIcon" width="128" height="128"/>
+        <image name="downloading" width="20.803611755371094" height="20.803611755371094"/>
     </resources>
 </document>

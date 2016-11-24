@@ -28,8 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self config];
-//    [self setupTableViewDoubleAction];
-    // Do any additional setup after loading the view.
+
+
+    
 }
 #pragma mark - Notification
 
@@ -75,30 +76,39 @@
 }
 - (void)resetData {
     [self.magnets removeAllObjects];
-    dispatch_async(dispatch_get_main_queue(), ^{
-
     [self.tableView reloadData];
-    });
+
 }
 - (void)setupSearchText{
-    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3",@"血族",@"神兽金刚之青龙再现",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
+    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队",@"血族",@"金刚",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
     self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
     
     [self changeKeyword];
 }
-//- (void)setupTableViewDoubleAction {
-//    NSInteger action = [[NSUserDefaults standardUserDefaults] integerForKey:@"DoubleAction"];
-//    switch (action) {
-//        case 0:
-//            self.tableView.doubleAction = @selector(openUrlLink:);
-//            break;
-//        case 1:
-//            self.tableView.doubleAction = @selector(queryDownloadMagnet:);
-//            break;
-//        default:
-//            break;
-//    }
-//}
+-(void)checkUPDateAPP{
+//    NSURL*url = [NSURL URLWithString:[NSString stringWithFormat:@"https://github.com/youusername/magnetX/releases/download/%@/magnetX.dmg",githubVersion]];
+//    NSLog(@"url_%@",url);
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    NSURLSessionConfiguration *conf = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager*manager     = [[AFURLSessionManager alloc] initWithSessionConfiguration:conf];
+//    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//        NSURL *downloadDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDownloadsDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+//        NSLog(@"downloadDirectoryURL_%@",downloadDirectoryURL);
+//        NSLog(@"AppendingPathComponent_%@",[downloadDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]]);
+//        return [downloadDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+//        
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nonnull filePath, NSError * _Nonnull error) {
+//        NSString *fileName = [response suggestedFilename];
+//        NSLog(@"fileName__%@",fileName);
+//        NSLog(@"filePath_%@",filePath);
+//        [self postUserNotificationWithFileName:fileName];
+//        
+//        NSWorkspace * workspace = [NSWorkspace sharedWorkspace];
+//        [workspace openFile:[filePath path]];
+//    }];
+//    
+//    [downloadTask resume];
+}
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
@@ -180,7 +190,9 @@
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return self.magnets.count;
 }
-
+-(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    return 30;
+}
 #pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {

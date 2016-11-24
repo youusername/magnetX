@@ -31,5 +31,12 @@
                                                  name:name
                                                object:nil];
 }
-
++ (void)postUserNotificationWithTitle:(NSString *)title informativeText:(NSString *)text{
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = title;
+    notification.informativeText = text;
+    notification.soundName = NSUserNotificationDefaultSoundName;
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
+}
 @end

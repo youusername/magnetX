@@ -13,4 +13,5 @@ extern sideModel *selectSideRule;
 + (breakDownHtml *)downloader;
 - (void)downloadHtmlURLString:(NSString *)urlString willStartBlock:(void(^)()) startBlock success:(void(^)(NSData*data)) successHandler failure:(void(^)(NSError *error)) failureHandler;
 
+- (void)getAPPNewVersion;
 @end
