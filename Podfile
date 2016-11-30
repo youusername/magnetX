@@ -8,7 +8,7 @@ target 'magnetX' do
   # Pods for magnetX
 pod 'AFNetworking'
 pod 'Ono'
-#pod 'CDEvents'
-#pod 'DateTools'
+pod 'GCDWebServer', '~> 3.0'
+pod 'Sparkle'
 pod 'SSZipArchive'
 end

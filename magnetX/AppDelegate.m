@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "GCDWebServer.h"
+#import "GCDWebServerDataResponse.h"
+#import "GCDWebServerStreamedResponse.h"
+#import <Sparkle/Sparkle.h>
 
 @interface AppDelegate ()
 
@@ -57,7 +61,22 @@
 //}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
+    [GCDWebServer setLogLevel:2];
+    GCDWebServer* webServer = [[GCDWebServer alloc] init];
+    [webServer addDefaultHandlerForMethod:@"GET"
+                             requestClass:[GCDWebServerRequest class]
+                        asyncProcessBlock:^(GCDWebServerRequest* request, GCDWebServerCompletionBlock completionBlock) {
+                            
+                            // Do some async operation like network access or file I/O (simulated here using dispatch_after())
+                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                                GCDWebServerDataResponse* response = [GCDWebServerDataResponse responseWithHTML:@"<?xml version=\"1.0\" encoding=\"utf-8\"?><rss version=\"2.0\" xmlns:sparkle=\"http://www.andymatuschak.org/xml-namespaces/sparkle\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\"><channel><title>magnetX</title><link>http://127.0.0.1:8080/</link><description></description><language>zh-CN</language><item><title>AutoUpdate</title><sparkle:releaseNotesLink></sparkle:releaseNotesLink><pubDate>Sun Oct 30 2016 08:55:45 GMT+0800 (CST)</pubDate><enclosure url=\"https://github.com/youusername/magnetX/releases/download/1.1/magnetX.dmg\" sparkle:version=\"11\" sparkle:shortVersionString=\"1.1\" length=\"4029952\" type=\"application/octet-stream\" sparkle:dsaSignature=\"\" /><sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion></item></channel></rss>"];
+                                completionBlock(response);
+                            });
+                            
+                        }];
+    [webServer startWithPort:8080 bonjourName:nil];
+    
+    [[SUUpdater sharedUpdater] checkForUpdates:nil];
     // Insert code here to initialize your application
 }
 //点击Dock重新打开主窗口
