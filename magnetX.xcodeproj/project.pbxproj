@@ -12,6 +12,7 @@
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
 		61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */; };
 		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
+		AAC06AE71DF532E800FB13BE /* CheckerXML.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC06AE61DF532E800FB13BE /* CheckerXML.m */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
 		AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820C01DB8C8C600D12963 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		AA78C13D1DC6EF730014BA0C /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = SOURCE_ROOT; };
+		AAC06ADF1DF52A5100FB13BE /* CheckerXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckerXML.h; sourceTree = "<group>"; };
+		AAC06AE61DF532E800FB13BE /* CheckerXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckerXML.m; sourceTree = "<group>"; };
 		AAC820B61DB8C8C600D12963 /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC820B91DB8C8C600D12963 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAC820BA1DB8C8C600D12963 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				AAC820DE1DB9ED9700D12963 /* movieModel.m */,
 				AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */,
 				AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */,
+				AAC06ADF1DF52A5100FB13BE /* CheckerXML.h */,
+				AAC06AE61DF532E800FB13BE /* CheckerXML.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,
 				AAC820BE1DB8C8C600D12963 /* main.m in Sources */,
 				AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */,
+				AAC06AE71DF532E800FB13BE /* CheckerXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
