@@ -61,6 +61,7 @@
 //}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    return;
     [GCDWebServer setLogLevel:2];
     GCDWebServer* webServer = [[GCDWebServer alloc] init];
     [webServer addDefaultHandlerForMethod:@"GET"
