@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CheckerXML : NSObject
-- (NSString*)getXML;
+@property(nonatomic,copy) NSString*checkXml;
 - (void)checkUPDateXML;
 @end
