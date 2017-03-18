@@ -8,7 +8,8 @@
 
 #import "SideViewController.h"
 #import "AppDelegate.h"
-//#import "DMHYCoreDataStackManager.h"
+#import "UserEditorStatus.h"
+#import "CocoaSecurity.h"
 
 @interface SideViewController ()<NSTableViewDataSource, NSTableViewDelegate, NSSplitViewDelegate>
 
@@ -37,18 +38,19 @@
     AppDelegate* app =(AppDelegate*)[NSApplication sharedApplication].delegate;
     [app updateRule:nil];
 }
+- (IBAction)EditorJsonAction:(id)sender {
+    NSData*data = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
+    [[UserEditorStatus sharedWorkspace] setJsonFileMD5:[CocoaSecurity md5WithData:data].hex];
+    [[NSWorkspace sharedWorkspace] openFile:[UserEditorStatus getJsonFilePath]];
+    
+}
 - (void)setupTableViewData{
-    NSString *url = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/rule-master/rule.json"];
-    NSData *data = [NSData dataWithContentsOfFile:url];
     
-    
-    if (data==nil) {
-        url = [[NSBundle mainBundle] pathForResource:@"rule" ofType:@"json"];
-        data = [NSData dataWithContentsOfFile:url];
-    }
-    
+    NSData*data = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    
+    if (!array) {
+        return;
+    }
     [self.sites removeAllObjects];
     
     for (NSDictionary *dic in array) {
@@ -69,6 +71,7 @@
     [self.tableView reloadData];
     });
 }
+
 - (void)changeSelectRuleOfIndex:(NSInteger)index{
     if (index<0) {
         return;

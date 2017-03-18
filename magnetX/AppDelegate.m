@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UserEditorStatus.h"
+#import "CocoaSecurity.h"
 
 @interface AppDelegate ()
 
@@ -96,9 +98,25 @@
 - (void)applicationDidUnhide:(NSNotification *)notification{
     
 }
+
 - (void)applicationWillBecomeActive:(NSNotification *)notification{
     //回到应用时让搜索输入框成为第一响应者
     [MagnetXNotification postNotificationName:MagnetXMakeFirstResponder];
+    
+    if (![[[UserEditorStatus sharedWorkspace] jsonFileMD5] isEqualToString:@"1"]) {
+        
+        NSData*jsonData = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
+        NSLog(@"applicationWillBecomeActive");
+        NSLog(@"hash_%@  jsonmd5_%@",[[UserEditorStatus sharedWorkspace] jsonFileMD5],[CocoaSecurity md5WithData:jsonData].hex);
+        
+        if (![[[UserEditorStatus sharedWorkspace] jsonFileMD5] isEqualToString:[CocoaSecurity md5WithData:jsonData].hex]) {
+            NSLog(@"applicationWillBecomeActive md5_%@",[CocoaSecurity md5WithData:jsonData].hex);
+            [[UserEditorStatus sharedWorkspace] setJsonFileMD5:[CocoaSecurity md5WithData:jsonData].hex];
+            //切回软件刷新源列表
+            [MagnetXNotification postNotificationName:MagnetXUpdateRuleNotification];
+            
+        }
+    }
     
 }
 - (void)applicationDidBecomeActive:(NSNotification *)notification{

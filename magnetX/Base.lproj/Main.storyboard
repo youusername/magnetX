@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -644,7 +644,11 @@
                                         </tableHeaderView>
                                     </scrollView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3u-A4u">
-                                        <rect key="frame" x="86" y="544" width="129" height="32"/>
+                                        <rect key="frame" x="157" y="546" width="129" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="8Pr-Ce-J85"/>
+                                            <constraint firstAttribute="height" constant="21" id="bQG-H3-m1W"/>
+                                        </constraints>
                                         <buttonCell key="cell" type="push" title="更新配置" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0JC-As-TQe">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -653,17 +657,33 @@
                                             <action selector="update:" target="UOH-tx-NO5" id="2Ig-wi-pm5"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w9a-LE-ZfW">
+                                        <rect key="frame" x="14" y="546" width="129" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ZD6-Ux-09Y"/>
+                                            <constraint firstAttribute="width" constant="117" id="xxA-mr-93Q"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="编辑配置" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ax4-dV-a9A">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="EditorJsonAction:" target="UOH-tx-NO5" id="fPl-Yo-mJB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="d7I-oy-tMe" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" id="3TZ-Iu-0sR"/>
-                                    <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="91" id="3gx-wt-5r1"/>
-                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="92" id="5d8-Tb-GNW"/>
-                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="28" id="MAp-g9-KJe"/>
+                                    <constraint firstItem="w9a-LE-ZfW" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="26" id="3dZ-du-OBR"/>
+                                    <constraint firstItem="w9a-LE-ZfW" firstAttribute="leading" secondItem="v2w-Us-7Q6" secondAttribute="leading" constant="20" id="NGl-jt-k4i"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="WHf-Rz-ef7"/>
                                     <constraint firstAttribute="bottom" secondItem="d7I-oy-tMe" secondAttribute="bottom" id="Ycp-ev-Twz"/>
+                                    <constraint firstAttribute="trailing" secondItem="vyS-3u-A4u" secondAttribute="trailing" constant="20" id="g0O-bf-cQl"/>
+                                    <constraint firstItem="vyS-3u-A4u" firstAttribute="top" secondItem="v2w-Us-7Q6" secondAttribute="top" constant="26" id="iD2-03-RjS"/>
                                     <constraint firstAttribute="width" constant="300" id="mNd-DN-fsd"/>
                                     <constraint firstAttribute="trailing" secondItem="d7I-oy-tMe" secondAttribute="trailing" id="mb2-Mw-THv"/>
-                                    <constraint firstItem="d7I-oy-tMe" firstAttribute="top" secondItem="vyS-3u-A4u" secondAttribute="bottom" constant="26" id="vbe-2w-bqz"/>
+                                    <constraint firstItem="d7I-oy-tMe" firstAttribute="top" secondItem="w9a-LE-ZfW" secondAttribute="bottom" constant="28" id="nD5-ck-u46"/>
+                                    <constraint firstItem="d7I-oy-tMe" firstAttribute="top" secondItem="vyS-3u-A4u" secondAttribute="bottom" constant="28" id="vwI-nq-7uu"/>
                                 </constraints>
                             </visualEffectView>
                         </subviews>

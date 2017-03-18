@@ -11,6 +11,7 @@
 		1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DED1DBB22790037BDBF /* MagnetXNotification.m */; };
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
 		61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */; };
+		61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */; };
 		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
 		AAC820BE1DB8C8C600D12963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BD1DB8C8C600D12963 /* main.m */; };
@@ -38,6 +39,8 @@
 		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61746F931DE5CCE7006E7F9C /* UPDateApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPDateApplicationViewController.h; sourceTree = "<group>"; };
 		61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPDateApplicationViewController.m; sourceTree = "<group>"; };
+		61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditorStatus.h; sourceTree = "<group>"; };
+		61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditorStatus.m; sourceTree = "<group>"; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		9C756038FAA0345D8973429C /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		AA78C13D1DC6EF730014BA0C /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = SOURCE_ROOT; };
@@ -191,6 +194,8 @@
 				AAC820DE1DB9ED9700D12963 /* movieModel.m */,
 				AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */,
 				AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */,
+				61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */,
+				61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -311,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D2FB4B2516F9D00E5A9513BB /* Copy Pods Resources */ = {
@@ -373,6 +378,7 @@
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
 				AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */,
 				AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */,
+				61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */,
 				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
 				1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */,
