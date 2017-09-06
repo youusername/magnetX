@@ -53,6 +53,7 @@
 
 当然，有钱捧个钱场（支持[支付宝、微信](https://github.com/youusername/rule/blob/master/image.png)捐助），没钱捧个人场（点个star），谢谢各位。
 ![image.png](https://github.com/youusername/rule/blob/master/image.png)
+
 ##感激
 
 感谢以下的开源项目,排名不分先后
