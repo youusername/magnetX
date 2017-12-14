@@ -11,6 +11,7 @@
 #import "breakDownHtml.h"
 #import "nameTableCellView.h"
 #import "NSTableView+ContextMenu.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate>
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self config];
+    
 //    [self setupTableViewDoubleAction];
     // Do any additional setup after loading the view.
 }
@@ -47,6 +49,11 @@
 }
 - (void)makeFirstResponder{
     [[self.searchTextField window] makeFirstResponder:self.searchTextField];
+}
+- (IBAction)hideSideVC:(NSButton*)sender {
+    [MagnetXNotification postNotificationName:@"hideSideView"];
+    
+    
 }
 - (void)changeKeyword{
 
@@ -214,6 +221,7 @@
     return nil;
 }
 
+
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
 
@@ -250,8 +258,10 @@
 }
 
 - (void)setErrorInfoAndStopIndicator:(NSString*)string{
-    self.info.stringValue = string;
-    [self stopAnimatingProgressIndicator];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.info.stringValue = string;
+        [self stopAnimatingProgressIndicator];
+    });
 }
 #pragma mark - ProgressIndicator
 

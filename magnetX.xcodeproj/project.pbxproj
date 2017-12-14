@@ -10,7 +10,23 @@
 		1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DE81DBA457D0037BDBF /* sideModel.m */; };
 		1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F161DED1DBB22790037BDBF /* MagnetXNotification.m */; };
 		363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */; };
-		61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */; };
+		610335D61FD8153300619843 /* MagSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610335D51FD8153300619843 /* MagSplitViewController.m */; };
+		612BA6021FE29BF7005EDC47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612BA6011FE29BF7005EDC47 /* QuartzCore.framework */; };
+		612BA6211FE2AEDD005EDC47 /* GitHubReleaseAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6051FE2AEDD005EDC47 /* GitHubReleaseAsset.m */; };
+		612BA6221FE2AEDD005EDC47 /* Install.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 612BA6091FE2AEDD005EDC47 /* Install.pdf */; };
+		612BA6231FE2AEDD005EDC47 /* GitHubTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 612BA60A1FE2AEDD005EDC47 /* GitHubTemplate.pdf */; };
+		612BA6241FE2AEDD005EDC47 /* GitHubProgressWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BA60B1FE2AEDD005EDC47 /* GitHubProgressWindowController.xib */; };
+		612BA6251FE2AEDD005EDC47 /* GitHubInstallWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612BA60D1FE2AEDD005EDC47 /* GitHubInstallWindowController.xib */; };
+		612BA6261FE2AEDD005EDC47 /* NSError+GitHubUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6111FE2AEDD005EDC47 /* NSError+GitHubUpdates.m */; };
+		612BA6271FE2AEDD005EDC47 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6121FE2AEDD005EDC47 /* Pair.m */; };
+		612BA6281FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6131FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m */; };
+		612BA6291FE2AEDD005EDC47 /* GitHubRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6151FE2AEDD005EDC47 /* GitHubRelease.m */; };
+		612BA62A1FE2AEDD005EDC47 /* GitHubUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6161FE2AEDD005EDC47 /* GitHubUpdater.m */; };
+		612BA62B1FE2AEDD005EDC47 /* NSString+GitHubUpdates.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA6171FE2AEDD005EDC47 /* NSString+GitHubUpdates.m */; };
+		612BA62C1FE2AEDD005EDC47 /* GitHubProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA61B1FE2AEDD005EDC47 /* GitHubProgressWindowController.m */; };
+		612BA62D1FE2AEDD005EDC47 /* GitHubInstallWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA61C1FE2AEDD005EDC47 /* GitHubInstallWindowController.m */; };
+		612BA62E1FE2AEDD005EDC47 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612BA61F1FE2AEDD005EDC47 /* Info.plist */; };
+		612BA6301FE2AF66005EDC47 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 612BA62F1FE2AF66005EDC47 /* README.md */; };
 		61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */; };
 		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
@@ -37,8 +53,34 @@
 		1F161DEC1DBB22790037BDBF /* MagnetXNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnetXNotification.h; sourceTree = "<group>"; };
 		1F161DED1DBB22790037BDBF /* MagnetXNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnetXNotification.m; sourceTree = "<group>"; };
 		21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magnetX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61746F931DE5CCE7006E7F9C /* UPDateApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPDateApplicationViewController.h; sourceTree = "<group>"; };
-		61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPDateApplicationViewController.m; sourceTree = "<group>"; };
+		610335D41FD8153300619843 /* MagSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagSplitViewController.h; sourceTree = "<group>"; };
+		610335D51FD8153300619843 /* MagSplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagSplitViewController.m; sourceTree = "<group>"; };
+		612BA6011FE29BF7005EDC47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		612BA6051FE2AEDD005EDC47 /* GitHubReleaseAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubReleaseAsset.m; sourceTree = "<group>"; };
+		612BA6061FE2AEDD005EDC47 /* NSString+GitHubUpdates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GitHubUpdates.h"; sourceTree = "<group>"; };
+		612BA6091FE2AEDD005EDC47 /* Install.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Install.pdf; sourceTree = "<group>"; };
+		612BA60A1FE2AEDD005EDC47 /* GitHubTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GitHubTemplate.pdf; sourceTree = "<group>"; };
+		612BA60C1FE2AEDD005EDC47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GitHubProgressWindowController.xib; sourceTree = "<group>"; };
+		612BA60E1FE2AEDD005EDC47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GitHubInstallWindowController.xib; sourceTree = "<group>"; };
+		612BA60F1FE2AEDD005EDC47 /* GitHubUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUpdater.h; sourceTree = "<group>"; };
+		612BA6101FE2AEDD005EDC47 /* GitHubProgressWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubProgressWindowController.h; sourceTree = "<group>"; };
+		612BA6111FE2AEDD005EDC47 /* NSError+GitHubUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+GitHubUpdates.m"; sourceTree = "<group>"; };
+		612BA6121FE2AEDD005EDC47 /* Pair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pair.m; sourceTree = "<group>"; };
+		612BA6131FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GitHubUpdates.m"; sourceTree = "<group>"; };
+		612BA6141FE2AEDD005EDC47 /* GitHubInstallWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubInstallWindowController.h; sourceTree = "<group>"; };
+		612BA6151FE2AEDD005EDC47 /* GitHubRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubRelease.m; sourceTree = "<group>"; };
+		612BA6161FE2AEDD005EDC47 /* GitHubUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUpdater.m; sourceTree = "<group>"; };
+		612BA6171FE2AEDD005EDC47 /* NSString+GitHubUpdates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GitHubUpdates.m"; sourceTree = "<group>"; };
+		612BA6181FE2AEDD005EDC47 /* GitHubReleaseAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubReleaseAsset.h; sourceTree = "<group>"; };
+		612BA6191FE2AEDD005EDC47 /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		612BA61A1FE2AEDD005EDC47 /* NSError+GitHubUpdates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+GitHubUpdates.h"; sourceTree = "<group>"; };
+		612BA61B1FE2AEDD005EDC47 /* GitHubProgressWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubProgressWindowController.m; sourceTree = "<group>"; };
+		612BA61C1FE2AEDD005EDC47 /* GitHubInstallWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubInstallWindowController.m; sourceTree = "<group>"; };
+		612BA61D1FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GitHubUpdates.h"; sourceTree = "<group>"; };
+		612BA61E1FE2AEDD005EDC47 /* GitHubUpdates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUpdates.h; sourceTree = "<group>"; };
+		612BA61F1FE2AEDD005EDC47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		612BA6201FE2AEDD005EDC47 /* GitHubRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRelease.h; sourceTree = "<group>"; };
+		612BA62F1FE2AF66005EDC47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditorStatus.h; sourceTree = "<group>"; };
 		61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditorStatus.m; sourceTree = "<group>"; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612BA6021FE29BF7005EDC47 /* QuartzCore.framework in Frameworks */,
 				363236AFB0F0EFCA87E302E3 /* libPods-magnetX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,9 +138,57 @@
 		38CCD415B04F734BCDAB785D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				612BA6011FE29BF7005EDC47 /* QuartzCore.framework */,
 				21FDE46DCB85117CA7CA564D /* libPods-magnetX.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		612BA6041FE2AEDD005EDC47 /* GitHubUpdates */ = {
+			isa = PBXGroup;
+			children = (
+				612BA6051FE2AEDD005EDC47 /* GitHubReleaseAsset.m */,
+				612BA6061FE2AEDD005EDC47 /* NSString+GitHubUpdates.h */,
+				612BA6071FE2AEDD005EDC47 /* Interface */,
+				612BA60F1FE2AEDD005EDC47 /* GitHubUpdater.h */,
+				612BA6101FE2AEDD005EDC47 /* GitHubProgressWindowController.h */,
+				612BA6111FE2AEDD005EDC47 /* NSError+GitHubUpdates.m */,
+				612BA6121FE2AEDD005EDC47 /* Pair.m */,
+				612BA6131FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m */,
+				612BA6141FE2AEDD005EDC47 /* GitHubInstallWindowController.h */,
+				612BA6151FE2AEDD005EDC47 /* GitHubRelease.m */,
+				612BA6161FE2AEDD005EDC47 /* GitHubUpdater.m */,
+				612BA6171FE2AEDD005EDC47 /* NSString+GitHubUpdates.m */,
+				612BA6181FE2AEDD005EDC47 /* GitHubReleaseAsset.h */,
+				612BA6191FE2AEDD005EDC47 /* Pair.h */,
+				612BA61A1FE2AEDD005EDC47 /* NSError+GitHubUpdates.h */,
+				612BA61B1FE2AEDD005EDC47 /* GitHubProgressWindowController.m */,
+				612BA61C1FE2AEDD005EDC47 /* GitHubInstallWindowController.m */,
+				612BA61D1FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.h */,
+				612BA61E1FE2AEDD005EDC47 /* GitHubUpdates.h */,
+				612BA61F1FE2AEDD005EDC47 /* Info.plist */,
+				612BA6201FE2AEDD005EDC47 /* GitHubRelease.h */,
+			);
+			path = GitHubUpdates;
+			sourceTree = "<group>";
+		};
+		612BA6071FE2AEDD005EDC47 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				612BA6081FE2AEDD005EDC47 /* Images */,
+				612BA60B1FE2AEDD005EDC47 /* GitHubProgressWindowController.xib */,
+				612BA60D1FE2AEDD005EDC47 /* GitHubInstallWindowController.xib */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		612BA6081FE2AEDD005EDC47 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				612BA6091FE2AEDD005EDC47 /* Install.pdf */,
+				612BA60A1FE2AEDD005EDC47 /* GitHubTemplate.pdf */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		AAC820AD1DB8C8C600D12963 = {
@@ -123,6 +214,8 @@
 			children = (
 				AAC820B91DB8C8C600D12963 /* AppDelegate.h */,
 				AAC820BA1DB8C8C600D12963 /* AppDelegate.m */,
+				612BA62F1FE2AF66005EDC47 /* README.md */,
+				612BA6041FE2AEDD005EDC47 /* GitHubUpdates */,
 				AAC820D81DB9C26C00D12963 /* BaseClass */,
 				AAC820D41DB8CAD300D12963 /* View */,
 				AAC820D01DB8CA6E00D12963 /* ViewController */,
@@ -156,8 +249,8 @@
 				AAC820D21DB8CA7700D12963 /* SideViewController.m */,
 				AAC820BF1DB8C8C600D12963 /* ViewController.h */,
 				AAC820C01DB8C8C600D12963 /* ViewController.m */,
-				61746F931DE5CCE7006E7F9C /* UPDateApplicationViewController.h */,
-				61746F941DE5CCE7006E7F9C /* UPDateApplicationViewController.m */,
+				610335D41FD8153300619843 /* MagSplitViewController.h */,
+				610335D51FD8153300619843 /* MagSplitViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -264,10 +357,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612BA6251FE2AEDD005EDC47 /* GitHubInstallWindowController.xib in Resources */,
 				AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */,
+				612BA6301FE2AF66005EDC47 /* README.md in Resources */,
+				612BA62E1FE2AEDD005EDC47 /* Info.plist in Resources */,
+				612BA6221FE2AEDD005EDC47 /* Install.pdf in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
+				612BA6231FE2AEDD005EDC47 /* GitHubTemplate.pdf in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
 				AA78C13E1DC6EF730014BA0C /* rule.json in Resources */,
+				612BA6241FE2AEDD005EDC47 /* GitHubProgressWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,16 +470,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612BA62D1FE2AEDD005EDC47 /* GitHubInstallWindowController.m in Sources */,
 				AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */,
+				612BA6271FE2AEDD005EDC47 /* Pair.m in Sources */,
+				612BA6281FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m in Sources */,
 				AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */,
-				61746F951DE5CCE7006E7F9C /* UPDateApplicationViewController.m in Sources */,
+				612BA62A1FE2AEDD005EDC47 /* GitHubUpdater.m in Sources */,
+				610335D61FD8153300619843 /* MagSplitViewController.m in Sources */,
+				612BA6211FE2AEDD005EDC47 /* GitHubReleaseAsset.m in Sources */,
 				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
+				612BA6261FE2AEDD005EDC47 /* NSError+GitHubUpdates.m in Sources */,
 				AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */,
+				612BA62C1FE2AEDD005EDC47 /* GitHubProgressWindowController.m in Sources */,
 				AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */,
 				61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */,
 				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
+				612BA62B1FE2AEDD005EDC47 /* NSString+GitHubUpdates.m in Sources */,
+				612BA6291FE2AEDD005EDC47 /* GitHubRelease.m in Sources */,
 				1F161DEE1DBB22790037BDBF /* MagnetXNotification.m in Sources */,
 				AAC820C41DB8C8C600D12963 /* magnetX.xcdatamodeld in Sources */,
 				AAC820C11DB8C8C600D12963 /* ViewController.m in Sources */,
@@ -392,6 +500,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		612BA60B1FE2AEDD005EDC47 /* GitHubProgressWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				612BA60C1FE2AEDD005EDC47 /* Base */,
+			);
+			name = GitHubProgressWindowController.xib;
+			sourceTree = "<group>";
+		};
+		612BA60D1FE2AEDD005EDC47 /* GitHubInstallWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				612BA60E1FE2AEDD005EDC47 /* Base */,
+			);
+			name = GitHubInstallWindowController.xib;
+			sourceTree = "<group>";
+		};
 		AAC820C71DB8C8C700D12963 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
