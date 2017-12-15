@@ -355,9 +355,9 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="更新" id="H8h-7b-M4v">
+                            <menuItem title="反馈" id="H8h-7b-M4v" userLabel="反馈">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="更新" id="HyV-fh-RgO">
+                                <menu key="submenu" title="反馈" id="HyV-fh-RgO">
                                     <items>
                                         <menuItem id="2jN-4X-RCx">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -372,12 +372,38 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="更新源配置" keyEquivalent="u" id="4J7-dP-txa">
+                                        <menuItem title="QQ" id="T7d-4p-9hK">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="updateRule:" target="Voe-Tx-rLC" id="cI0-bo-VHE"/>
+                                                <segue destination="IoL-qu-buQ" kind="show" id="drf-vs-244"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="检查更新软件" keyEquivalent="i" id="T7d-4p-9hK"/>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="更新" id="VDS-NU-xzF">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="更新" id="qPs-OU-trJ">
+                                    <items>
+                                        <menuItem id="PtP-uO-iF1">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openDocument:" target="Ady-hI-5gd" id="s4v-0i-UGh"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem id="oTf-ad-F1K">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openDocument:" target="Ady-hI-5gd" id="FB5-gt-aXr"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="bbV-Eq-UTC"/>
+                                        <menuItem title="更新源配置" keyEquivalent="u" id="C3W-Wj-vv8">
+                                            <connections>
+                                                <action selector="updateRule:" target="Voe-Tx-rLC" id="eE8-lJ-qpz"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="检查更新软件" keyEquivalent="i" id="jOu-Ic-rmV"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -403,6 +429,31 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-465" y="-425"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mae-LW-Day">
+            <objects>
+                <viewController id="IoL-qu-buQ" sceneMemberID="viewController">
+                    <view key="view" id="VT7-o6-LE7">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-Kh-eNd">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="qq" id="hz1-UF-84i"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qfo-Kh-eNd" secondAttribute="trailing" id="IRw-4p-6VQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Qfo-Kh-eNd" secondAttribute="bottom" id="J8T-dZ-qX8"/>
+                            <constraint firstItem="Qfo-Kh-eNd" firstAttribute="leading" secondItem="VT7-o6-LE7" secondAttribute="leading" id="YXN-AE-JDt"/>
+                            <constraint firstItem="Qfo-Kh-eNd" firstAttribute="top" secondItem="VT7-o6-LE7" secondAttribute="top" id="g7D-Pn-HBu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="b3D-hP-77o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="-54"/>
         </scene>
         <!--关于MagnetX-->
         <scene sceneID="f93-vs-1ew">
@@ -954,5 +1005,6 @@
     <resources>
         <image name="AppIcon" width="128" height="128"/>
         <image name="donateImage" width="694" height="516"/>
+        <image name="qq" width="180.33332824707031" height="247"/>
     </resources>
 </document>
