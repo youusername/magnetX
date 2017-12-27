@@ -10,12 +10,13 @@
 
 extern sideModel *selectSideRule;
 
-@interface movieModel : NSObject
+@interface MovieModel : NSObject
 @property (nonatomic,strong)NSString* name;
 @property (nonatomic,strong)NSString* size;
 @property (nonatomic,strong)NSString* count;
 @property (nonatomic,strong)NSString* source;
 @property (nonatomic,strong)NSString* magnet;
-+ (movieModel*)entity:(ONOXMLElement *)element;
-+ (NSArray<movieModel*>*)HTMLDocumentWithData:(NSData*)data;
++ (MovieModel*)entity:(ONOXMLElement *)element;
++ (NSArray<MovieModel*>*)HTMLDocumentWithData:(NSData*)data;
++ (NSArray*)resultAnalysis:(NSData*)htmlData;
 @end
