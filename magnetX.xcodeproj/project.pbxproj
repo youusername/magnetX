@@ -38,7 +38,7 @@
 		AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D21DB8CA7700D12963 /* SideViewController.m */; };
 		AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820D61DB8CE4100D12963 /* WindowController.m */; };
 		AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DA1DB9C27F00D12963 /* NavigationView.m */; };
-		AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DE1DB9ED9700D12963 /* movieModel.m */; };
+		AAC820DF1DB9ED9700D12963 /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DE1DB9ED9700D12963 /* MovieModel.m */; };
 		AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC820E01DB9F27500D12963 /* SourceList.plist */; };
 		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
 		AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E61DBA171100D12963 /* nameTableCellView.m */; };
@@ -102,8 +102,8 @@
 		AAC820D61DB8CE4100D12963 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
 		AAC820D91DB9C27F00D12963 /* NavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
 		AAC820DA1DB9C27F00D12963 /* NavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
-		AAC820DD1DB9ED9700D12963 /* movieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movieModel.h; sourceTree = "<group>"; };
-		AAC820DE1DB9ED9700D12963 /* movieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = movieModel.m; sourceTree = "<group>"; };
+		AAC820DD1DB9ED9700D12963 /* MovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
+		AAC820DE1DB9ED9700D12963 /* MovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
 		AAC820E01DB9F27500D12963 /* SourceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SourceList.plist; sourceTree = "<group>"; };
 		AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = breakDownHtml.h; sourceTree = "<group>"; };
 		AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = breakDownHtml.m; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 				1F161DED1DBB22790037BDBF /* MagnetXNotification.m */,
 				1F161DE71DBA457D0037BDBF /* sideModel.h */,
 				1F161DE81DBA457D0037BDBF /* sideModel.m */,
-				AAC820DD1DB9ED9700D12963 /* movieModel.h */,
-				AAC820DE1DB9ED9700D12963 /* movieModel.m */,
+				AAC820DD1DB9ED9700D12963 /* MovieModel.h */,
+				AAC820DE1DB9ED9700D12963 /* MovieModel.m */,
 				AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */,
 				AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */,
 				61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */,
@@ -471,7 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				612BA62D1FE2AEDD005EDC47 /* GitHubInstallWindowController.m in Sources */,
-				AAC820DF1DB9ED9700D12963 /* movieModel.m in Sources */,
+				AAC820DF1DB9ED9700D12963 /* MovieModel.m in Sources */,
 				612BA6271FE2AEDD005EDC47 /* Pair.m in Sources */,
 				612BA6281FE2AEDD005EDC47 /* NSBundle+GitHubUpdates.m in Sources */,
 				AAC820D31DB8CA7700D12963 /* SideViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "movieModel.h"
+#import "MovieModel.h"
 #import "breakDownHtml.h"
 #import "nameTableCellView.h"
 #import "NSTableView+ContextMenu.h"
@@ -19,7 +19,7 @@
 @property (weak) IBOutlet NSProgressIndicator *indicator;
 @property (weak) IBOutlet NSTextField *info;
 @property (weak) IBOutlet NSTableView *tableView;
-@property (nonatomic, strong) NSMutableArray<movieModel*> *magnets;
+@property (nonatomic, strong) NSMutableArray<MovieModel*> *magnets;
 @property (nonatomic, strong) NSString  *searchURLString;
 
 @end
@@ -55,20 +55,44 @@
     
     
 }
+
+- (BOOL)isURL:(NSString*)str{
+    
+    NSString *regexString = @"http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexString];
+    BOOL isUrl = [pred evaluateWithObject:str];
+    return isUrl;
+    
+}
+
 - (void)changeKeyword{
 
     [self resetData];
     [self startAnimatingProgressIndicator];
-    
-    NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
-    NSString*url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
 
+    __block BOOL isMatch = [self isURL:self.searchTextField.stringValue];
+    NSString*url = @"";
+    
+    if (isMatch) {
+        url = self.searchTextField.stringValue;
+    }else{
+
+        NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+        url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+
+    }
+    
     @WEAKSELF(self);
     [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
         
     } success:^(NSData*data) {
+        if (isMatch) {
+            [selfWeak.magnets addObjectsFromArray:[MovieModel resultAnalysis:data]];
+        }else{
+            
+            [selfWeak.magnets addObjectsFromArray:[MovieModel HTMLDocumentWithData:data]];
+        }
         
-        [selfWeak.magnets addObjectsFromArray:[movieModel HTMLDocumentWithData:data]];
         
         if (selfWeak.magnets.count>0) {
             [selfWeak reloadDataAndStopIndicator];
@@ -88,24 +112,12 @@
     });
 }
 - (void)setupSearchText{
-    NSArray*searchText = @[@"武媚娘传奇",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队3",@"血族",@"神兽金刚之青龙再现",@"麻雀",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
+    NSArray*searchText = @[@"王牌特工",@"星球大战",@"异形",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队",@"血族",@"银翼杀手",@"猎凶风河谷",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
     self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
     
     [self changeKeyword];
 }
-//- (void)setupTableViewDoubleAction {
-//    NSInteger action = [[NSUserDefaults standardUserDefaults] integerForKey:@"DoubleAction"];
-//    switch (action) {
-//        case 0:
-//            self.tableView.doubleAction = @selector(openUrlLink:);
-//            break;
-//        case 1:
-//            self.tableView.doubleAction = @selector(queryDownloadMagnet:);
-//            break;
-//        default:
-//            break;
-//    }
-//}
+
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
@@ -148,7 +160,7 @@
     if (row<0) {
         return;
     }
-    movieModel *torrent = self.magnets[row];
+    MovieModel *torrent = self.magnets[row];
     NSPasteboard*pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
     [pasteboard setString:torrent.magnet forType:NSStringPboardType];
@@ -164,7 +176,7 @@
     if (row<0) {
         return;
     }
-    movieModel *torrent = self.magnets[row];
+    MovieModel *torrent = self.magnets[row];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL*url =[NSURL URLWithString:torrent.magnet];
@@ -192,30 +204,33 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
-    movieModel *torrent = self.magnets[row];
+    MovieModel *torrent = self.magnets[row];
     if ([identifier isEqualToString:@"nameCell"]) {
         nameTableCellView *cellView   = [tableView makeViewWithIdentifier:@"nameCell" owner:self];
-        cellView.textField.stringValue = torrent.name;
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.name];
         return cellView;
     }
     if ([identifier isEqualToString:@"sizeCell"]) {
         NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"sizeCell" owner:self];
-        cellView.textField.stringValue = torrent.size;
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.size];
         return cellView;
     }
     if ([identifier isEqualToString:@"countCell"]) {
         NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"countCell" owner:self];
-        cellView.textField.stringValue = torrent.count;
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.count];
         return cellView;
     }
     if ([identifier isEqualToString:@"sourceCell"]) {
+        
+        NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
+        
         NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"sourceCell" owner:self];
-        cellView.textField.stringValue = selectSideRule.site;
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",source];
         return cellView;
     }
     if ([identifier isEqualToString:@"magnetCell"]) {
         NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"magnetCell" owner:self];
-        cellView.textField.stringValue = torrent.magnet;
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.magnet];
         return cellView;
     }
     return nil;
