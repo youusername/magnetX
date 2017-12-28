@@ -72,12 +72,8 @@ sideModel *selectSideRule;
     }];
     return array;
 }
-
-
-+ (NSArray*)resultAnalysis:(NSData*)htmlData{
-    
++ (NSArray*)resultAnalysisFormString:(NSString*)htmlString{
     NSMutableArray *resultArray = [NSMutableArray array];
-    NSString *htmlString = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
     //电驴搜索结果
     NSString * regulaStr = @"ed2k://.*.\\|\\/";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regulaStr
@@ -86,7 +82,7 @@ sideModel *selectSideRule;
     
     NSArray *arrayOfAllMatches = [regex matchesInString:htmlString options:0 range:NSMakeRange(0, [htmlString length])];
     [resultArray addObjectsFromArray:[self matchesGetModel:arrayOfAllMatches htmlString:htmlString isEd2k:YES]];
-
+    
     
     //磁力搜索结果
     regulaStr = @"magnet:?[^\"]+";
@@ -94,7 +90,7 @@ sideModel *selectSideRule;
                                                       options:NSRegularExpressionCaseInsensitive
                                                         error:nil];
     NSArray * magnetArray = [regex matchesInString:htmlString options:0 range:NSMakeRange(0, [htmlString length])];
-
+    
     if (magnetArray.count != 0) {
         [resultArray addObjectsFromArray:[self matchesGetModel:magnetArray htmlString:htmlString isEd2k:NO]];
     }
@@ -105,16 +101,31 @@ sideModel *selectSideRule;
     
     return resultArray;
 }
+
++ (NSArray*)resultAnalysis:(NSData*)htmlData{
+    
+    NSString *htmlString = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
+    return [self resultAnalysisFormString:htmlString];
+}
 + (NSMutableArray *)matchesGetModel:(NSArray *)arrayOfAllMatches htmlString:(NSString *)htmlString isEd2k:(BOOL)isEd2k{
     NSMutableArray * resultArray = [NSMutableArray new];
     for (NSTextCheckingResult *match in arrayOfAllMatches)
     {
+        
         NSRange range = match.range;
         range.location = 1;
         NSString* substringForMatch = [htmlString substringWithRange:match.range];
         
+        //清除不正常的数据
         if (!isEd2k) {
+            if (![substringForMatch hasPrefix:@"magnet:?xt="]) {
+                continue;
+            }
             substringForMatch = [substringForMatch substringToIndex:60];
+        }else{
+            if (![substringForMatch hasPrefix:@"ed2k:"]) {
+                continue;
+            }
         }
         
         MovieModel *model = [MovieModel new];

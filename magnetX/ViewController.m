@@ -12,8 +12,9 @@
 #import "nameTableCellView.h"
 #import "NSTableView+ContextMenu.h"
 #import <QuartzCore/QuartzCore.h>
+#import <WebKit/WebKit.h>
 
-@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate>
+@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate,WKUIDelegate,WKNavigationDelegate>
 
 @property (weak) IBOutlet NSTextField *searchTextField;
 @property (weak) IBOutlet NSProgressIndicator *indicator;
@@ -21,7 +22,7 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (nonatomic, strong) NSMutableArray<MovieModel*> *magnets;
 @property (nonatomic, strong) NSString  *searchURLString;
-
+@property (nonatomic,strong) WKWebView*web;
 @end
 
 @implementation ViewController
@@ -46,16 +47,48 @@
     
     [self observeNotification];
     [self setupSearchText];
+    
+    self.web =[[WKWebView alloc]initWithFrame:CGRectZero];
+    self.web.UIDelegate = self;
+    self.web.navigationDelegate = self;
+    [self.view addSubview:self.web];
 }
 - (void)makeFirstResponder{
     [[self.searchTextField window] makeFirstResponder:self.searchTextField];
 }
 - (IBAction)hideSideVC:(NSButton*)sender {
     [MagnetXNotification postNotificationName:@"hideSideView"];
-    
+}
+- (NSString*)createGetHTMLJavaScript{
+    NSString *js = @"document.getElementsByTagName('html')[0].innerHTML";
+    return js;
     
 }
-
+#pragma mark - WKNavigationDelegate
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
+    NSLog(@"Commit");
+}
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    NSLog(@"Start");
+}
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    NSLog(@"Finish");
+    NSString *jsToGetHTMLSource =  [self createGetHTMLJavaScript];
+    
+    @WEAKSELF(self);
+    [webView evaluateJavaScript:jsToGetHTMLSource completionHandler:^(id _Nullable HTMLSource, NSError * _Nullable error) {
+        
+        [selfWeak.magnets addObjectsFromArray:[MovieModel resultAnalysisFormString:HTMLSource]];
+        if (selfWeak.magnets.count>0) {
+            [selfWeak reloadDataAndStopIndicator];
+        }else{
+            [selfWeak setErrorInfoAndStopIndicator:@"源网站没有数据,切换其它源试试！"];
+        }
+    }];
+}
 - (BOOL)isURL:(NSString*)str{
     
     NSString *regexString = @"http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?";
@@ -70,10 +103,10 @@
     [self resetData];
     [self startAnimatingProgressIndicator];
 
-    __block BOOL isMatch = [self isURL:self.searchTextField.stringValue];
+    __block BOOL isURL = [self isURL:self.searchTextField.stringValue];
     NSString*url = @"";
     
-    if (isMatch) {
+    if (isURL) {
         url = self.searchTextField.stringValue;
     }else{
 
@@ -82,11 +115,26 @@
 
     }
     
+//    if (isURL) {
+//
+//        if ([url hasPrefix:@"https"]) {
+//            [self.web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+//        }else{
+//            [self downHtmlString:url isUrl:isURL];
+//        }
+//
+//    }else{
+        [self downHtmlString:url isUrl:isURL];
+//    }
+
+}
+
+- (void)downHtmlString:(NSString*)url isUrl:(BOOL)isURL{
     @WEAKSELF(self);
     [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
         
     } success:^(NSData*data) {
-        if (isMatch) {
+        if (isURL) {
             [selfWeak.magnets addObjectsFromArray:[MovieModel resultAnalysis:data]];
         }else{
             
@@ -102,8 +150,8 @@
     } failure:^(NSError *error) {
         [selfWeak setErrorInfoAndStopIndicator:@"请检查网络，或者等一下再刷新"];
     }];
-
 }
+
 - (void)resetData {
     [self.magnets removeAllObjects];
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,9 +168,8 @@
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
 }
+
 - (IBAction)setupData:(id)sender {
     
 //    if (![sender isKindOfClass:[ViewController class]]) {

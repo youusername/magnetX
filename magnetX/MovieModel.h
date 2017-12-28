@@ -19,4 +19,5 @@ extern sideModel *selectSideRule;
 + (MovieModel*)entity:(ONOXMLElement *)element;
 + (NSArray<MovieModel*>*)HTMLDocumentWithData:(NSData*)data;
 + (NSArray*)resultAnalysis:(NSData*)htmlData;
++ (NSArray*)resultAnalysisFormString:(NSString*)htmlString;
 @end

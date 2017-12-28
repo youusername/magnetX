@@ -10,26 +10,6 @@
   "source":"http://www.aoyoso.com/search/XXX_ctime_1.html"
   },
   {
-  "site":"Torrent So",
-  "waiting":"0",
-  "group":"//div[@class='bt_list']//a[@class='tableli']",
-  "magnet":".//@href",
-  "name":".//h3",
-  "size":".//em[@class='list_file_size']",
-  "count":".//em[@class='list_file_time']",
-  "source":"https://www.torrentso.com/cn/s/XXX/"
-  },
-  {
-  "site":"爱磁力",
-  "waiting":"0",
-  "group":"//td[@class='x-item']",
-  "magnet":".//a//@href",
-  "name":".//a",
-  "size":".//span[4]//b",
-  "count":".//span[3]//b",
-  "source":"http://icili.org/list/XXX/1"
-  },
-  {
   "site":"磁力吧",
   "waiting":"0",
   "group":"//div[@class='search-item']",
@@ -38,36 +18,6 @@
   "size":".//span[3]//b",
   "count":".//span[2]//b",
   "source":"http://www.ciliba.org/s/XXX.html"
-  },
-  {
-  "site":"BT云搜",
-  "waiting":"0",
-  "group":"//li[@class='media']",
-  "magnet":".//a//@href",
-  "name":".//a",
-  "size":".//div[@class='media-more']//span[2]",
-  "count":".//div[@class='media-more']//span[1]",
-  "source":"http://www.btyunsou.com/search/XXX_ctime_1.html"
-  },
-  {
-  "site":"磁力猪",
-  "waiting":"0",
-  "group":"//div[@class='row']",
-  "magnet":".//a//@href",
-  "name":".//a",
-  "size":".//div[@class='col-sm-2 col-lg-1 hidden-xs text-right size']",
-  "count":".//div[@class='col-sm-2 col-lg-2 hidden-xs text-right date']",
-  "source":"http://www.clpig.com/torrent/XXX.html"
-  },
-  {
-  "site":"cililian.me",
-  "waiting":"0",
-  "group":"//ul[@class='mlist']//li",
-  "magnet":".//a//@href",
-  "name":".//a",
-  "size":".//dl[@class='BotInfo']//dt/span[1]",
-  "count":".//dl[@class='BotInfo']//dt/span[2]",
-  "source":"http://cililian.me/list/XXX/1.html"
   },
   {
   "site":"种子搜",
@@ -108,5 +58,38 @@
   "size":".//span[1]",
   "count":".//span[2]",
   "source":"http://www.bt177.net/word/XXX.html"
+  },
+  {
+  "site":"zhongzidi",
+  "waiting":"0",
+  "group":"//div[@class='panel-body']//ul",
+  "magnet":".//dl[2]/a[1]//@href",
+  "name":".//a",
+  "size":".//dl[1]/dd[2]",
+  "count":".//dl[1]/dd[3]",
+  "source":"https://m.zhongzidi.com/list/XXX/1"
+
+  },
+  {
+  "site":"cililiana",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//div[2]/a[1]//@href",
+  "name":".//div[1]/a",
+  "size":".//dl/dt/span[1]",
+  "count":".//dl/dt/span[3]",
+  "source":"http://cililiana.com/list/XXX/1.html"
+  
+  },
+  {
+  "site":"屌丝搜",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//div[2]/a[1]//@href",
+  "name":".//div[1]/a",
+  "size":".//dl/dt/span[1]",
+  "count":".//dl/dt/span[3]",
+  "source":"http://www.diaosisou.org/list/XXX/1"
+  
   }
   ]
