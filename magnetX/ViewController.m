@@ -282,7 +282,9 @@
     }
     return nil;
 }
-
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    return 30;
+}
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
