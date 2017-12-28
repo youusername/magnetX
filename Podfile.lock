@@ -1,0 +1,33 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - CocoaSecurity (1.2.4)
+  - Ono (1.2.2)
+  - SSZipArchive (2.0.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CocoaSecurity
+  - Ono
+  - SSZipArchive
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  SSZipArchive: b6648b70a36303ca5be9f0351174b347e1886236
+
+PODFILE CHECKSUM: bcd4532531198446196b18d9ec0d62dc480ccd1e
+
+COCOAPODS: 1.2.1
