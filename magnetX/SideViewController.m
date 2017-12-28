@@ -108,7 +108,9 @@
 
     return nil;
 }
-
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    return 25;
+}
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     [self changeSelectRuleOfIndex:self.tableView.selectedRow];
     
