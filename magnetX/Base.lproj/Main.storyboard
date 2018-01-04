@@ -20,7 +20,6 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
-                                                <segue destination="Fq6-E9-2j3" kind="show" id="Hue-IW-24l"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -454,35 +453,6 @@
                 <customObject id="b3D-hP-77o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-264" y="-54"/>
-        </scene>
-        <!--关于MagnetX-->
-        <scene sceneID="f93-vs-1ew">
-            <objects>
-                <viewController title="关于MagnetX" id="Fq6-E9-2j3" sceneMemberID="viewController">
-                    <view key="view" id="HUH-g2-gLY">
-                        <rect key="frame" x="0.0" y="0.0" width="418" height="308"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BK5-k8-qC7">
-                                <rect key="frame" x="167" y="206" width="84" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="I93-83-SHX"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Fp-jF-WK4">
-                                <rect key="frame" x="22" y="139" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="感谢大家的使用！" id="O3u-Qt-yk8">
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="NRz-cF-wzL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1362" y="-81"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="818-4h-xPg">
@@ -1003,7 +973,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon" width="128" height="128"/>
         <image name="donateImage" width="694" height="516"/>
         <image name="qq" width="180.33332824707031" height="247"/>
     </resources>
