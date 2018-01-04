@@ -304,12 +304,39 @@
     NSMenuItem *openItem = [[NSMenuItem alloc] initWithTitle:@"打开介绍页面"
                                                       action:@selector(openUrlLink:)
                                                keyEquivalent:@""];
+    NSMenuItem *playMagnet = [[NSMenuItem alloc] initWithTitle:@"在线播放"
+                                                        action:@selector(playMagnet:)
+                                               keyEquivalent:@""];
     [rightClickMenu addItem:downloadItem];
     [rightClickMenu addItem:copyMagnetItem];
     [rightClickMenu addItem:openItem];
+    [rightClickMenu addItem:playMagnet];
     return rightClickMenu;
 }
 
+
+- (void)playMagnet:(id)sender{
+    NSInteger row = -1;
+    if ([sender isKindOfClass:[NSButton class]]) {
+        row = [self.tableView rowForView:sender];
+    } else {
+        row = self.tableView.selectedRow;
+    }
+    
+    if (row<0) {
+        return;
+    }
+    MovieModel *torrent = self.magnets[row];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSPasteboard*pasteboard = [NSPasteboard generalPasteboard];
+        [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
+        [pasteboard setString:torrent.magnet forType:NSStringPboardType];
+        
+        NSString * path =  [[NSBundle mainBundle] pathForResource:@"123" ofType:@"app"];
+        [[NSWorkspace sharedWorkspace] openFile:path];
+    });
+}
 #pragma mark - Indicator and reload table view data
 
 - (void)reloadDataAndStopIndicator {
