@@ -27,7 +27,6 @@
 		612BA62D1FE2AEDD005EDC47 /* GitHubInstallWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 612BA61C1FE2AEDD005EDC47 /* GitHubInstallWindowController.m */; };
 		612BA62E1FE2AEDD005EDC47 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612BA61F1FE2AEDD005EDC47 /* Info.plist */; };
 		612BA6301FE2AF66005EDC47 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 612BA62F1FE2AF66005EDC47 /* README.md */; };
-		61338CF71FF6652300FF4E1E /* 123.app in Resources */ = {isa = PBXBuildFile; fileRef = 61338CF61FF6652300FF4E1E /* 123.app */; };
 		61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */; };
 		AA78C13E1DC6EF730014BA0C /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = AA78C13D1DC6EF730014BA0C /* rule.json */; };
 		AAC820BB1DB8C8C600D12963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820BA1DB8C8C600D12963 /* AppDelegate.m */; };
@@ -82,7 +81,6 @@
 		612BA61F1FE2AEDD005EDC47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		612BA6201FE2AEDD005EDC47 /* GitHubRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubRelease.h; sourceTree = "<group>"; };
 		612BA62F1FE2AF66005EDC47 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		61338CF61FF6652300FF4E1E /* 123.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = 123.app; sourceTree = "<group>"; };
 		61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditorStatus.h; sourceTree = "<group>"; };
 		61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditorStatus.m; sourceTree = "<group>"; };
 		83525DFD30FE7452E49B392A /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 		AAC820BC1DB8C8C600D12963 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				61338CF61FF6652300FF4E1E /* 123.app */,
 				AAC820BD1DB8C8C600D12963 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -366,7 +363,6 @@
 				612BA6301FE2AF66005EDC47 /* README.md in Resources */,
 				612BA62E1FE2AEDD005EDC47 /* Info.plist in Resources */,
 				612BA6221FE2AEDD005EDC47 /* Install.pdf in Resources */,
-				61338CF71FF6652300FF4E1E /* 123.app in Resources */,
 				AAC820C61DB8C8C600D12963 /* Assets.xcassets in Resources */,
 				612BA6231FE2AEDD005EDC47 /* GitHubTemplate.pdf in Resources */,
 				AAC820C91DB8C8C700D12963 /* Main.storyboard in Resources */,
@@ -462,9 +458,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-resources.sh",
+				"${PODS_ROOT}/MLHudAlert/MLHudAlert/Resources/MLHudAlertError.png",
+				"${PODS_ROOT}/MLHudAlert/MLHudAlert/Resources/MLHudAlertInfo.png",
+				"${PODS_ROOT}/MLHudAlert/MLHudAlert/Resources/MLHudAlertSuccess.png",
+				"${PODS_ROOT}/MLHudAlert/MLHudAlert/Resources/MLHudAlertWarn.png",
+				"${PODS_ROOT}/MLHudAlert/MLHudAlert/MLHudAlert.xib",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

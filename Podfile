@@ -10,4 +10,5 @@ pod 'AFNetworking'
 pod 'Ono'
 pod 'CocoaSecurity'
 pod 'SSZipArchive'
+pod 'MLHudAlert', git: 'https://github.com/MacLabs/MLHudAlert.git'
 end

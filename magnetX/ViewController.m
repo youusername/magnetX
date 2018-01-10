@@ -13,6 +13,8 @@
 #import "NSTableView+ContextMenu.h"
 #import <QuartzCore/QuartzCore.h>
 #import <WebKit/WebKit.h>
+#import "MLHudAlert.h"
+#import "AppDelegate.h"
 
 @interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate,WKUIDelegate,WKNavigationDelegate>
 
@@ -326,17 +328,44 @@
     if (row<0) {
         return;
     }
-    MovieModel *torrent = self.magnets[row];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+    if([[NSWorkspace sharedWorkspace] launchApplication:@"WebTorrent"]){
+
+        MovieModel *torrent = self.magnets[row];
         NSPasteboard*pasteboard = [NSPasteboard generalPasteboard];
         [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
         [pasteboard setString:torrent.magnet forType:NSStringPboardType];
-        
-        NSString * path =  [[NSBundle mainBundle] pathForResource:@"123" ofType:@"app"];
-        [[NSWorkspace sharedWorkspace] openFile:path];
-    });
+        [self openWebTorrent];
+
+    }else{
+        AppDelegate* app =(AppDelegate*)[NSApplication sharedApplication].delegate;
+         [self setErrorInfoAndStopIndicator:@"请下载安装 WebTorrent"];
+        [MLHudAlert alertWithWindow:app.RootWindow type:MLHudAlertTypeError message:@"未找到 WebTorrent"];
+    }
+
 }
+
+- (void)openWebTorrent{
+    NSDictionary* errorDict;
+    NSAppleEventDescriptor* returnDescriptor = NULL;
+    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to keystroke \"v\" using command down"];
+    returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+    
+    if (returnDescriptor != NULL)
+    {
+        if (kAENullEvent != [returnDescriptor descriptorType])
+        {
+            if (cAEList == [returnDescriptor descriptorType])
+            {
+            }else{
+                
+            }
+        }
+    }else{
+        
+    }
+}
+
 #pragma mark - Indicator and reload table view data
 
 - (void)reloadDataAndStopIndicator {
