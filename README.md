@@ -1,6 +1,7 @@
 ![image.gif](https://github.com/youusername/magnetX/blob/master/image.gif)
 
-## [软件下载地址](https://github.com/youusername/magnetX/releases) 
+## [Mac版软件下载地址](https://github.com/youusername/magnetX/releases) 
+## [Win版软件下载地址](https://github.com/HexPang/MagnetY/releases) 
 
 
 
@@ -28,6 +29,7 @@
 答：magnetX。
 
 ## 更新日志
+* 2018年1月20日   增加在线播放支持、增加下一页功能
 * 2017年12月28日   更新源网站，新增网址过滤功能
 
 * 2016年11月22日   增加两个源网站

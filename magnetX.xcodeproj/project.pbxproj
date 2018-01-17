@@ -41,7 +41,6 @@
 		AAC820DF1DB9ED9700D12963 /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DE1DB9ED9700D12963 /* MovieModel.m */; };
 		AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC820E01DB9F27500D12963 /* SourceList.plist */; };
 		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
-		AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E61DBA171100D12963 /* nameTableCellView.m */; };
 		AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +106,6 @@
 		AAC820E01DB9F27500D12963 /* SourceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SourceList.plist; sourceTree = "<group>"; };
 		AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = breakDownHtml.h; sourceTree = "<group>"; };
 		AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = breakDownHtml.m; sourceTree = "<group>"; };
-		AAC820E51DBA171100D12963 /* nameTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nameTableCellView.h; sourceTree = "<group>"; };
-		AAC820E61DBA171100D12963 /* nameTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameTableCellView.m; sourceTree = "<group>"; };
 		AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ContextMenu.h"; sourceTree = "<group>"; };
 		AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ContextMenu.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,8 +258,6 @@
 				AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */,
 				AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */,
 				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
-				AAC820E51DBA171100D12963 /* nameTableCellView.h */,
-				AAC820E61DBA171100D12963 /* nameTableCellView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -494,7 +489,6 @@
 				612BA6261FE2AEDD005EDC47 /* NSError+GitHubUpdates.m in Sources */,
 				AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */,
 				612BA62C1FE2AEDD005EDC47 /* GitHubProgressWindowController.m in Sources */,
-				AAC820E71DBA171100D12963 /* nameTableCellView.m in Sources */,
 				61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */,
 				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MovieModel.h"
 #import "breakDownHtml.h"
-#import "nameTableCellView.h"
+
 #import "NSTableView+ContextMenu.h"
 #import <QuartzCore/QuartzCore.h>
 #import <WebKit/WebKit.h>
@@ -24,7 +24,9 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (nonatomic, strong) NSMutableArray<MovieModel*> *magnets;
 @property (nonatomic, strong) NSString  *searchURLString;
-@property (nonatomic,strong) WKWebView*web;
+@property (nonatomic, strong) WKWebView*web;
+@property (nonatomic, assign) BOOL isLoading;
+@property (nonatomic, assign) NSInteger page;
 @end
 
 @implementation ViewController
@@ -46,6 +48,8 @@
 }
 - (void)config{
     self.magnets = [NSMutableArray new];
+    self.page = 1;
+    self.isLoading = NO;
     
     [self observeNotification];
     [self setupSearchText];
@@ -54,6 +58,7 @@
     self.web.UIDelegate = self;
     self.web.navigationDelegate = self;
     [self.view addSubview:self.web];
+    
 }
 - (void)makeFirstResponder{
     [[self.searchTextField window] makeFirstResponder:self.searchTextField];
@@ -132,6 +137,9 @@
 }
 
 - (void)downHtmlString:(NSString*)url isUrl:(BOOL)isURL{
+    
+    self.isLoading = YES;
+    
     @WEAKSELF(self);
     [[breakDownHtml downloader] downloadHtmlURLString:url willStartBlock:^{
         
@@ -149,8 +157,10 @@
         }else{
             [selfWeak setErrorInfoAndStopIndicator:@"源网站没有数据,切换其它源试试！"];
         }
+        selfWeak.isLoading = NO;
     } failure:^(NSError *error) {
         [selfWeak setErrorInfoAndStopIndicator:@"请检查网络，或者等一下再刷新"];
+        selfWeak.isLoading = NO;
     }];
 }
 
@@ -246,55 +256,80 @@
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.magnets.count;
+    
+    NSInteger count = self.magnets.count;
+    if (count>0) {
+        count+=1;
+    }
+    return count;
 }
 
 #pragma mark - NSTableViewDelegate
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
-    MovieModel *torrent = self.magnets[row];
-    if ([identifier isEqualToString:@"nameCell"]) {
-        nameTableCellView *cellView   = [tableView makeViewWithIdentifier:@"nameCell" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.name];
-        return cellView;
-    }
-    if ([identifier isEqualToString:@"sizeCell"]) {
-        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"sizeCell" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.size];
-        return cellView;
-    }
-    if ([identifier isEqualToString:@"countCell"]) {
-        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"countCell" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.count];
-        return cellView;
-    }
-    if ([identifier isEqualToString:@"sourceCell"]) {
+    
+    if (row >= self.magnets.count) {
+        if ([identifier isEqualToString:@"nameCell"]) {
+            return [self tableView:tableView identifier:identifier setValue:@"                                       下一页"];
+        }else{
+            return [self tableView:tableView identifier:identifier setValue:@""];
+        }
         
-        NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
-        
-        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"sourceCell" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",source];
-        return cellView;
-    }
-    if ([identifier isEqualToString:@"magnetCell"]) {
-        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:@"magnetCell" owner:self];
-        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",torrent.magnet];
-        return cellView;
+    }else{
+        MovieModel *torrent = self.magnets[row];
+        if ([identifier isEqualToString:@"nameCell"]) {
+            return [self tableView:tableView identifier:identifier setValue:torrent.name];
+        }
+        if ([identifier isEqualToString:@"sizeCell"]) {
+            return [self tableView:tableView identifier:identifier setValue:torrent.size];
+        }
+        if ([identifier isEqualToString:@"countCell"]) {
+            return [self tableView:tableView identifier:identifier setValue:torrent.count];
+        }
+        if ([identifier isEqualToString:@"sourceCell"]) {
+            
+            NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
+            return [self tableView:tableView identifier:identifier setValue:source];
+        }
+        if ([identifier isEqualToString:@"magnetCell"]) {
+
+            return [self tableView:tableView identifier:identifier setValue:torrent.magnet];
+        }
     }
     return nil;
+}
+
+- (id)tableView:(NSTableView *)tableView identifier:(NSString*)identifier setValue:(NSString*)value{
+    
+        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:identifier owner:self];
+        cellView.textField.stringValue = value;
+    if (cellView) {
+        return cellView;
+        
+    }else{
+        return nil;
+    }
+    
 }
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
     return 30;
 }
 
-- (void)tableViewSelectionDidChange:(NSNotification *)notification {
-    NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
-
-}
+//- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+//    NSLog(@"self.tableView.selectedRow__%ld",self.tableView.selectedRow);
+//    if (self.tableView.selectedRow>= self.magnets.count) {
+//        NSLog(@"下一页");
+//    }
+//
+//}
 
 #pragma mark - Table View Context Menu Delegate
-
+- (void)tableView:(NSTableView *)aTableView clickForRow:(NSInteger)row{
+    if (row >= self.magnets.count && !self.isLoading) {
+        NSLog(@"下一页");
+    }
+}
 - (NSMenu *)tableView:(NSTableView *)aTableView menuForRows:(NSIndexSet *)rows {
     NSMenu *rightClickMenu = [[NSMenu alloc] initWithTitle:@""];
     NSMenuItem *downloadItem = [[NSMenuItem alloc] initWithTitle:@"下载"
@@ -309,10 +344,13 @@
     NSMenuItem *playMagnet = [[NSMenuItem alloc] initWithTitle:@"在线播放"
                                                         action:@selector(playMagnet:)
                                                keyEquivalent:@""];
-    [rightClickMenu addItem:downloadItem];
-    [rightClickMenu addItem:copyMagnetItem];
-    [rightClickMenu addItem:openItem];
-    [rightClickMenu addItem:playMagnet];
+    if (self.tableView.selectedRow < self.magnets.count) {
+        
+        [rightClickMenu addItem:downloadItem];
+        [rightClickMenu addItem:copyMagnetItem];
+        [rightClickMenu addItem:openItem];
+        [rightClickMenu addItem:playMagnet];
+    }
     return rightClickMenu;
 }
 

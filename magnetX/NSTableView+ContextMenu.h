@@ -10,6 +10,8 @@
 
 @protocol ContextMenuDelegate <NSObject>
 - (NSMenu*)tableView:(NSTableView*)aTableView menuForRows:(NSIndexSet*)rows;
+- (void)tableView:(NSTableView*)aTableView clickForRow:(NSInteger)row;
+
 @end
 
 @interface NSTableView (ContextMenu)

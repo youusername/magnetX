@@ -28,4 +28,22 @@
     return [super menuForEvent:event];
 }
 
+- (void)mouseDown:(NSEvent *)event{
+    NSPoint location = [self convertPoint:[event locationInWindow] fromView:nil];
+    NSInteger row = [self rowAtPoint:location];
+    if (!(row >= 0) || ([event type] != NSRightMouseDown)) {
+
+    }
+    NSIndexSet *selected = [self selectedRowIndexes];
+    if (![selected containsIndex:row]) {
+        selected = [NSIndexSet indexSetWithIndex:row];
+        [self selectRowIndexes:selected byExtendingSelection:NO];
+    }
+    if ([[self delegate] respondsToSelector:@selector(tableView:clickForRow:)]) {
+        [(id)[self delegate] tableView:self clickForRow:row];
+    }
+    [super mouseDown:event];
+
+}
+
 @end
