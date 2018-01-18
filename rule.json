@@ -7,7 +7,7 @@
   "name":".//a",
   "size":".//table//tr//td[2]",
   "count":".//table//tr//td[1]",
-  "source":"http://www.aoyoso.com/search/XXX_ctime_1.html"
+  "source":"http://www.aoyoso.com/search/XXX_ctime_PPP.html"
   },
   {
   "site":"磁力吧",
@@ -17,7 +17,7 @@
   "name":".//a",
   "size":".//span[3]//b",
   "count":".//span[2]//b",
-  "source":"http://www.ciliba.org/s/XXX.html"
+  "source":"http://www.ciliba.org/s/XXX_PPP.html"
   },
   {
   "site":"种子搜",
@@ -27,7 +27,7 @@
   "name":".//tbody//a",
   "size":".//tbody//tr//td[2]//strong",
   "count":".//tbody//tr//td[1]//strong",
-  "source":"http://www.zhongziso.com/list/XXX/1"
+  "source":"http://www.zhongziso.com/list/XXX/PPP"
   },
   {
   "site":"SOBT",
@@ -37,7 +37,7 @@
   "name":".//a[@target='_blank']",
   "size":".//div[@class='item-bar']//span[2]//b",
   "count":".//div[@class='item-bar']//span[1]//b",
-  "source":"http://www.sobt5.org/q/XXX.html"
+  "source":"http://www.sobt5.org/q/XXX_PPP.html"
   },
   {
   "site":"BT岛",
@@ -47,7 +47,7 @@
   "name":".//a[@target='_blank']",
   "size":".//dt//span[1]",
   "count":".//dt//span[2]",
-  "source":"http://www.btdao5.com/list/XXX-s1d-1.html"
+  "source":"http://www.btdao5.com/list/XXX-s1d-PPP.html"
   },
   {
   "site":"bt177",
@@ -57,7 +57,7 @@
   "name":".//a",
   "size":".//span[1]",
   "count":".//span[2]",
-  "source":"http://www.bt177.net/word/XXX.html"
+  "source":"http://www.bt177.net/word/XXX_PPP.html"
   },
   {
   "site":"zhongzidi",
@@ -67,7 +67,7 @@
   "name":".//a",
   "size":".//dl[1]/dd[2]",
   "count":".//dl[1]/dd[3]",
-  "source":"https://m.zhongzidi.com/list/XXX/1"
+  "source":"https://m.zhongzidi.com/list/XXX/PPP"
 
   },
   {
@@ -78,7 +78,7 @@
   "name":".//div[1]/a",
   "size":".//dl/dt/span[1]",
   "count":".//dl/dt/span[3]",
-  "source":"http://cililiana.com/list/XXX/1.html"
+  "source":"http://cililiana.com/list/XXX/PPP.html"
   
   },
   {
@@ -89,7 +89,7 @@
   "name":".//div[1]/a",
   "size":".//dl/dt/span[1]",
   "count":".//dl/dt/span[3]",
-  "source":"http://www.diaosisou.org/list/XXX/1"
+  "source":"http://www.diaosisou.org/list/XXX/PPP"
   
   }
   ]

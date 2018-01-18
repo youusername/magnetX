@@ -118,6 +118,7 @@
     }else{
 
         NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+        beseURL = [beseURL stringByReplacingOccurrencesOfString:@"PPP" withString:[NSString stringWithFormat:@"%ld",self.page]];
         url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
 
     }
@@ -147,7 +148,7 @@
         if (isURL) {
             [selfWeak.magnets addObjectsFromArray:[MovieModel resultAnalysis:data]];
         }else{
-            
+
             [selfWeak.magnets addObjectsFromArray:[MovieModel HTMLDocumentWithData:data]];
         }
         
@@ -165,7 +166,9 @@
 }
 
 - (void)resetData {
+    self.page = 1;
     [self.magnets removeAllObjects];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
 
     [self.tableView reloadData];
@@ -258,7 +261,7 @@
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     
     NSInteger count = self.magnets.count;
-    if (count>0) {
+    if (count>0 && ![self isURL:self.searchTextField.stringValue]) {
         count+=1;
     }
     return count;
@@ -271,7 +274,9 @@
     
     if (row >= self.magnets.count) {
         if ([identifier isEqualToString:@"nameCell"]) {
-            return [self tableView:tableView identifier:identifier setValue:@"                                       下一页"];
+            NSTableCellView *cellView = [self tableView:tableView identifier:identifier setValue:@"        点 击 加 载 更 多                点 击 加 载 更 多                点 击 加 载 更 多        "];
+            cellView.textField.textColor = [NSColor redColor];
+            return cellView;
         }else{
             return [self tableView:tableView identifier:identifier setValue:@""];
         }
@@ -302,8 +307,10 @@
 
 - (id)tableView:(NSTableView *)tableView identifier:(NSString*)identifier setValue:(NSString*)value{
     
-        NSTableCellView *cellView      = [tableView makeViewWithIdentifier:identifier owner:self];
-        cellView.textField.stringValue = value;
+    NSTableCellView *cellView      = [tableView makeViewWithIdentifier:identifier owner:self];
+    cellView.textField.stringValue = value;
+    cellView.textField.textColor = [NSColor blackColor];
+    
     if (cellView) {
         return cellView;
         
@@ -327,7 +334,13 @@
 #pragma mark - Table View Context Menu Delegate
 - (void)tableView:(NSTableView *)aTableView clickForRow:(NSInteger)row{
     if (row >= self.magnets.count && !self.isLoading) {
-        NSLog(@"下一页");
+//        NSLog(@"下一页");
+        self.page += 1;
+        
+        NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+        beseURL = [beseURL stringByReplacingOccurrencesOfString:@"PPP" withString:[NSString stringWithFormat:@"%ld",self.page]];
+        NSString* url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        [self downHtmlString:url isUrl:NO];
     }
 }
 - (NSMenu *)tableView:(NSTableView *)aTableView menuForRows:(NSIndexSet *)rows {
