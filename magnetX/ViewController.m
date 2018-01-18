@@ -205,6 +205,7 @@
         return;
     }
     NSString*beseURL = [selectSideRule.source stringByReplacingOccurrencesOfString:@"XXX" withString:self.searchTextField.stringValue];
+    beseURL = [beseURL stringByReplacingOccurrencesOfString:@"PPP" withString:[NSString stringWithFormat:@"%ld",self.page]];
     NSString*url = [beseURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL*toURL =[NSURL URLWithString:url];
