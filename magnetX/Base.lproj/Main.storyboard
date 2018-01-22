@@ -371,7 +371,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="QQ" id="T7d-4p-9hK">
+                                        <menuItem title="QQ群" id="T7d-4p-9hK">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <segue destination="IoL-qu-buQ" kind="show" id="drf-vs-244"/>
@@ -380,9 +380,9 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="更新" id="VDS-NU-xzF">
+                            <menuItem title="捐赠" id="VDS-NU-xzF">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="更新" id="qPs-OU-trJ">
+                                <menu key="submenu" title="捐赠" id="qPs-OU-trJ">
                                     <items>
                                         <menuItem id="PtP-uO-iF1">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -397,12 +397,13 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="bbV-Eq-UTC"/>
-                                        <menuItem title="更新源配置" keyEquivalent="u" id="C3W-Wj-vv8">
+                                        <menuItem title="捐赠" id="yYn-1j-ZeH">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="updateRule:" target="Voe-Tx-rLC" id="eE8-lJ-qpz"/>
+                                                <action selector="openDocument:" target="Ady-hI-5gd" id="Wuv-zR-ssm"/>
+                                                <segue destination="7yp-CB-uVc" kind="show" id="8cQ-1K-lli"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="检查更新软件" keyEquivalent="i" id="jOu-Ic-rmV"/>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -564,7 +565,7 @@
                 </viewController>
                 <customObject id="fvZ-bV-vn5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="1547"/>
+            <point key="canvasLocation" x="-290" y="205"/>
         </scene>
         <!--Side View Controller-->
         <scene sceneID="kwX-Mf-jWQ">
@@ -576,6 +577,13 @@
                         <subviews>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="mediumLight" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Us-7Q6">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="600"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZL7-2U-Ped">
+                                        <rect key="frame" x="26" y="522" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="256icon" id="Uh2-eL-4EV"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="w8E-Qq-kOd"/>
                                 </constraints>
@@ -644,17 +652,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-3u-A4u">
-                                <rect key="frame" x="10" y="525" width="82" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="更新配置" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0JC-As-TQe">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="update:" target="UOH-tx-NO5" id="2Ig-wi-pm5"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9a-LE-ZfW">
                                 <rect key="frame" x="120" y="525" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -973,6 +970,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="256icon" width="256" height="256"/>
         <image name="donateImage" width="694" height="516"/>
         <image name="qq" width="180.33332824707031" height="247"/>
     </resources>
