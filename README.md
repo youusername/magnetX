@@ -28,6 +28,9 @@
 
 答：magnetX。
 
+## 在线播放功能说明
+在线播放是配合[webtorrent](https://github.com/webtorrent/webtorrent-desktop/releases)桌面版进行的，需要单独下载，点击在线播放后会跳转到webtorrent添加任务，开始缓冲才能进去播放，webtorrent加载资源得等待几分，如果几分钟后还是没有速度，删掉，换一个磁力。
+
 ## 更新日志
 * 2018年1月20日   增加在线播放支持、增加下一页功能
 * 2017年12月28日   更新源网站，新增网址过滤功能
@@ -37,17 +40,18 @@
 
 ## magnetX有哪些功能？
 
-* 支持搜索源网站热更新。
 * 不再有网页弹窗广告。
 * 搜索网站一键切换。
-* 配合迅雷一键下载资源。
+* 配合迅雷、115等网盘一键下载资源。
 * 查看文件大小不会误下葫芦娃。
+* [webtorrent](https://github.com/webtorrent/webtorrent-desktop/releases)方法在线播放
 
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * 邮件(214644496#QQ.com, 把#换成@)
 * QQ: 214644496
+* BUG、反馈QQ群:670122660
 * weibo: [@不娶名字不能看](http://weibo.com/u/2689574923)
 
 
