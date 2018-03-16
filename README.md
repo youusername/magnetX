@@ -2,7 +2,7 @@
 
 ## [Mac版软件下载地址](https://github.com/youusername/magnetX/releases) 
 ## [Win版软件下载地址](https://github.com/HexPang/MagnetY/releases) 
-
+## [网页版地址](https://github.com/dengyuhan/magnetW) 
 
 
 ## magnetX是什么?
