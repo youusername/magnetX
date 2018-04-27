@@ -17,7 +17,7 @@
   "name":".//a",
   "size":".//span[3]//b",
   "count":".//span[2]//b",
-  "source":"http://www.ciliba.org/s/XXX_PPP.html"
+  "source":"http://www.ciliba.org/s/XXX_rel_PPP.html"
   },
   {
   "site":"种子搜",
@@ -28,16 +28,6 @@
   "size":".//tbody//tr//td[2]//strong",
   "count":".//tbody//tr//td[1]//strong",
   "source":"http://www.zhongziso.com/list/XXX/PPP"
-  },
-  {
-  "site":"SOBT",
-  "waiting":"0",
-  "group":"//div[@class='search-list col-md-8']//div[@class='search-item']",
-  "magnet":".//a//@href",
-  "name":".//a[@target='_blank']",
-  "size":".//div[@class='item-bar']//span[2]//b",
-  "count":".//div[@class='item-bar']//span[1]//b",
-  "source":"http://www.sobt5.org/q/XXX_PPP.html"
   },
   {
   "site":"BT岛",
@@ -69,17 +59,6 @@
   "count":".//dl[1]/dd[3]",
   "source":"https://m.zhongzidi.com/list/XXX/PPP"
 
-  },
-  {
-  "site":"cililiana",
-  "waiting":"0",
-  "group":"//ul[@class='mlist']//li",
-  "magnet":".//div[2]/a[1]//@href",
-  "name":".//div[1]/a",
-  "size":".//dl/dt/span[1]",
-  "count":".//dl/dt/span[3]",
-  "source":"http://cililiana.com/list/XXX/PPP.html"
-  
   },
   {
   "site":"屌丝搜",
