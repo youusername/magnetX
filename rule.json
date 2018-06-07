@@ -1,15 +1,4 @@
  [
-
-  {
-  "site":"Nyaa",
-  "waiting":"0",
-  "group":"//tr[@class='default']",
-  "magnet":".//td[@class='text-center'][1]//a[2]//@href",
-  "name":".//td[@colspan='2']//a//@title",
-  "size":".//td[@class='text-center'][2]",
-  "count":".//td[@class='text-center'][3]",
-  "source":"https://nyaa.si/?f=0&c=0_0&q=XXX&p=PPP"
-  },
   {
   "site":"BTSOW",
   "waiting":"0",
