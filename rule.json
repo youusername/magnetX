@@ -1,4 +1,75 @@
  [
+
+  {
+  "site":"Nyaa",
+  "waiting":"0",
+  "group":"//tr[@class='default']",
+  "magnet":".//td[@class='text-center'][1]//a[2]//@href",
+  "name":".//td[@colspan='2']//a//@title",
+  "size":".//td[@class='text-center'][2]",
+  "count":".//td[@class='text-center'][3]",
+  "source":"https://nyaa.si/?f=0&c=0_0&q=XXX&p=PPP"
+  },
+  {
+  "site":"BTSOW",
+  "waiting":"0",
+  "group":"//div[@class='row']",
+  "magnet":".//a//@href",
+  "name":".//a//@title",
+  "size":".//div[2]",
+  "count":".//div//span[3]//span",
+  "source":"https://btso.pw/search/XXX/page/PPP"
+  },
+  {
+  "site":"BT樱桃",
+  "waiting":"0",
+  "group":"//div[@class='r']",
+  "magnet":".//a//@href",
+  "name":".//a//h5",
+  "size":".//div//span[2]//span",
+  "count":".//div//span[3]//span",
+  "source":"http://www.btcerises.net/search?keyword=XXX&p=PPP"
+  },
+  {
+  "site":"橘子搜索",
+  "waiting":"0",
+  "group":"//ul[@class='mlist']//li",
+  "magnet":".//a//@href",
+  "name":".//a[@target='_blank']",
+  "size":".//d",
+  "count":".//d",
+  "source":"http://www.juzisousuo.com/word/XXX_PPP.html"
+  },
+  {
+  "site":"磁力吧.net",
+  "waiting":"0",
+  "group":"//div[@class='main']//li",
+  "magnet":".//div[@class='T1']//a//@href",
+  "name":".//div[@class='T1']//a",
+  "size":".//b",
+  "count":".//b",
+  "source":"http://ciliba.net/word/XXX_PPP.html"
+  },
+  {
+  "site": "BT包菜",
+  "waiting": "0",
+  "group": "//table[@class='table']//tr",
+  "magnet": ".//td[@class='x-item']//div[1]//a//@href",
+  "name": ".//td[@class='x-item']//div[1]//a",
+  "size": ".//div[@class='tail']//b[1]",
+  "count": ".//div[@class='tail']//b[4]",
+  "source": "http://www.baocaibt.org/search/XXX/?c=&s=create_time&p=PPP"
+  },
+  {
+  "site": "飞客",
+  "waiting": "0",
+  "group": "//div[@class='ppwrapper']//div[6]",
+  "magnet": ".//div[@class='categorybar']//a//@href",
+  "name": ".//div[@class='title']",
+  "size": ".//div[@class='categorybar']//span[2]//b",
+  "count": ".//div[@class='categorybar']//span[3]//b",
+  "source": "http://feikebt.org/s/XXX/PPP/0/0.html"
+  },
   {
   "site":"AOYOSO",
   "waiting":"0",
@@ -10,7 +81,7 @@
   "source":"http://www.aoyoso.com/search/XXX_ctime_PPP.html"
   },
   {
-  "site":"磁力吧",
+  "site":"磁力吧.org",
   "waiting":"0",
   "group":"//div[@class='search-item']",
   "magnet":".//a//@href",
@@ -50,15 +121,14 @@
   "source":"http://www.bt177.net/word/XXX_PPP.html"
   },
   {
-  "site":"zhongzidi",
-  "waiting":"0",
-  "group":"//div[@class='panel-body']//ul",
-  "magnet":".//dl[2]/a[1]//@href",
-  "name":".//a",
-  "size":".//dl[1]/dd[2]",
-  "count":".//dl[1]/dd[3]",
-  "source":"https://m.zhongzidi.com/list/XXX/PPP"
-
+  "site": "飞机",
+  "waiting": "0",
+  "group": "//div[@class='p-wrapper']//div[6]",
+  "magnet": ".//div[@class='categorybar']//a//@href",
+  "name": ".//div[@class='title']",
+  "size": ".//div[@class='categorybar']//span[2]//b",
+  "count": ".//div[@class='categorybar']//span[3]//b",
+  "source": "http://feijibt.org/list/XXX/PPP/0/0.html"
   },
   {
   "site":"屌丝搜",
@@ -69,6 +139,5 @@
   "size":".//dl/dt/span[1]",
   "count":".//dl/dt/span[3]",
   "source":"http://www.diaosisou.org/list/XXX/PPP"
-  
   }
   ]

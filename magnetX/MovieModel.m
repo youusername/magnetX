@@ -53,7 +53,10 @@ sideModel *selectSideRule;
     if ([firstMagnet componentsSeparatedByString:@"&"].count>1) {
         firstMagnet = [firstMagnet componentsSeparatedByString:@"&"][0];
     }
-    NSString*magnet=[firstMagnet substringWithRange:NSMakeRange(firstMagnet.length-40,40)];
+    NSString*magnet;
+    if (firstMagnet.length>=40) {
+        magnet=[firstMagnet substringWithRange:NSMakeRange(firstMagnet.length-40,40)];
+    }
     Model.magnet = [NSString stringWithFormat:@"magnet:?xt=urn:btih:%@",magnet];
     Model.name = [[element firstChildWithXPath:selectSideRule.name] stringValue];
     Model.size = [[element firstChildWithXPath:selectSideRule.size] stringValue];
