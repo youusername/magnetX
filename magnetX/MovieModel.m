@@ -62,6 +62,10 @@ sideModel *selectSideRule;
     Model.size = [[element firstChildWithXPath:selectSideRule.size] stringValue];
     Model.count = [[element firstChildWithXPath:selectSideRule.count] stringValue];
 //    Model.source =selectSideRule.site;
+    
+    if (Model.name.length<2 || Model.magnet.length<60) {
+        return nil;
+    }
     return Model;
 }
 
@@ -71,7 +75,9 @@ sideModel *selectSideRule;
     [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
         MovieModel*movie = [MovieModel entity:element];
 //        movie.source = url;
-        [array addObject:movie];
+        if (movie) {
+            [array addObject:movie];
+        }
     }];
     return array;
 }
