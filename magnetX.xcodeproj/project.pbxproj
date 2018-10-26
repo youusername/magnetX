@@ -185,7 +185,6 @@
 				92854BD74C2337E944F6F0AE /* Pods-magnetX.debug.xcconfig */,
 				274CC5E11306A95CCF1D1FEE /* Pods-magnetX.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
