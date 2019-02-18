@@ -323,6 +323,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = NWJM7PNTRW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
