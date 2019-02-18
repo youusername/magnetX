@@ -1,0 +1,24 @@
+{
+  "name": "MLHudAlert",
+  "version": "0.0.4",
+  "summary": "Hud alert window for OS X",
+  "homepage": "https://github.com/MacLabs/MLHudAlert",
+  "license": "LICENCE*.*",
+  "authors": {
+    "Jason Lee": "huacnlee@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/MacLabs/MLHudAlert.git",
+    "tag": "0.0.4"
+  },
+  "platforms": {
+    "osx": null
+  },
+  "source_files": "MLHudAlert/**/*.{h,m}",
+  "resources": [
+    "MLHudAlert/Resources/*.{png}",
+    "MLHudAlert/*.xib"
+  ],
+  "public_header_files": "MLHudAlert/**/*.h",
+  "requires_arc": true
+}
