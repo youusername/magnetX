@@ -151,6 +151,12 @@
 
             [selfWeak.magnets addObjectsFromArray:[MovieModel HTMLDocumentWithData:data]];
         }
+        ///过滤插在数据列中的广告
+        [selfWeak.magnets enumerateObjectsUsingBlock:^(MovieModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (obj.magnet.length<40) {
+                [selfWeak.magnets removeObject:obj];
+            }
+        }];
         
         
         if (selfWeak.magnets.count>0) {

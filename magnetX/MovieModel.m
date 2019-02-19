@@ -53,12 +53,19 @@ sideModel *selectSideRule;
     if ([firstMagnet componentsSeparatedByString:@"&"].count>1) {
         firstMagnet = [firstMagnet componentsSeparatedByString:@"&"][0];
     }
-    NSString*magnet=[firstMagnet substringWithRange:NSMakeRange(firstMagnet.length-40,40)];
+    NSString*magnet;
+    if (firstMagnet.length>=40) {
+        magnet=[firstMagnet substringWithRange:NSMakeRange(firstMagnet.length-40,40)];
+    }
     Model.magnet = [NSString stringWithFormat:@"magnet:?xt=urn:btih:%@",magnet];
     Model.name = [[element firstChildWithXPath:selectSideRule.name] stringValue];
     Model.size = [[element firstChildWithXPath:selectSideRule.size] stringValue];
     Model.count = [[element firstChildWithXPath:selectSideRule.count] stringValue];
 //    Model.source =selectSideRule.site;
+    
+    if (Model.name.length<2 || Model.magnet.length<60) {
+        return nil;
+    }
     return Model;
 }
 
@@ -68,7 +75,9 @@ sideModel *selectSideRule;
     [doc enumerateElementsWithXPath:selectSideRule.group usingBlock:^(ONOXMLElement *element, NSUInteger idx, BOOL *stop) {
         MovieModel*movie = [MovieModel entity:element];
 //        movie.source = url;
-        [array addObject:movie];
+        if (movie) {
+            [array addObject:movie];
+        }
     }];
     return array;
 }

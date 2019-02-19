@@ -1,0 +1,8 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/CocoaSecurity" "${PODS_ROOT}/Headers/Public/MLHudAlert" "${PODS_ROOT}/Headers/Public/Ono" $(SDKROOT)/usr/include/libxml2
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaSecurity" "${PODS_CONFIGURATION_BUILD_DIR}/MLHudAlert" "${PODS_CONFIGURATION_BUILD_DIR}/Ono"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"CocoaSecurity" -l"MLHudAlert" -l"Ono" -l"xml2" -framework "CoreServices" -framework "Security" -framework "SystemConfiguration"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

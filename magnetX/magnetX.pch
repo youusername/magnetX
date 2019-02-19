@@ -11,10 +11,10 @@
 #import "magnetXAPI.h"
 #import "sideModel.h"
 #import "Ono.h"
-#import "movieModel.h"
+#import "MovieModel.h"
 #import "MagnetXNotification.h"
 #import "AFHTTPSessionManager.h"
-#import "SSZipArchive.h"
+//#import "SSZipArchive.h"
 #import "breakDownHtml.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

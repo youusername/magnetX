@@ -30,7 +30,7 @@
 }
 
 - (IBAction)updateRule:(id)sender {
-    
+    /*
     NSURL*url = [NSURL URLWithString:MagnetXUpdateRuleURL];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     NSURLSession * session = [NSURLSession sharedSession];
@@ -49,7 +49,7 @@
 
     }];
     [dataTask resume];
-    
+   */
 }
 
 
