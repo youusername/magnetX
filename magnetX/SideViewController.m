@@ -68,7 +68,10 @@
     [self changeSelectRuleOfIndex:0];
     dispatch_async(dispatch_get_main_queue(), ^{
 
-    [self.tableView reloadData];
+        [self.tableView reloadData];
+//        默认选中第一个
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+        [self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
     });
 }
 

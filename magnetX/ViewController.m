@@ -262,6 +262,18 @@
         [self setupData:self];
     }
 }
+- (IBAction)openPan:(id)sender {
+    NSTextField * field ;//= [[sender superview] subviews][0];
+    for (NSView*view in [[sender superview] subviews]) {
+        if ([view isKindOfClass:[NSTextField class]]) {
+            field = (NSTextField*)view;
+        }
+    }
+    NSLog(@"%@",field.stringValue);
+    
+    NSURL*toURL =[NSURL URLWithString:[NSString stringWithFormat:@"https://pan.bitqiu.com/promote-invite?mafrom=promote&mipos=cps&uid=110290000&agentdown=%@",field.stringValue]];
+    [self openMagnetWith:toURL];
+}
 
 #pragma mark - NSTableViewDataSource
 
@@ -300,9 +312,9 @@
             return [self tableView:tableView identifier:identifier setValue:torrent.count];
         }
         if ([identifier isEqualToString:@"sourceCell"]) {
-            
-            NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
-            return [self tableView:tableView identifier:identifier setValue:source];
+            return [self tableView:tableView identifier:identifier setValue:torrent.magnet];
+//            NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
+//            return [self tableView:tableView identifier:identifier setValue:source];
         }
         if ([identifier isEqualToString:@"magnetCell"]) {
 

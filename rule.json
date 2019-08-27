@@ -9,6 +9,27 @@
         "count": "./tbody/tr/td[1]/strong",
         "source": "https://www.zhongzilou.com/list/XXX/PPP"
     },
+
+    {
+        "site": "MAG磁力站",
+        "waiting": "0",
+        "group": "//ul[@class\u003d\u0027link-list\u0027]",
+        "magnet": "./li/@data-magnet",
+        "name": "./li/span[1]",
+        "size": "./li/span[2]/span[1]",
+        "count": "./li/span[2]/span[2]",
+        "source": "http://oabt005.com/index/index/k/XXX/p/PPP"
+    },
+    {
+        "site": "磁力王",
+        "waiting": "0",
+        "group": "//div[@class\u003d\"single_cont\"]",
+        "magnet": "./ul[1]/li/h3/a/@data-src",
+        "name": "./ul[1]/li/h3/a",
+        "size": "./ul[2]/li[2]/span",
+        "count": "./ul[2]/li[1]/text()",
+        "source": "https://www.ciliwang.club/list.html?keyword\u003dXXX\u0026page\u003dPPP"
+    },
     {
         "site": "BT蚂蚁",
         "waiting": "0",
@@ -17,7 +38,7 @@
         "name": "./div[@class\u003d\u0027item-title\u0027]/a",
         "size": "./div[@class\u003d\u0027item-bar\u0027]/span[4]/b",
         "count": "./div[@class\u003d\u0027item-bar\u0027]/span[1]/b",
-        "source": "http://www.btaot.com/search/XXX-first-asc-PPP"
+        "source": "http://www.btdet.com/search/XXX-first-asc-PPP"
     },
     {
         "site": "BT4G",
@@ -40,6 +61,16 @@
         "source": "https://nyaa.si?q\u003dXXX\u0026p\u003dPPP"
     },
     {
+        "site": "动漫花园",
+        "waiting": "0",
+        "group": "//*[@id\u003d\"topic_list\"]/tbody/tr",
+        "magnet": "./td[4]/a/@href",
+        "name": "./td[3]/a",
+        "size": "./td[5]",
+        "count": "./td[1]/text()",
+        "source": "https://dmhy.anoneko.com/topics/list/page/PPP?keyword\u003dXXX"
+    },
+    {
         "site": "Sukebei Nyaa",
         "waiting": "0",
         "group": "//div[@class\u003d\u0027table-responsive\u0027]/table/tbody/tr",
@@ -57,7 +88,7 @@
         "name": "./a/div[1]",
         "size": "./div[1]",
         "count": "./div[2]",
-        "source": "https://btsow.pw/search/XXX/page/PPP"
+        "source": "https://btspread.com/search/XXX/page/PPP"
     },
     {
         "site": "Torrentz2",
@@ -74,20 +105,10 @@
         "waiting": "0",
         "group": "//div[@class\u003d\"resultdiv\"]",
         "magnet": "./div[1]/a/@href",
-        "name": "./div[1]/a/div",
+        "name": "./div[1]/a",
         "size": "./div[2]/div[3]/div[2]",
         "count": "./div[2]/div[2]/div[2]",
         "source": "https://idope.se/torrent-list/XXX/?p\u003dPPP"
-    },
-    {
-        "site": "BTbook",
-        "waiting": "0",
-        "group": "//div[@class\u003d\u0027cili-item\u0027]",
-        "magnet": "./div[1]/h3/a/@href",
-        "name": "./div[1]/h3/a",
-        "size": "./div[3]/span[3]/b",
-        "count": "./div[3]/span[2]/b/b",
-        "source": "https://btbookk.net/sou/XXX/time-PPP.html"
     },
     {
         "site": "SkrBT",
@@ -107,26 +128,16 @@
         "name": "./div[1]/h3/a",
         "size": "./div[3]/h4/small/span[1]",
         "count": "./div[3]/h4/small/span[3]",
-        "source": "https://lemoncili.com/search?keyword\u003dXXX\u0026s\u003drelevance\u0026p\u003dPPP"
+        "source": "https://lemencili1.xyz/search?keyword\u003dXXX\u0026s\u003drelevance\u0026p\u003dPPP"
     },
     {
-        "site": "BT磁力链",
+        "site": "卧槽搜搜",
         "waiting": "0",
-        "group": "//li",
+        "group": "//td[@class\u003d\u0027x-item\u0027]",
         "magnet": "./h3/a/@href",
         "name": "./h3/a",
-        "size": "./dl/dt/span[2]",
-        "count": "./dl/dt/span[1]",
-        "source": "https://www.bturl.tv/search/XXX_ctime_PPP.html"
-    },
-    {
-        "site": "MAG磁力站",
-        "waiting": "0",
-        "group": "//ul[@class\u003d\u0027link-list\u0027]",
-        "magnet": "./li/@data-magnet",
-        "name": "./li/span[1]",
-        "size": "./li/span[2]/span[1]",
-        "count": "./li/span[2]/span[2]",
-        "source": "http://oabt005.com/index/index/k/XXX/p/PPP"
+        "size": "./span[4]/b",
+        "count": "./span[2]/b",
+        "source": "http://www.wcs777.com/s/XXX-first-asc-PPP"
     }
 ]
