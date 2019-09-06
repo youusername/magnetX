@@ -24,10 +24,10 @@
         "site": "磁力王",
         "waiting": "0",
         "group": "//div[@class\u003d\"single_cont\"]",
-        "magnet": "./ul[1]/li/h3/a/@data-src",
-        "name": "./ul[1]/li/h3/a",
-        "size": "./ul[2]/li[2]/span",
-        "count": "./ul[2]/li[1]/text()",
+        "magnet": "*//h3/a/@data-src",
+        "name": "*//h3/a",
+        "size": "*//li[2]/span",
+        "count": "*//li[1]/text()",
         "source": "https://www.ciliwang.club/list.html?keyword\u003dXXX\u0026page\u003dPPP"
     },
     {

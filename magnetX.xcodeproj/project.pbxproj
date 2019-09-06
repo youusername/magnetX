@@ -42,6 +42,7 @@
 		AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC820E01DB9F27500D12963 /* SourceList.plist */; };
 		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
 		AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */; };
+		B6FFDD432322079A0075317C /* NSString+XTNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDD422322079A0075317C /* NSString+XTNSString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,8 @@
 		AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = breakDownHtml.m; sourceTree = "<group>"; };
 		AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ContextMenu.h"; sourceTree = "<group>"; };
 		AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ContextMenu.m"; sourceTree = "<group>"; };
+		B6FFDD412322079A0075317C /* NSString+XTNSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XTNSString.h"; sourceTree = "<group>"; };
+		B6FFDD422322079A0075317C /* NSString+XTNSString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTNSString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +287,8 @@
 				AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */,
 				61B0E20E1E7CFC6300C2C6C3 /* UserEditorStatus.h */,
 				61B0E20F1E7CFC6300C2C6C3 /* UserEditorStatus.m */,
+				B6FFDD412322079A0075317C /* NSString+XTNSString.h */,
+				B6FFDD422322079A0075317C /* NSString+XTNSString.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				612BA62C1FE2AEDD005EDC47 /* GitHubProgressWindowController.m in Sources */,
 				61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */,
 				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
+				B6FFDD432322079A0075317C /* NSString+XTNSString.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
 				612BA62B1FE2AEDD005EDC47 /* NSString+GitHubUpdates.m in Sources */,
 				612BA6291FE2AEDD005EDC47 /* GitHubRelease.m in Sources */,

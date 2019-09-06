@@ -15,6 +15,7 @@
 #import <WebKit/WebKit.h>
 #import "MLHudAlert.h"
 #import "AppDelegate.h"
+#import "NSString+XTNSString.h"
 
 @interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate,WKUIDelegate,WKNavigationDelegate>
 
@@ -303,13 +304,13 @@
     }else{
         MovieModel *torrent = self.magnets[row];
         if ([identifier isEqualToString:@"nameCell"]) {
-            return [self tableView:tableView identifier:identifier setValue:torrent.name];
+            return [self tableView:tableView identifier:identifier setValue:torrent.name.clearSpace];
         }
         if ([identifier isEqualToString:@"sizeCell"]) {
-            return [self tableView:tableView identifier:identifier setValue:torrent.size];
+            return [self tableView:tableView identifier:identifier setValue:torrent.size.clearSpace];
         }
         if ([identifier isEqualToString:@"countCell"]) {
-            return [self tableView:tableView identifier:identifier setValue:torrent.count];
+            return [self tableView:tableView identifier:identifier setValue:torrent.count.clearSpace];
         }
         if ([identifier isEqualToString:@"sourceCell"]) {
             return [self tableView:tableView identifier:identifier setValue:torrent.magnet];
