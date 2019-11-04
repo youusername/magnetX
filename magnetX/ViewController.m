@@ -295,7 +295,7 @@
     if (row >= self.magnets.count) {
         if ([identifier isEqualToString:@"nameCell"]) {
             NSTableCellView *cellView = [self tableView:tableView identifier:identifier setValue:@"        点 击 加 载 更 多                点 击 加 载 更 多                点 击 加 载 更 多        "];
-            cellView.textField.textColor = [NSColor redColor];
+//            cellView.textField.textColor = [NSColor redColor];
             return cellView;
         }else{
             return [self tableView:tableView identifier:identifier setValue:@""];
