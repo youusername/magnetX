@@ -329,7 +329,7 @@
     
     NSTableCellView *cellView      = [tableView makeViewWithIdentifier:identifier owner:self];
     cellView.textField.stringValue = value;
-    cellView.textField.textColor = [NSColor blackColor];
+//    cellView.textField.textColor = [NSColor blackColor];
     
     if (cellView) {
         return cellView;
