@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.sites = [NSMutableArray new];
-    [self setupTableViewData];
+    [self setupTableViewData:nil];
     [self observeNotification];
 
     extern sideModel *selectSideRule;
@@ -44,9 +44,23 @@
     [[NSWorkspace sharedWorkspace] openFile:[UserEditorStatus getJsonFilePath]];
     
 }
-- (void)setupTableViewData{
     
-    NSData*data = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
+- (IBAction)updateJson:(id)sender {
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://bt.lansou.pw/mac/rule"]];
+//    NSString * str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    NSString *url = [[NSBundle mainBundle] pathForResource:@"rule" ofType:@"json"];
+    [data writeToFile:url atomically:YES];
+    
+    [self setupTableViewData:data];
+}
+    
+    
+- (void)setupTableViewData:(NSData*)data{
+    if (!data) {
+        data = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
+    }
+//    NSData*data = [NSData dataWithContentsOfFile:[UserEditorStatus getJsonFilePath]];
     NSArray*array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     if (!array) {
         return;
@@ -86,7 +100,7 @@
 #pragma mark - Notification
 
 - (void)observeNotification {
-    [MagnetXNotification addObserver:self selector:@selector(setupTableViewData) name:MagnetXUpdateRuleNotification];
+    [MagnetXNotification addObserver:self selector:@selector(setupTableViewData:) name:MagnetXUpdateRuleNotification];
 }
 
 
