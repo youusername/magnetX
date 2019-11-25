@@ -46,7 +46,7 @@
 }
     
 - (IBAction)updateJson:(id)sender {
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://bt.lansou.pw/mac/rule"]];
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://gitee.com/zvj88888888/magnet_qt/raw/master/rule.json"]];
 //    NSString * str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     NSString *url = [[NSBundle mainBundle] pathForResource:@"rule" ofType:@"json"];

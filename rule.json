@@ -1,142 +1,132 @@
 [
     {
-        "site": "磁力果",
-        "waiting": "0",
-        "group": "//div[@class\u003d\"card mb-4\"]",
-        "magnet": "./div[1]/div[2]/div/button[1]/@data-src",
-        "name": "./div[1]/div[1]/a",
-        "size": "./div[2]/div/div[1]/small[2]/span",
-        "count": "./div[2]/div/div[1]/small[1]/span",
-        "source": "https://www.ciliguo.best/search?q\u003dXXX\u0026p\u003dPPP"
-    },
-    {
-        "site": "磁力王",
-        "waiting": "0",
-        "group": "//div[@class\u003d\"single_cont\"]",
-        "magnet": "./ul[1]/li/h3/a/@data-src",
-        "name": "./ul[1]/li/h3/a",
-        "size": "./ul[2]/li[2]/span",
-        "count": "./ul[2]/li[1]/text()",
-        "source": "https://www.ciliwang1.club/list.html?keyword\u003dXXX\u0026page\u003dPPP\u0026sort\u003dai"
-    },
-    {
-        "site": "种子搜",
-        "waiting": "0",
-        "group": "//table[@class\u003d\u0027table table-bordered table-striped\u0027]",
-        "magnet": "./tbody/tr[1]/td/div/h4/a/@href",
-        "name": "./tbody/tr[1]/td/div/h4/a",
-        "size": "./tbody/tr/td[2]/strong",
-        "count": "./tbody/tr/td[1]/strong",
-        "source": "https://www.zhongzihu.com/list/XXX/PPP"
-    },
-    {
         "site": "BT蚂蚁",
         "waiting": "0",
-        "group": "//div[@id\u003d\u0027wall\u0027]/div[@class\u003d\u0027search-item\u0027]",
-        "magnet": "./div[@class\u003d\u0027item-title\u0027]/a/@href",
-        "name": "./div[@class\u003d\u0027item-title\u0027]/a",
-        "size": "./div[@class\u003d\u0027item-bar\u0027]/span[4]/b",
-        "count": "./div[@class\u003d\u0027item-bar\u0027]/span[1]/b",
+        "group": "//div[@id='wall']/div[@class='search-item']",
+        "magnet": "./div[@class='item-title']/a/@href",
+        "name": "./div[@class='item-title']/a",
+        "size": "./div[@class='item-bar']/span[4]/b",
+        "count": "./div[@class='item-bar']/span[1]/b",
         "source": "http://www.btunt.com/search/XXX-first-asc-PPP"
     },
     {
-        "site": "Nyaa（动漫）",
+        "site": " 磁力狗",
         "waiting": "0",
-        "group": "//div[@class\u003d\u0027table-responsive\u0027]/table/tbody/tr",
-        "magnet": "./td[3]/a[2]/@href",
-        "name": "./td[2]/a",
-        "size": "./td[4]",
-        "count": "./td[5]",
-        "source": "https://nyaa.si?q\u003dXXX\u0026p\u003dPPP"
-    },
-    {
-        "site": "动漫花园",
-        "waiting": "0",
-        "group": "//*[@id\u003d\"topic_list\"]/tbody/tr",
-        "magnet": "./td[4]/a/@href",
-        "name": "./td[3]/a",
-        "size": "./td[5]",
-        "count": "./td[1]/text()",
-        "source": "https://dmhy.anoneko.com/topics/list/page/PPP?keyword\u003dXXX"
-    },
-    {
-        "site": "Sukebei Nyaa",
-        "waiting": "0",
-        "group": "//div[@class\u003d\u0027table-responsive\u0027]/table/tbody/tr",
-        "magnet": "./td[3]/a[2]/@href",
-        "name": "./td[2]/a",
-        "size": "./td[4]",
-        "count": "./td[5]",
-        "source": "https://sukebei.nyaa.si?q\u003dXXX\u0026p\u003dPPP"
+        "group": "//*[@id=\"Search_list_wrapper\"]/li",
+        "magnet": "./div[1]/div[1]/a[1]/@href",
+        "name": "./div[1]/div[1]/a[1]",
+        "size": "./div[2]/text()[1]",
+        "count": "./div[2]/text()[2]",
+        "source": "http://www.ciligou.co/search?word=XXX&sort=rele&p=PPP"
     },
     {
         "site": "idope",
         "waiting": "0",
-        "group": "//div[@class\u003d\"resultdiv\"]",
+        "group": "//div[@class=\"resultdiv\"]",
         "magnet": "./div[1]/a/@href",
         "name": "./div[1]/a",
         "size": "./div[2]/div[3]/div[2]",
         "count": "./div[2]/div[2]/div[2]",
-        "source": "https://idope.se/torrent-list/XXX/?p\u003dPPP"
+        "source": "https://idope.se/torrent-list/XXX/?p=PPP"
     },
     {
-        "site": "BT4G",
+        "site": " 超人搜索",
         "waiting": "0",
-        "group": "/html/body/main/div/div[3]/div/div",
-        "magnet": "./h5/a/@href",
-        "name": "./h5/a",
-        "size": "./span[4]/b",
-        "count": "./span[2]/b",
-        "source": "https://cn.bt4g.com/search/XXX/PPP"
+        "group": "//article[@class='item']/div",
+        "magnet": "./a[1]/@href",
+        "name": "./a[1]",
+        "size": "./p[1]",
+        "count": "./p[1]",
+        "source": "https://www.crsoso.xyz/search/XXX/page-PPP.html"
+    },
+    {
+        "site": "动漫花园",
+        "waiting": "0",
+        "group": "//*[@id=\"topic_list\"]/tbody/tr",
+        "magnet": "./td[4]/a/@href",
+        "name": "./td[3]/a",
+        "size": "./td[5]",
+        "count": "./td[1]/text()",
+        "source": "https://dmhy.anoneko.com/topics/list/page/PPP?keyword=XXX"
     },
     {
         "site": "MAG磁力站",
         "waiting": "0",
-        "group": "//ul[@class\u003d\u0027link-list\u0027]",
+        "group": "//ul[@class='link-list']",
         "magnet": "./li/@data-magnet",
         "name": "./li/span[1]",
         "size": "./li/span[2]/span[1]",
         "count": "./li/span[2]/span[2]",
-        "source": "http://oabt005.com/index/index/k/XXX/p/PPP"
+        "source": "http://f.cili001.com/index/index/k/XXX/p/PPP"
     },
     {
-        "site": "磁力柠檬",
+        "site": "磁力宝",
         "waiting": "0",
-        "group": "//div[@class\u003d\u0027panel panel-default border-radius\u0027]",
-        "magnet": "./div[1]/h3/a/@href",
-        "name": "./div[1]/h3/a",
-        "size": "./div[3]/h4/small/span[1]",
-        "count": "./div[3]/h4/small/span[3]",
-        "source": "https://lemencili1.xyz/search?keyword\u003dXXX\u0026s\u003drelevance\u0026p\u003dPPP"
+        "group": "//div[@class='search-item']",
+        "magnet": "./div[1]/h3[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "count": "./div[3]/span[2]/b[1]",
+        "source": "https://www.cilibao.net/s/XXX.html"
     },
     {
-        "site": "SkrBT",
+        "site": "磁力管家",
         "waiting": "0",
-        "group": "//ul[@class\u003d\u0027list-unstyled\u0027]",
-        "magnet": "./li[2]/a/@href",
-        "name": "./li[1]/a",
-        "size": "./li[2]/span[1]",
-        "count": "./li[2]/span[3]",
-        "source": "https://www.skrbt.world/search?keyword\u003dXXX\u0026s\u003drelevance\u0026p\u003dPPP"
+        "group": "//div[@class='row']",
+        "magnet": "./div[1]/h4[1]/a[1]/@href",
+        "name": "./div[1]/h4[1]/a[1]",
+        "size": "./div[2]/div[2]",
+        "count": "./div[2]/div[4]",
+        "source": "http://p99y.com/search/kw/XXX.html?page=PPP"
     },
     {
-        "site": "BTSOW",
+        "site": " Sobt",
         "waiting": "0",
-        "group": "//div[@class\u003d\u0027row\u0027]",
-        "magnet": "./a/@href",
-        "name": "./a/div[1]",
-        "size": "./div[1]",
-        "count": "./div[2]",
-        "source": "https://btspread.com/search/XXX/page/PPP"
+        "group": "//div[@class='search-item']",
+        "magnet": "./div[1]/h3[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "count": "./div[3]/span[2]/b[1]",
+        "source": "http://www.sobt5.pwq/XXX.html?sort=rel&page=PPP"
     },
     {
-        "site": "KickassTorrents",
+        "site": "天天磁力",
         "waiting": "0",
-        "group": "//tr[@class\u003d\u0027odd\u0027]",
-        "magnet": "./td[1]/div[2]/div/a/@href",
-        "name": "./td[1]/div[2]/div/a",
-        "size": "./td[2]",
-        "count": "./td[4]",
-        "source": "https://kickasstorrents.to/usearch/XXX/PPP"
+        "group": "//div[@class='newest-blog-item border m-top-10']",
+        "magnet": "./div[1]/div[1]/span[5]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[1]/div[1]/span[2]",
+        "count": "./div[1]/div[1]/span[3]",
+        "source": "http://www.ttcili8.com/s/XXX/PPP-0-0.html"
+    },
+    {
+        "site": "SSBTZZ",
+        "waiting": "0",
+        "group": "//div[@class='search-item']",
+        "magnet": "./div[3]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "count": "./div[3]/span[5]/b[1]",
+        "source": "https://www.ssbtzz.com/search/XXX/default-PPP.html"
+    },
+    {
+        "site": " Btdad",
+        "waiting": "0",
+        "group": "//div[@class='ssbox']",
+        "magnet": "./div[2]/span[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[2]/span[3]/b[1]",
+        "count": "./div[2]/span[4]/b[1]",
+        "source": "http://www.btdad.xyz/search-XXX-0-0-PPP.html"
+    },
+    {
+        "site": "磁力蜘蛛",
+        "waiting": "0",
+        "group": "//div[@class='search-item']",
+        "magnet": "./div[1]/h3[1]/a[1]/@href",
+        "name": "./div[1]/h3[1]/a[1]",
+        "size": "./div[3]/span[3]/b[1]",
+        "count": "./div[3]/span[2]/b[1]",
+        "source": "http://www.eclzz.com/s/XXX_rel_PPP.html"
     }
 ]
