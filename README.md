@@ -1,9 +1,14 @@
 ![image.gif](https://github.com/youusername/magnetX/blob/master/image.gif)
 
 ## [Mac版软件下载地址](https://github.com/youusername/magnetX/releases) 
-## [Win版软件下载地址](https://github.com/HexPang/MagnetY/releases) 
+## [Win版(Qt版)下载地址](https://github.com/youusername/magnet_qt/releases) 
+## [Win版(原生)下载地址](https://github.com/HexPang/MagnetY/releases) 
 ## [网页版地址](https://github.com/dengyuhan/magnetW) 
 
+
+## 本项目仅用于学习交流---严禁用于非法用途---若有侵犯，联系删除
+## 本项目仅用于学习交流---严禁用于非法用途---若有侵犯，联系删除
+## 本项目仅用于学习交流---严禁用于非法用途---若有侵犯，联系删除
 
 ## magnetX是什么?
 
@@ -32,12 +37,6 @@
 在线播放是配合[webtorrent](https://github.com/webtorrent/webtorrent-desktop/releases)桌面版进行的，需要单独下载，点击在线播放后会跳转到webtorrent添加任务，开始缓冲才能进去播放，webtorrent加载资源得等待几分，如果几分钟后还是没有速度，删掉，换一个磁力。
 
 ## 更新日志
-* 2018年10月26日   更新json
-* 2018年1月20日   增加在线播放支持、增加下一页功能
-* 2017年12月28日   更新源网站，新增网址过滤功能
-
-* 2016年11月22日   增加两个源网站
-* 2016年11月8日    增加四个源网站，去掉高清MP4吧
 
 ## magnetX有哪些功能？
 
@@ -50,6 +49,7 @@
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
+* 本项目仅用于学习交流------严禁用于非法用途-----若有侵犯，联系删除
 * 邮件(214644496#QQ.com, 把#换成@)
 * QQ: 214644496
 * BUG、反馈QQ群:670122660
