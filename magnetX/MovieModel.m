@@ -47,8 +47,8 @@ sideModel *selectSideRule;
 + (MovieModel*)entity:(ONOXMLElement *)element{
     MovieModel*Model = [MovieModel new];
     NSString*firstMagnet = [element firstChildWithXPath:selectSideRule.magnet].stringValue;
-    if ([firstMagnet hasSuffix:@".html"]) {
-        firstMagnet = [firstMagnet stringByReplacingOccurrencesOfString:@".html"withString:@""];
+    if ([firstMagnet componentsSeparatedByString:@".html"]) {
+        firstMagnet = [firstMagnet componentsSeparatedByString:@".html"][0];
     }
     if ([firstMagnet componentsSeparatedByString:@"&"].count>1) {
         firstMagnet = [firstMagnet componentsSeparatedByString:@"&"][0];

@@ -73,7 +73,6 @@
         side.group= dic[@"group"];
         side.name = dic[@"name"];;
         side.size = dic[@"size"];;
-        side.waiting= dic[@"waiting"];
         side.count  = dic[@"count"];;
         side.source = dic[@"source"];;
         side.magnet = dic[@"magnet"];;

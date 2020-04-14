@@ -28,6 +28,7 @@
 @property (nonatomic, strong) WKWebView*web;
 @property (nonatomic, assign) BOOL isLoading;
 @property (nonatomic, assign) NSInteger page;
+@property (weak) IBOutlet NSButton *addTrackers;
 @end
 
 @implementation ViewController
@@ -182,8 +183,8 @@
     });
 }
 - (void)setupSearchText{
-    NSArray*searchText = @[@"王牌特工",@"星球大战",@"异形",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队",@"血族",@"银翼杀手",@"猎凶风河谷",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
-    self.searchTextField.stringValue = searchText[arc4random() % searchText.count];
+//    NSArray*searchText = @[@"王牌特工",@"星球大战",@"异形",@"冰与火之歌",@"心花路放",@"猩球崛起",@"行尸走肉",@"分手大师",@"敢死队",@"血族",@"银翼杀手",@"猎凶风河谷",@"暗杀教室",@"我的战争",@"海底总动员",@"咖啡公社"];
+    self.searchTextField.stringValue = @"bbc";//searchText[arc4random() % searchText.count];
     
     [self changeKeyword];
 }
@@ -231,9 +232,14 @@
         return;
     }
     MovieModel *torrent = self.magnets[row];
+    NSString * copy_magnet = torrent.magnet;
+    if (self.addTrackers.state == 1) {
+        copy_magnet = [NSString stringWithFormat:@"%@%@",torrent.magnet,[sideModel getTrackerslist]];
+    }
+    
     NSPasteboard*pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
-    [pasteboard setString:torrent.magnet forType:NSStringPboardType];
+    [pasteboard setString:copy_magnet forType:NSStringPboardType];
 }
 - (IBAction)queryDownloadMagnet:(id)sender {
     NSInteger row = -1;
@@ -264,16 +270,7 @@
     }
 }
 - (IBAction)openPan:(id)sender {
-    NSTextField * field ;//= [[sender superview] subviews][0];
-    for (NSView*view in [[sender superview] subviews]) {
-        if ([view isKindOfClass:[NSTextField class]]) {
-            field = (NSTextField*)view;
-        }
-    }
-    NSLog(@"%@",field.stringValue);
-    
-    NSURL*toURL =[NSURL URLWithString:[NSString stringWithFormat:@"https://pan.bitqiu.com/promote-invite?mafrom=promote&mipos=cps&uid=110290000&agentdown=%@",field.stringValue]];
-    [self openMagnetWith:toURL];
+
 }
 
 #pragma mark - NSTableViewDataSource
@@ -313,9 +310,9 @@
             return [self tableView:tableView identifier:identifier setValue:torrent.count.clearSpace];
         }
         if ([identifier isEqualToString:@"sourceCell"]) {
-            return [self tableView:tableView identifier:identifier setValue:torrent.magnet];
-//            NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
-//            return [self tableView:tableView identifier:identifier setValue:source];
+//            return [self tableView:tableView identifier:identifier setValue:torrent.magnet];
+            NSString * source = [self isURL:self.searchTextField.stringValue] ? @"" : selectSideRule.site;
+            return [self tableView:tableView identifier:identifier setValue:source];
         }
         if ([identifier isEqualToString:@"magnetCell"]) {
 
