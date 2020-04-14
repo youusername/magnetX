@@ -33,6 +33,10 @@
 
     extern sideModel *selectSideRule;
     selectSideRule = self.sites[0];
+    
+
+        [self updateJson:nil];
+
 }
 - (IBAction)update:(id)sender {
     AppDelegate* app =(AppDelegate*)[NSApplication sharedApplication].delegate;
