@@ -70,16 +70,7 @@
         "name": ".//div[1]/h3/a",
         "size": ".//div[3]/span[1]/b",
         "count": ".//div[3]/span[2]/b",
-        "source": "https://bthub.xyz/main-search-kw-XXX-PPP.html"
-    },
-    {
-        "site": "btdb.io",
-        "group": "//div[@class='media']",
-        "magnet": ".//ul/li/h2/a/@href",
-        "name": ".//ul/li/h2/a",
-        "size": ".//ul/li/div/small[1]/strong",
-        "count": ".//ul/li/div/small[2]/strong",
-        "source": "https://btdb.io/search/XXX/?page=PPP"
+        "source": "https://bthub.site/cn/search/kw-XXX-PPP.html"
     },
     {
       "site": " Btdad.info",
@@ -98,15 +89,6 @@
       "size": "./li/span[2]/span[1]",
       "count": "./li/span[2]/span[2]",
       "source": "http://f.cili001.com/index/index/k/XXX/p/PPP"
-    },
-    {
-      "site": "Zooqle",
-      "group": "//*[@class='table table-condensed table-torrents vmiddle']/tr",
-      "magnet": "./td[3]/ul/li/a/@href",
-      "name": "./td[2]/a",
-      "size": ".//td[4]/div/div",
-      "count": "./td[5]",
-      "source": "https://zooqle.com/search?pg=PPP&q=XXX&v=t"
     },
     {
          "site": "octopgo",

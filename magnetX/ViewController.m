@@ -10,19 +10,19 @@
 #import "MovieModel.h"
 #import "breakDownHtml.h"
 
-#import "NSTableView+ContextMenu.h"
+#import "XTTableView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <WebKit/WebKit.h>
 #import "MLHudAlert.h"
 #import "AppDelegate.h"
 #import "NSString+XTNSString.h"
 
-@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,ContextMenuDelegate,WKUIDelegate,WKNavigationDelegate>
+@interface ViewController()<NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate,WKUIDelegate,WKNavigationDelegate>
 
 @property (weak) IBOutlet NSTextField *searchTextField;
 @property (weak) IBOutlet NSProgressIndicator *indicator;
 @property (weak) IBOutlet NSTextField *info;
-@property (weak) IBOutlet NSTableView *tableView;
+@property (weak) IBOutlet XTTableView *tableView;
 @property (nonatomic, strong) NSMutableArray<MovieModel*> *magnets;
 @property (nonatomic, strong) NSString  *searchURLString;
 @property (nonatomic, strong) WKWebView*web;
@@ -59,6 +59,7 @@
     self.web =[[WKWebView alloc]initWithFrame:CGRectZero];
     self.web.UIDelegate = self;
     self.web.navigationDelegate = self;
+    self.tableView.delegate = self;
     [self.view addSubview:self.web];
     
 }

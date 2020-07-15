@@ -41,7 +41,7 @@
 		AAC820DF1DB9ED9700D12963 /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820DE1DB9ED9700D12963 /* MovieModel.m */; };
 		AAC820E11DB9F27500D12963 /* SourceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC820E01DB9F27500D12963 /* SourceList.plist */; };
 		AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */; };
-		AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */; };
+		B6E4C0CB24BEEDB700EEF50E /* XTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E4C0CA24BEEDB700EEF50E /* XTTableView.m */; };
 		B6FFDD432322079A0075317C /* NSString+XTNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDD422322079A0075317C /* NSString+XTNSString.m */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +107,8 @@
 		AAC820E01DB9F27500D12963 /* SourceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SourceList.plist; sourceTree = "<group>"; };
 		AAC820E21DB9FF3B00D12963 /* breakDownHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = breakDownHtml.h; sourceTree = "<group>"; };
 		AAC820E31DB9FF3B00D12963 /* breakDownHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = breakDownHtml.m; sourceTree = "<group>"; };
-		AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ContextMenu.h"; sourceTree = "<group>"; };
-		AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ContextMenu.m"; sourceTree = "<group>"; };
+		B6E4C0C924BEEDB700EEF50E /* XTTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTTableView.h; sourceTree = "<group>"; };
+		B6E4C0CA24BEEDB700EEF50E /* XTTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTTableView.m; sourceTree = "<group>"; };
 		B6FFDD412322079A0075317C /* NSString+XTNSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XTNSString.h"; sourceTree = "<group>"; };
 		B6FFDD422322079A0075317C /* NSString+XTNSString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTNSString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,8 +258,8 @@
 		AAC820D41DB8CAD300D12963 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AAE4C0161DC07E710000D0B9 /* NSTableView+ContextMenu.h */,
-				AAE4C0171DC07E710000D0B9 /* NSTableView+ContextMenu.m */,
+				B6E4C0C924BEEDB700EEF50E /* XTTableView.h */,
+				B6E4C0CA24BEEDB700EEF50E /* XTTableView.m */,
 				AAC820C71DB8C8C700D12963 /* Main.storyboard */,
 			);
 			name = View;
@@ -444,10 +444,10 @@
 				AAC820DB1DB9C27F00D12963 /* NavigationView.m in Sources */,
 				AAC820D71DB8CE4100D12963 /* WindowController.m in Sources */,
 				612BA6261FE2AEDD005EDC47 /* NSError+GitHubUpdates.m in Sources */,
-				AAE4C0181DC07E710000D0B9 /* NSTableView+ContextMenu.m in Sources */,
 				612BA62C1FE2AEDD005EDC47 /* GitHubProgressWindowController.m in Sources */,
 				61B0E2101E7CFC6300C2C6C3 /* UserEditorStatus.m in Sources */,
 				1F161DE91DBA457D0037BDBF /* sideModel.m in Sources */,
+				B6E4C0CB24BEEDB700EEF50E /* XTTableView.m in Sources */,
 				B6FFDD432322079A0075317C /* NSString+XTNSString.m in Sources */,
 				AAC820E41DB9FF3B00D12963 /* breakDownHtml.m in Sources */,
 				612BA62B1FE2AEDD005EDC47 /* NSString+GitHubUpdates.m in Sources */,
@@ -591,7 +591,7 @@
 				INFOPLIST_FILE = magnetX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.214644496.magnetX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -612,7 +612,7 @@
 				INFOPLIST_FILE = magnetX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.214644496.magnetX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
