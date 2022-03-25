@@ -1,9 +1,5 @@
 ![image.gif](https://github.com/youusername/magnetX/blob/master/image.gif)
 
-## [Mac版软件下载地址](https://github.com/youusername/magnetX/releases) 
-## [Win版(Qt版)下载地址](https://github.com/youusername/magnet_qt/releases) 
-## [Win版(原生)下载地址](https://github.com/HexPang/MagnetY/releases) 
-## [网页版地址](https://github.com/dengyuhan/magnetW) 
 
 
 ## 本项目仅用于学习交流---严禁用于非法用途---若有侵犯，联系删除
@@ -49,18 +45,6 @@
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
-* 本项目仅用于学习交流------严禁用于非法用途-----若有侵犯，联系删除
-* 邮件(214644496#QQ.com, 把#换成@)
-* QQ: 214644496
-* BUG、反馈QQ群:670122660
-* weibo: [@不娶名字不能看](http://weibo.com/u/2689574923)
-
-
-## 捐助开发者
-在兴趣的驱动下,写一个`免费`的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。
-
-当然，有钱捧个钱场（支持[支付宝、微信](https://github.com/youusername/rule/blob/master/image.png)捐助），没钱捧个人场（点个star），谢谢各位。
-![image.png](https://github.com/youusername/rule/blob/master/image.png)
 
 ##感激
 
